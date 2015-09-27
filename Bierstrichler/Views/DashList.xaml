@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="Bierstrichler.Views.DashList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:diag="clr-namespace:System.Diagnostics;assembly=WindowsBase"
+             xmlns:personviews="clr-namespace:Bierstrichler.Views.Persons"
+             mc:Ignorable="d" 
+             d:DesignHeight="549.254" d:DesignWidth="753.731"
+             xmlns:views="clr-namespace:Bierstrichler.Views"
+             xmlns:conv="clr-namespace:Bierstrichler.Converters"
+             xmlns:itemviews="clr-namespace:Bierstrichler.Views.Items"
+             xmlns:custom="clr-namespace:Bierstrichler.CustomControls"
+             Loaded="UserControl_Loaded">
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="booleanToVisibility"/>
+        <conv:NullToVisibilityHiddenConverter x:Key="nullToVisibility"/>
+    </UserControl.Resources>
+    <Grid>
+        <DockPanel LastChildFill="True">
+            <DockPanel DockPanel.Dock="Left">
+                <DockPanel DockPanel.Dock="Top" HorizontalAlignment="Stretch" LastChildFill="True">
+                    <ToggleButton DockPanel.Dock="Right" Margin="3" x:Name="ShowAddUser" 
+                              IsChecked="{Binding IsAddListVisible}" Checked="ShowAddUser_Checked"
+                              Unchecked="ShowAddUser_Unchecked" Width="80"
+                              ToolTip="Zeigt die Liste zum Hinzufügen neuer Nutzer." 
+                              Content="{Binding AddButtonText}" d:Content="Hinzufügen"
+                              Cursor="Hand"/>
+                    <TextBlock TextBlock.TextAlignment="Center" FontSize="21.333">Anwesende</TextBlock>
+                </DockPanel>
+                <personviews:PersonDashList DataContext="{Binding}" AllowDrop="True" x:Name="PresentPersonsList"
+                                        AddButtonPressed="{Binding IsAddListVisible}" MinWidth="200"
+                                            RequestPasswordOnAdd="true"/>
+            </DockPanel>
+            <DockPanel LastChildFill="True" x:Name="allPersonsPanel" DockPanel.Dock="Left">
+                <StackPanel VerticalAlignment="Center" DockPanel.Dock="Left">
+                    <Button DockPanel.Dock="Left" Height="40" Width="40" Margin="5"
+                        Command="{Binding MovePersonToPresentList}" CommandParameter="{Binding AllPersons.Selected}">&lt;-</Button>
+                    <Button DockPanel.Dock="Left" Height="40" Width="40" Margin="5"
+                        Command="{Binding RemovePersonFromPresentListCommand}" CommandParameter="{Binding PresentPersons.Selected}">-&gt;</Button>
+                </StackPanel>
+                <personviews:PersonListView DataContext="{Binding}" MinWidth="200" Width="249"
+                                   Margin="0,0,5,0" x:Name="AllPersonsList" HorizontalAlignment="Stretch"/>
+            </DockPanel>
+            <DockPanel Grid.Column="4" DockPanel.Dock="Top">
+                <personviews:ActiveConsumer DataContext="{Binding PresentPersons.Selected}" 
+                                        Visibility="{Binding Converter={StaticResource nullToVisibility}}"/>
+                <StackPanel DockPanel.Dock="Left" HorizontalAlignment="Left" VerticalAlignment="Top"
+                        Visibility="{Binding PresentPersons.Selected, Converter={StaticResource nullToVisibility}}">
+                    <Button Margin="3" Command="{Binding SpecialPaymentCommand}" TextBlock.FontSize="20"
+                        CommandParameter="{Binding PresentPersons.Selected}" Padding="3" Cursor="Hand"
+                        ToolTip="Tätigt eine Sonderzahlung über einen einzugebenden Betrag.">
+                        Sonderzahlung
+                    </Button>
+                    <Button Margin="3" Command="{Binding DepositCommand}" CommandParameter="{Binding PresentPersons.Selected}"
+                        Visibility="{Binding IsCashier, Converter={StaticResource booleanToVisibility}}" TextBlock.FontSize="20"
+                        ToolTip="Einzahlen auf das Konto des aktuellen Nutzers." Padding="3" Cursor="Hand">
+                        Einzahlen
+                    </Button>
+                    <Button Margin="3" Command="{Binding PayoutCommand}" CommandParameter="{Binding PresentPersons.Selected}"
+                        Visibility="{Binding IsCashier, Converter={StaticResource booleanToVisibility}}" Cursor="Hand"
+                        ToolTip="Auszahlen von Geld an den aktuellen Nutzer." TextBlock.FontSize="20" Padding="3">
+                        Auszahlen
+                    </Button>
+                </StackPanel>
+            </DockPanel>
+            <itemviews:DrinkList DataContext="{Binding Items}"/>
+        </DockPanel>
+
+        <Expander Header="Biercharts" BorderBrush="Black" Background="White" HorizontalAlignment="Right" VerticalAlignment="Top" Padding="2">
+            <views:BeerChartsView DataContext="{Binding BeerCharts}"/>
+        </Expander>
+    </Grid>
+</UserControl>

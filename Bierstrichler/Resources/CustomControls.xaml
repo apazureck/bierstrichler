@@ -1,0 +1,58 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:c="clr-namespace:Bierstrichler.Converters">
+
+	<c:NullToBoolFalseConverter x:Key="nullToBoolFalse"/>
+	
+	<Style x:Key="ImageControlWithButtons" TargetType="ContentControl">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="Control">
+					<ControlTemplate.Resources>
+						<Storyboard x:Key="ShowControls">
+							<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="content"
+																		   FillBehavior="HoldEnd">
+								<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+								<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+							</DoubleAnimationUsingKeyFrames>
+						</Storyboard>
+						<Storyboard x:Key="HideControls">
+							<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="content" FillBehavior="HoldEnd">
+								<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+							</DoubleAnimationUsingKeyFrames>
+						</Storyboard>
+					</ControlTemplate.Resources>
+					<Grid VerticalAlignment="Stretch" 
+										  HorizontalAlignment="Stretch" 
+										  Background="Transparent" x:Name="base">
+						<Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+							<Image x:Name="image" Source="{Binding Image}" HorizontalAlignment="Stretch"
+											   VerticalAlignment="Stretch" Width="{TemplateBinding Width}"/>
+						</Border>
+						<ContentPresenter x:Name="content" VerticalAlignment="Stretch"
+														  HorizontalAlignment="Stretch" 
+														  Content="{TemplateBinding ContentControl.Content}"
+														  Margin="{TemplateBinding Padding}"
+														  Opacity="0"/>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<DataTrigger Binding="{Binding Path=Source, ElementName=image, Converter={StaticResource nullToBoolFalse}}">
+							<DataTrigger.Setters>
+								<Setter Property="Opacity" TargetName="content" Value="1"/>
+							</DataTrigger.Setters>
+						</DataTrigger>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Trigger.ExitActions>
+								<BeginStoryboard x:Name="HideControls_BeginStoryboard1" Storyboard="{StaticResource HideControls}"/>
+							</Trigger.ExitActions>
+							<Trigger.EnterActions>
+								<BeginStoryboard x:Name="ShowControls_BeginStoryboard1" Storyboard="{StaticResource ShowControls}"/>
+							</Trigger.EnterActions>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	
+</ResourceDictionary>

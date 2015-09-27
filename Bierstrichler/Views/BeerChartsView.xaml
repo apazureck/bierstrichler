@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="Bierstrichler.Views.BeerChartsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+             xmlns:c="clr-namespace:Bierstrichler.Converters">
+    <UserControl.Resources>
+        <c:StringIsNullOrEmptyToVisibilityConvertrer x:Key="stringToVisibility"/>
+    </UserControl.Resources>
+    <ScrollViewer Padding="2">
+        <ItemsControl ItemsSource="{Binding ChartList}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock xml:space="preserve"><Run Text="{Binding Key, Mode=OneWay}"/>. <Run Text="{Binding Value.Name, Mode=OneWay}"/> </TextBlock>
+                        <TextBlock Visibility="{Binding Value.Vulgo, Mode=OneWay, Converter={StaticResource stringToVisibility}}" xml:space="preserve"><Run FontWeight="Bold">v/o</Run> <Run Text="{Binding Value.Vulgo}"/> </TextBlock>
+                        <TextBlock>(<Run Text="{Binding Value.TotalChartDrinks, Mode=OneWay}"/>)</TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </ScrollViewer>
+</UserControl>

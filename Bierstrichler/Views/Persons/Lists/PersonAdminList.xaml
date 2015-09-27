@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="Bierstrichler.Views.Persons.PersonAdminList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:cm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <CollectionViewSource x:Key="ItemCollectionView" 
+        Source="{Binding Persons}">
+            <CollectionViewSource.GroupDescriptions>
+                <PropertyGroupDescription PropertyName="Category"/>
+            </CollectionViewSource.GroupDescriptions>
+            <CollectionViewSource.SortDescriptions>
+                <cm:SortDescription PropertyName="Nachname" />
+            </CollectionViewSource.SortDescriptions>
+        </CollectionViewSource>
+    </UserControl.Resources>
+    <ListView ItemsSource="{Binding Source={StaticResource ItemCollectionView}}" SelectedItem="{Binding Selected}"
+              x:Name="listView" d:DataContext="{d:DesignData /SampleData/ItemViewModelSampleData.xaml}">
+    	<ListView.Background>
+    		<SolidColorBrush Color="White" Opacity="0.5"/>
+    	</ListView.Background>
+        <ListView.GroupStyle>
+            <GroupStyle>
+                <GroupStyle.HeaderTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="Black" BorderThickness="1" Margin="1,1,1,1">
+                            <TextBlock Text="{Binding Name}" FontWeight="Bold" Margin="1"/>
+                        </Border>
+                    </DataTemplate>
+                </GroupStyle.HeaderTemplate>
+                <GroupStyle.Panel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Vertical"/>
+                    </ItemsPanelTemplate>
+                </GroupStyle.Panel>
+            </GroupStyle>
+        </ListView.GroupStyle>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="{Binding Image}" Height="30" Stretch="Uniform"/>
+                    <TextBlock Text="{Binding Name}"/>
+                </StackPanel>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</UserControl>

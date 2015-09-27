@@ -1,0 +1,397 @@
+﻿<UserControl x:Class="Bierstrichler.Views.Items.DrinkList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:cm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             xmlns:l="clr-namespace:Bierstrichler.Views.Items"
+             xmlns:converters="clr-namespace:Bierstrichler.Converters"
+             xmlns:c="clr-namespace:Bierstrichler.CustomControls"
+             xmlns:me="clr-namespace:Bierstrichler.Functional"
+             mc:Ignorable="d" d:DesignHeight="357" d:DesignWidth="464"
+             xmlns:dd="clr-namespace:GongSolutions.Wpf.DragDrop;assembly=GongSolutions.Wpf.DragDrop"
+             x:Name="uc">
+    <UserControl.Resources>
+        
+        <CollectionViewSource x:Key="ItemCollectionView" Source="{Binding Items}" IsLiveFilteringRequested="True" 
+                              Filter="CollectionViewSource_Filter" IsLiveSortingRequested="True">
+            <CollectionViewSource.LiveFilteringProperties>
+                <system:String>Available</system:String>
+            </CollectionViewSource.LiveFilteringProperties>
+            <CollectionViewSource.GroupDescriptions>
+                <PropertyGroupDescription PropertyName="Category"/>
+            </CollectionViewSource.GroupDescriptions>
+            <CollectionViewSource.SortDescriptions>
+                <cm:SortDescription PropertyName="Name" />
+            </CollectionViewSource.SortDescriptions>
+        </CollectionViewSource>
+        
+        <converters:NullToVisibileConverter x:Key="nullToVisibleConverter"/>
+        <converters:NumberToCurrentCultureStringFormatConverter x:Key="numToStrCultureConverter"/>
+        
+        <SolidColorBrush x:Key="ListBox.Static.Background" Color="#FFFFFFFF"/>
+        <SolidColorBrush x:Key="ListBox.Static.Border" Color="#FFABADB3"/>
+        <SolidColorBrush x:Key="ListBox.Disabled.Background" Color="#FFFFFFFF"/>
+        <SolidColorBrush x:Key="ListBox.Disabled.Border" Color="#FFD9D9D9"/>
+
+        <Style x:Key="CharacterContainerStyle" TargetType="{x:Type ListBoxItem}">
+            <Setter Property="Background" Value="#FF3B0031" />
+            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Margin" Value="5,2" />
+            <Setter Property="Padding" Value="3" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                        <Grid>
+                            <Rectangle StrokeThickness="1" Stroke="Transparent" RadiusX="5" RadiusY="5" Fill="White"  />
+                            <Grid>
+                                <Rectangle x:Name="BackgroundRect" Opacity="0.5" StrokeThickness="1" 
+                    Stroke="Transparent" RadiusX="5" RadiusY="5" Fill="{TemplateBinding Background}" />
+                                <Rectangle StrokeThickness="1" Stroke="#FF000000" RadiusX="3" RadiusY="3" >
+                                    <Rectangle.Fill>
+                                        <LinearGradientBrush StartPoint="-0.513721,0.412914" EndPoint="1.43072,0.412914">
+                                            <LinearGradientBrush.GradientStops>
+                                                <GradientStop Color="Transparent" Offset="0"/>
+                                                <GradientStop Color="#60FFFFFF" Offset="1"/>
+                                            </LinearGradientBrush.GradientStops>
+                                        </LinearGradientBrush>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0.6*"/>
+                                        <RowDefinition Height="0.4*"/>
+                                    </Grid.RowDefinitions>
+                                    <Rectangle RadiusX="3" RadiusY="3"  Margin="3" Grid.RowSpan="1" Grid.Row="0"  >
+                                        <Rectangle.Fill>
+                                            <LinearGradientBrush  EndPoint="0,0" StartPoint="0,1">
+                                                <GradientStop Color="#44FFFFFF" Offset="0"/>
+                                                <GradientStop Color="#66FFFFFF" Offset="1"/>
+                                            </LinearGradientBrush>
+                                        </Rectangle.Fill>
+                                    </Rectangle>
+                                </Grid>
+                                <ContentPresenter x:Name="ContentHost" Margin="{TemplateBinding Padding}" 
+                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                                <Rectangle Fill="{x:Null}" Stroke="#FFFFFFFF" RadiusX="3" RadiusY="3" Margin="1" />
+                            </Grid>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="BackgroundRect" Property="Opacity" Value="1" />
+                                <Setter TargetName="BackgroundRect" Property="Opacity" Value="1" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="DrinkListSytle" TargetType="{x:Type ListView}">
+        	<Setter Property="Background" Value="{StaticResource ListBox.Static.Background}"/>
+        	<Setter Property="BorderBrush" Value="{StaticResource ListBox.Static.Border}"/>
+        	<Setter Property="BorderThickness" Value="1"/>
+        	<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+        	<Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+        	<Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+        	<Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
+        	<Setter Property="ScrollViewer.PanningMode" Value="Both"/>
+        	<Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+        	<Setter Property="VerticalContentAlignment" Value="Center"/>
+        	<Setter Property="Template">
+        		<Setter.Value>
+        			<ControlTemplate TargetType="{x:Type ListView}">
+        				<Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="1" SnapsToDevicePixels="true">
+        					<ScrollViewer Focusable="false" Padding="{TemplateBinding Padding}">
+        						<ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+        					</ScrollViewer>
+        				</Border>
+        				<ControlTemplate.Triggers>
+        					<Trigger Property="IsEnabled" Value="false">
+        						<Setter Property="Background" TargetName="Bd" Value="{StaticResource ListBox.Disabled.Background}"/>
+        						<Setter Property="BorderBrush" TargetName="Bd" Value="{StaticResource ListBox.Disabled.Border}"/>
+        					</Trigger>
+        					<MultiTrigger>
+        						<MultiTrigger.Conditions>
+        							<Condition Property="IsGrouping" Value="true"/>
+        							<Condition Property="VirtualizingPanel.IsVirtualizingWhenGrouping" Value="false"/>
+        						</MultiTrigger.Conditions>
+        						<Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
+        					</MultiTrigger>
+        				</ControlTemplate.Triggers>
+        			</ControlTemplate>
+        		</Setter.Value>
+        	</Setter>
+        </Style>
+
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+
+        <Style x:Key="DrinkDashStyle" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="Right" Margin="0,1,18.688,1" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <LinearGradientBrush x:Key="NormalBrush" EndPoint="0,1" StartPoint="0,0">
+            <GradientStop Color="#EEE" Offset="0.0"/>
+            <GradientStop Color="#CCC" Offset="1.0"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush x:Key="NormalBorderBrush" EndPoint="0,1" StartPoint="0,0">
+            <GradientStop Color="#CCC" Offset="0.0"/>
+            <GradientStop Color="#444" Offset="1.0"/>
+        </LinearGradientBrush>
+
+        <!-- LightBrush is used for content areas such as Menu, Tab Control background -->
+        <LinearGradientBrush x:Key="LightBrush" EndPoint="0,1" StartPoint="0,0">
+            <GradientStop Color="#FFF" Offset="0.0"/>
+            <GradientStop Color="#EEE" Offset="1.0"/>
+        </LinearGradientBrush>
+
+        <!-- MouseOverBrush is used for MouseOver in Button, Radio Button, CheckBox -->
+        <LinearGradientBrush x:Key="MouseOverBrush" EndPoint="0,1" StartPoint="0,0">
+            <GradientStop Color="#FFF" Offset="0.0"/>
+            <GradientStop Color="#AAA" Offset="1.0"/>
+        </LinearGradientBrush>
+
+        <!-- PressedBrush is used for Pressed in Button, Radio Button, CheckBox -->
+        <LinearGradientBrush x:Key="PressedBrush" EndPoint="0,1" StartPoint="0,0">
+            <GradientStop Color="#BBB" Offset="0.0"/>
+            <GradientStop Color="#EEE" Offset="0.1"/>
+            <GradientStop Color="#EEE" Offset="0.9"/>
+            <GradientStop Color="#FFF" Offset="1.0"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush x:Key="PressedBorderBrush" EndPoint="0,1" StartPoint="0,0">
+            <GradientStop Color="#444" Offset="0.0"/>
+            <GradientStop Color="#888" Offset="1.0"/>
+        </LinearGradientBrush>
+
+        <!-- SelectedBackgroundBrush is used for the Selected item in ListBoxItem, ComboBoxItem-->
+        <SolidColorBrush x:Key="SelectedBackgroundBrush" Color="#DDD"/>
+
+        <!-- Disabled Brushes are used for the Disabled look of each control -->
+        <SolidColorBrush x:Key="DisabledForegroundBrush" Color="#888"/>
+        <SolidColorBrush x:Key="DisabledBackgroundBrush" Color="#EEE"/>
+        <SolidColorBrush x:Key="DisabledBorderBrush" Color="#AAA"/>
+
+        <!-- Used for background of ScrollViewer, TreeView, ListBox, Expander, TextBox, Tab Control -->
+        <SolidColorBrush x:Key="WindowBackgroundBrush" Color="#FFF"/>
+
+        <!-- DefaultedBorderBrush is used to show KeyBoardFocus -->
+        <LinearGradientBrush x:Key="DefaultedBorderBrush" EndPoint="0,1" StartPoint="0,0">
+            <GradientStop Color="#777" Offset="0.0"/>
+            <GradientStop Color="#000" Offset="1.0"/>
+        </LinearGradientBrush>
+
+        <SolidColorBrush x:Key="SolidBorderBrush" Color="#888"/>
+        <SolidColorBrush x:Key="LightBorderBrush" Color="#AAA"/>
+        <SolidColorBrush x:Key="LightColorBrush" Color="#DDD"/>
+
+        <!-- Used for Checkmark, Radio button, TreeViewItem, Expander ToggleButton glyphs -->
+        <SolidColorBrush x:Key="GlyphBrush" Color="#444"/>
+
+
+        <!-- Style and Template pairs are used to define each control Part -->
+        <!-- The Style provides default values on the control; the Template gives the elements for each control -->
+
+        <!-- SimpleButtonFocusVisual is used to show keyboard focus around a SimpleButton control -->
+        <Style x:Key="SimpleButtonFocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Border>
+                            <Rectangle Margin="2" Stroke="#60000000" StrokeThickness="1" StrokeDashArray="1 2"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Simple Button - This control sets brushes on each state. Note that these brushes must be listed above since they are static resources -->
+        <Style x:Key="SimpleButton" TargetType="{x:Type Button}" BasedOn="{x:Null}">
+            <Setter Property="FocusVisualStyle" Value="{DynamicResource SimpleButtonFocusVisual}"/>
+            <Setter Property="Background" Value="{DynamicResource NormalBrush}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource NormalBorderBrush}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+
+                        <!-- We use Grid as a root because it is easy to add more elements to customize the button -->
+                        <Grid x:Name="Grid">
+                            <Border x:Name="Border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}"/>
+
+                            <!-- Content Presenter is where the text content etc is placed by the control -->
+                            <!-- The bindings are useful so that the control can be parameterized without editing the template -->
+                            <ContentPresenter x:Name="contentPresenter" 
+                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                              Margin="{TemplateBinding Padding}" 
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}" 
+                                              RecognizesAccessKey="True">
+                            </ContentPresenter>
+                        </Grid>
+
+                        <!--Each state sets a brush on the Border in the template -->
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter TargetName="contentPresenter" Property="Effect">
+                                    <Setter.Value>
+                                        <DropShadowEffect Color="White" BlurRadius="15" ShadowDepth="0" Opacity="1" RenderingBias="Quality"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="true">
+                                <Setter Property="BorderBrush" Value="{DynamicResource DefaultedBorderBrush}" TargetName="Border"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" Value="{DynamicResource PressedBrush}" TargetName="Border"/>
+                                <Setter Property="BorderBrush" Value="{DynamicResource PressedBorderBrush}" TargetName="Border"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="true"/>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" Value="{DynamicResource DisabledBackgroundBrush}" TargetName="Border"/>
+                                <Setter Property="BorderBrush" Value="{DynamicResource DisabledBorderBrush}" TargetName="Border"/>
+                                <Setter Property="Foreground" Value="{DynamicResource DisabledForegroundBrush}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </UserControl.Resources>
+    
+    <ScrollViewer x:Name="scrollViewer" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+        <ListView x:Name="itemList" ItemsSource="{Binding Source={StaticResource ItemCollectionView}}"
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled" BorderBrush="Transparent"
+                  Width="{Binding ElementName=scrollViewer, Path=ViewportWidth}"
+                  Background="{x:Null}" Style="{DynamicResource DrinkListSytle}"
+                  ItemContainerStyle="{StaticResource CharacterContainerStyle}"
+                  dd:DragDrop.IsDragSource="True"
+                  dd:DragDrop.DragHandler="{Binding Items}"
+                  dd:DragDrop.DragDropContext="{Binding Selected}">
+        <ListView.GroupStyle>
+            <GroupStyle>
+                <GroupStyle.HeaderTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="Black" BorderThickness="1" Margin="5,5,5,1">
+                                <StackPanel Background="White" HorizontalAlignment="Stretch">
+                                    <TextBlock Text="{Binding Name}" FontWeight="Bold" Margin="1"/>
+                                </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </GroupStyle.HeaderTemplate>
+                <GroupStyle.Panel>
+                    <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal" Margin="5" 
+                                       ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                                       Width="{Binding ElementName=itemList, Path=Width}"
+                                       dd:DragDrop.IsDragSource="True"
+                                       dd:DragDrop.DragHandler="{Binding Items}"
+                                       dd:DragDrop.DragDropContext="{Binding Selected}"/>
+                    </ItemsPanelTemplate>
+                </GroupStyle.Panel>
+            </GroupStyle>
+        </ListView.GroupStyle>
+        <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Button Cursor="Hand" 
+                            Command="{Binding ElementName=uc, Path=DataContext.BuyCommand}" 
+                            CommandParameter="{Binding}"
+                            BorderBrush="Transparent"
+                            Background="Transparent"
+                            Style="{StaticResource SimpleButton}">
+                        <Button.ToolTip>
+                            <l:DrinkToolTip/>
+                        </Button.ToolTip>
+                        <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" x:Name="pGrid">
+                            <Grid.ContextMenu>
+                                <ContextMenu>
+                                    <MenuItem IsEnabled="False">
+                                        <MenuItem.Header>
+                                            <TextBlock FontWeight="Bold">Zu <Run Text="{Binding Name}"/> hinzufügen:</TextBlock>
+                                        </MenuItem.Header>
+                                    </MenuItem>
+                                    <MenuItem Header="+1 Einheiten" Command="{Binding AddUnitsCommand}" CommandParameter="1"/>
+                                    <MenuItem Header="+4 Einheiten" Command="{Binding AddUnitsCommand}" CommandParameter="4"/>
+                                    <MenuItem Header="+20 Einheiten" Command="{Binding AddUnitsCommand}" CommandParameter="20"/>
+                                </ContextMenu>
+                            </Grid.ContextMenu>
+                            <Image Source="{Binding Image}" Width="100" Height="100" Stretch="Fill" x:Name="btnImg"/>
+                            <TextBlock VerticalAlignment="Center"
+                                       Width="{Binding Width, ElementName=btnImg}"
+                                       HorizontalAlignment="Stretch"
+                                       Text="{Binding Name}" 
+                                       TextWrapping="Wrap"
+                                       TextAlignment="Center"
+                                       Visibility="{Binding Source, ElementName=btnImg, Converter={StaticResource nullToVisibleConverter}}"
+                                       IsHitTestVisible="False"/>
+                            <Border VerticalAlignment="Center"
+                                    HorizontalAlignment="Stretch"
+                                    Width="{Binding Width, ElementName=btnImg}">
+                                <Border.Style>
+                                    <Style TargetType="Border">
+                                        <Style.Setters>
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                        </Style.Setters>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding ElementName=btnImg, Path=IsMouseOver}" Value="True">
+                                                <Setter Property="Visibility" Value="Visible"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Border.Style>
+                                <me:OutlinedTextBlock Text="{Binding Name}" StrokeThickness="1" Stroke="White" Fill="Black" TextWrapping="Wrap" FontSize="18" FontWeight="Bold" TextAlignment="Center"
+                                       x:Name="hoverTextBlock"
+                                       IsHitTestVisible="False">
+                                </me:OutlinedTextBlock>
+                            </Border>
+                        </Grid>
+                    </Button>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        <ListView.ItemsPanel>
+            <ItemsPanelTemplate>
+                    <c:RectangularWrapPanel Orientation="Vertical" Margin="5" ScrollViewer.HorizontalScrollBarVisibility="Disabled"/>
+            </ItemsPanelTemplate>
+        </ListView.ItemsPanel>
+    </ListView>
+    </ScrollViewer>
+</UserControl>

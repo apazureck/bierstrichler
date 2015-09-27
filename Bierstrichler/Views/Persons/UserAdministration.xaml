@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="Bierstrichler.Views.Persons.UserAdministration"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:l="clr-namespace:Bierstrichler.Views.Persons"
+             xmlns:converters="clr-namespace:Bierstrichler.Converters"
+             mc:Ignorable="d" 
+             d:DesignHeight="428"
+             x:Name="UC" d:DesignWidth="604">
+    <UserControl.Resources>
+        <converters:NullToVisibilityCollapsedConverter x:Key="NullToVisibilityConverter"/>
+    </UserControl.Resources>
+    <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150" MinWidth="150"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <WrapPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Button Content="Neu" Width="75" Command="{Binding AddNewPersonCommand}"/>
+            <Button Content="Löschen" Width="75" Command="{Binding RemovePersonCommand}"/>
+        </WrapPanel>
+        <l:PersonAdminList Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="pList"/>
+        <GridSplitter HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="5" Grid.RowSpan="2" 
+                      Grid.Column="1" ShowsPreview="False"/>
+        <DockPanel Grid.Column="2" Grid.RowSpan="2" LastChildFill="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Label DockPanel.Dock="Top">Personeninformation</Label>
+            <l:UserEdit Visibility="{Binding DataContext.Selected, ElementName=UC, Converter={StaticResource NullToVisibilityConverter}}" 
+                    Grid.Row="1" Margin="5" DataContext="{Binding Selected}"/>
+        </DockPanel>
+    </Grid>
+</UserControl>

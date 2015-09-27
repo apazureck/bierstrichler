@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="(c) Andreas Pazureck 2015, www.pazureck.de/bierstrichler">
+    <title></title>
+    <style type="text/css">
+        body, td {
+            font-family: Verdana, Arial, Helvetica;
+            font-size: 10pt;
+            text-align: left;
+        }
+
+        h1 {
+            font-family: Verdana, Arial, Helvetica;
+            font-size: 12pt;
+            text-align: left;
+            font-weight: bold;
+            color: #0d2563;
+            text-shadow: grey 0.1em 0.1em 0.2em;
+        }
+
+        a {
+            font-family: Verdana, Arial, Helvetica;
+            font-size: 10pt;
+            font-weight: bold;
+            color: #9B0E17;
+            text-decoration: none;
+            text-shadow: grey 0.1em 0.1em 0.2em;
+        }
+
+        p {
+            margin: 1px 3px 9px 3px;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+        .ReadMsgBody {
+            width: 100%;
+        }
+
+        .ExternalClass {
+            width: 100%;
+            display: block !important;
+        }
+
+            .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+                line-height: 100%;
+            }
+
+        table {
+            border-spacing: 4px;
+        }
+
+            table td {
+                border-collapse: collapse;
+            }
+
+        .yshortcuts a {
+            border-bottom: none !important;
+        }
+
+        @media only screen and (max-width: 320px) {
+        }
+    </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body bgcolor="#FFFF99" style="font-family: Verdana,Arial,Helvetica; font-size: 10pt; text-align: left; cursor: auto;">
+    <table align="center" bgcolor="#FFFFFF" border="0" cellpadding="1" cellspacing="5px" width="608">
+        <tbody>
+            <tr>
+                <td colspan="2">
+                    <table>
+                        <tbody>
+                            <tr bgcolor="#FFFFFF">
+                                <td width="476">
+                                    <p><span style="font-size:48pt;"><span style="font-family: Edwardian Script ITC;">Fuxia Ostmark</span></span></p>
+                                    <div align="right">
+                                        <p><span style="font-size:14pt;">Bierrechnung vom {$CurrentDate|dd. M. yyyy$}</span></p>
+                                    </div>
+                                </td>
+                                <td align="center" colspan="2" style="font-family: Verdana,Arial,Helvetica; font-size: 10pt;" width="106"><img align="right" alt="" border="0" height="159" src="Ostmark_Wappen_Cropped.jpg" width="131" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding: 5px 5px 5px 5px;font-family: Verdana, Arial, Helvetica; font-size: 10pt;" valign="top" width="391">
+                    <a name="top"></a><multiline>
+                        <p>Lieber {$Vorname$},</p>
+                        <p align="justify">Du hast im letzten Abrechnungszeitraum folgende Getränke konsumiert:</p>
+                        <table border="0">
+                            <tr><th>#</th><th>Name</th><th>Preis</th></tr>
+                            {$BEGIN ConsumedItems$}
+                            <tr><td>{$NumOfConsumed$}</td><td>{$ItemName$}</td><td>{$TotalPrize|0.00$} €</td></tr>
+                            {$END ConsumedItems$}
+                        </table>
+                        <p>
+                            Dein Aktueller Kontostand beträgt {$IF Guthaben<0$} <font color="red">{$ELSE$}<font>{$ENDIF$}<b>{$Guthaben|0.00$} €</b></font>.<br />
+                            {$IF Guthaben>=0 $}{$ELSE$}<br />Bitte denk daran dein Konto bald einmal wieder auszugleichen, damit die Bierkasse auch genug Geld hat.<br />{$ENDIF$}
+                            Die Fuxia dankt und freut sich Dich bald wieder begrüßen zu dürfen.<br />
+                        </p>
+                        <p>
+                            Mit Besten Grüßen,<br />
+                            <br />
+                            Der Bierfux
+                        </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>&nbsp;</p>
+</body>
+</html>

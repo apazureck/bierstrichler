@@ -1,0 +1,107 @@
+﻿<UserControl x:Class="Bierstrichler.Views.Persons.PersonDashList"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+			 xmlns:cm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+			 xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+			 xmlns:Custom="http://www.galasoft.ch/mvvmlight"
+			 xmlns:dd="clr-namespace:GongSolutions.Wpf.DragDrop;assembly=GongSolutions.Wpf.DragDrop"
+			 xmlns:c="clr-namespace:Bierstrichler.Converters"
+			 xmlns:mvc="clr-namespace:Bierstrichler.Converters.MultiValueConverters"
+			 xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
+			 mc:Ignorable="d" 
+			 d:DesignHeight="300" d:DesignWidth="300" x:Name="UC"
+			 dd:DragDrop.IsDragSource="True"
+			 dd:DragDrop.IsDropTarget="True"
+			 dd:DragDrop.DropHandler="{Binding PresentPersons}"
+			 dd:DragDrop.DragHandler="{Binding PresentPersons}">
+	<UserControl.Resources>
+		<ResourceDictionary>
+		<ResourceDictionary.MergedDictionaries>
+			<ResourceDictionary Source="../../../Resources/GroupStyles.xaml"/>
+			<ResourceDictionary>
+				<c:EnumToDisplayValueConverter x:Key="enumToDisplayValueConverter"/>
+				<c:InverseBooleanConverter x:Key="inverseBoolConverter"/>
+				<mvc:ShowAddUserHintMultiValueConverter x:Key="showHowToAddHintConverter"/>
+				<CollectionViewSource x:Key="ItemCollectionView" 
+		Source="{Binding PresentPersons.Persons}">
+					<CollectionViewSource.GroupDescriptions>
+						<PropertyGroupDescription PropertyName="UserType" Converter="{StaticResource enumToDisplayValueConverter}"/>
+						<PropertyGroupDescription PropertyName="Status" Converter="{StaticResource enumToDisplayValueConverter}"/>
+					</CollectionViewSource.GroupDescriptions>
+					<CollectionViewSource.SortDescriptions>
+						<cm:SortDescription PropertyName="Category"/>
+						<cm:SortDescription PropertyName="StatusString"/>
+						<cm:SortDescription PropertyName="Nachname"/>
+					</CollectionViewSource.SortDescriptions>
+				</CollectionViewSource>
+			</ResourceDictionary>
+		</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</UserControl.Resources>
+	<Grid>
+		<StackPanel>
+			<StackPanel.Visibility>
+				<MultiBinding Converter="{StaticResource showHowToAddHintConverter}">
+					<Binding ElementName="UC" Path="AddButtonPressed" Converter="{StaticResource inverseBoolConverter}"/>
+					<Binding Path="PresentPersons.Count"/>
+				</MultiBinding>
+			</StackPanel.Visibility>
+			<Canvas Height="80">
+				<ed:BlockArrow Fill="#FFF4F4F5" Height="50" Orientation="Right" Stroke="Black" Width="74.828" Canvas.Left="113.383" Canvas.Top="15.407" RenderTransformOrigin="0.5,0.5">
+					<ed:BlockArrow.RenderTransform>
+						<TransformGroup>
+							<ScaleTransform/>
+							<SkewTransform/>
+							<RotateTransform Angle="-57.311"/>
+							<TranslateTransform/>
+						</TransformGroup>
+					</ed:BlockArrow.RenderTransform>
+				</ed:BlockArrow>
+			</Canvas>
+			<TextBlock TextWrapping="Wrap" Width="200" Padding="5"><Run Text="Drücke auf &quot;Hinzufügen&quot;, um eine Person auf die Anwesenheitsliste zu setzen."/></TextBlock>
+		</StackPanel>
+		<TextBlock TextWrapping="Wrap" Width="200" Padding="5">
+			<TextBlock.Visibility>
+				<MultiBinding Converter="{StaticResource showHowToAddHintConverter}">
+					<Binding ElementName="UC" Path="AddButtonPressed"/>
+					<Binding Path="PresentPersons.Count"/>
+				</MultiBinding>
+			</TextBlock.Visibility>
+			Doppelklicke auf eine Person oder ziehe sie in diese Liste, um sie als anwesend zu markieren.
+		</TextBlock>
+	<ListView ItemsSource="{Binding Source={StaticResource ItemCollectionView}}" 
+			  SelectedItem="{Binding PresentPersons.Selected}" PreviewMouseDown="listView_PreviewMouseDown"
+			  x:Name="listView"
+              dd:DragDrop.IsDragSource="True"
+			 dd:DragDrop.IsDropTarget="True"
+			 dd:DragDrop.DropHandler="{Binding PresentPersons}"
+			 dd:DragDrop.DragHandler="{Binding PresentPersons}">
+		<ListView.Background>
+			<SolidColorBrush Color="White" Opacity="0.5"/>
+		</ListView.Background>
+		<ListView.ContextMenu>
+			<ContextMenu>
+				<MenuItem Command="{Binding Path=RemovePersonFromPresentListCommand}"
+			CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=ContextMenu}, Path=PlacementTarget.SelectedItem}" Header="Nutzer entfernen">
+				</MenuItem>
+			</ContextMenu>
+		</ListView.ContextMenu>
+		<ListView.GroupStyle>
+				<GroupStyle Panel="{StaticResource personListPanelStyle}" ContainerStyle="{StaticResource UserTypeTemplate}"/>
+				<GroupStyle Panel="{StaticResource personListPanelStyle}" ContainerStyle="{StaticResource UserStatusTemplate}"/>
+			</ListView.GroupStyle>
+		<ListView.ItemTemplate>
+			<DataTemplate>
+				<StackPanel Orientation="Horizontal" ToolTip="Rechtsklick zum Entfernen">
+                        <Image Source="{Binding Image}" Height="30" Width="23" Stretch="Fill" Margin="1,1,3,1"/>
+                        <TextBlock VerticalAlignment="Center" FontSize="20">
+                            <Run Text="{Binding Vorname}"/> <Run Text="{Binding Nachname}" FontWeight="Bold"/>
+                        </TextBlock>
+                    </StackPanel>
+			</DataTemplate>
+		</ListView.ItemTemplate>
+	</ListView>
+	</Grid>
+</UserControl>

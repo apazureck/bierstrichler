@@ -1,0 +1,9 @@
+Lieber {$Vorname$},
+
+Dein gewähltes Minimalguthaben von {$MinGuthaben|0.00$} € wurde unterschritten.
+
+Bitte vergiss nicht beim nächsten mal wieder etwas Guthaben auf dein Bierkonto einzuzahlen.
+
+Mit Besten Grüßen,
+
+Deine Fuxia

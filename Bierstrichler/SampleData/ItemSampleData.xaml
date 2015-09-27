@@ -1,0 +1,5 @@
+﻿<Items:Item xmlns:Items="clr-namespace:Bierstrichler.Data.Items;assembly=Bierstrichler.Data" xmlns:System="clr-namespace:System;assembly=mscorlib" Available="True" Category="Cras adipiscing phasellus mauris" Coleurfaehig="False" Description="Curabitur vestibulum" Name="Aenean nam aliquam" PriceSelling="128.07" PriceBuying="457.65" Stock="84">
+	<Items:Item.ID>
+		<System:Guid/>
+	</Items:Item.ID>
+</Items:Item>

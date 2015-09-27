@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="Bierstrichler.Views.Items.DrinkToolTip"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:c="clr-namespace:Bierstrichler.Converters"
+             mc:Ignorable="d"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             d:DesignHeight="300" d:DesignWidth="300" MaxWidth="300">
+    <UserControl.Resources>
+        <c:NumberToCurrentCultureStringFormatConverter x:Key="numToStrCultureConverter"/>
+        <sys:String x:Key="formatString">0.00</sys:String>
+    </UserControl.Resources>
+    <StackPanel>
+        <DockPanel HorizontalAlignment="Stretch">
+            <TextBlock FontSize="20" FontWeight="Bold" TextWrapping="Wrap" Text="{Binding Name}" DockPanel.Dock="Left" MaxWidth="200"/>
+            <StackPanel DockPanel.Dock="Right">
+                <TextBlock TextAlignment="Right">Preis: <Run FontWeight="Bold" Text="{Binding PriceSelling, Converter={StaticResource numToStrCultureConverter}, ConverterParameter={StaticResource formatString}}">
+                </Run> €</TextBlock>
+                <TextBlock TextAlignment="Right">Vorhanden: <Run FontWeight="Bold" Text="{Binding Stock, Mode=OneWay}"/></TextBlock>
+            </StackPanel>
+        </DockPanel>
+        <TextBlock TextWrapping="Wrap" Text="{Binding Description}"></TextBlock>
+    </StackPanel>
+</UserControl>

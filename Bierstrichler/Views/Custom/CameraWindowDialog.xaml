@@ -1,0 +1,15 @@
+﻿<Window x:Class="Bierstrichler.Views.Custom.CameraWindowDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:s="clr-namespace:DiagramDesigner"
+        xmlns:cam="clr-namespace:WebcamControl;assembly=WebcamControl"
+        xmlns:wf="clr-namespace:Bierstrichler.CustomControls"
+        Title="CameraWindow" SizeToContent="WidthAndHeight">
+    <DockPanel LastChildFill="True">
+        <Button DockPanel.Dock="Bottom" HorizontalAlignment="Center" VerticalAlignment="Bottom" Padding="3" Margin="3" Click="TakePictureButton_Click">Take Picture</Button>
+        <Grid>
+            <cam:Webcam Background="AliceBlue" Width="640" Height="480" HorizontalAlignment="Stretch" 
+                        VerticalAlignment="Top" x:Name="webCamImage"/>
+        </Grid>
+    </DockPanel>
+</Window>

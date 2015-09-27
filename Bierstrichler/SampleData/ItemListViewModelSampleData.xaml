@@ -1,0 +1,2171 @@
+﻿<Items:ItemListViewModel xmlns:Items="clr-namespace:Bierstrichler.ViewModels.Items" xmlns:Items1="clr-namespace:Bierstrichler.Data.Items;assembly=Bierstrichler.Data" xmlns:System="clr-namespace:System;assembly=mscorlib" EndDate="09/20/2015 18:47:02" StartDate="09/20/2015 18:47:02">
+	<Items:ItemListViewModel.Categories>
+		<Items:CategoryViewModel Name="Himenaeos nibh dis senectus sociosqu">
+			<Items:CategoryViewModel.Items>
+				<Items:ItemViewModel Available="True" AmountRemoved="42" AmountAdded="52" Category="Donec malesuada rutrum" Coleurfaehig="False" Description="Porttitor semper adipiscing" Name="Nec penatibus egestas sapien" Stock="34">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Vestibulum mus" Coleurfaehig="False" Description="Vestibulum dapibus" Name="Est primis imperdiet parturient" RelativeImagePath="Hac leo suscipit" Stock="92"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="78" AmountAdded="84" Category="Feugiat vehicula gravida sociis volutpat" Coleurfaehig="False" Description="Tellus nunc odio orci sed" Name="Taciti vestibulum maecenas per" Stock="51">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Fusce ultrices euismod" Coleurfaehig="False" Description="Parturient vestibulum" Name="Non torquent" RelativeImagePath="Nisi nisl etiam" Stock="66"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="55" AmountAdded="50" Category="Vestibulum turpis varius iaculis urna" Coleurfaehig="False" Description="Convallis dictumst sem" Name="Vestibulum aenean mauris bibendum" Stock="57">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Tortor phasellus consequat" Coleurfaehig="False" Description="Pede tristique quam quis ultricies" Name="Praesent accumsan tempor tincidunt tempus" RelativeImagePath="Adipiscing venenatis vulputate parturient curabitur" Stock="63"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="32" AmountAdded="29" Category="Habitasse natoque vestibulum" Coleurfaehig="False" Description="Cras hendrerit potenti sit" Name="Vestibulum eleifend posuere cursus" Stock="76">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Morbi congue fringilla laoreet" Coleurfaehig="False" Description="Lorem aptent elementum auctor facilisis" Name="Dignissim adipiscing nullam parturient" RelativeImagePath="Lacinia fermentum" Stock="50"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="92" AmountAdded="48" Category="Proin sodales ligula dis litora" Coleurfaehig="False" Description="Aliquam himenaeos faucibus imperdiet" Name="Viverra nunc est luctus magnis" Stock="96">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Adipiscing nulla parturient facilisi" Coleurfaehig="False" Description="Pretium nam rhoncus" Name="Dictum lectus libero vel" RelativeImagePath="Duis sed" Stock="70"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+			</Items:CategoryViewModel.Items>
+		</Items:CategoryViewModel>
+		<Items:CategoryViewModel Name="Hac mattis">
+			<Items:CategoryViewModel.Items>
+				<Items:ItemViewModel Available="True" AmountRemoved="88" AmountAdded="15" Category="Penatibus dolor" Coleurfaehig="False" Description="Montes lobortis fames" Name="Porttitor integer" Stock="83">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Interdum leo malesuada" Coleurfaehig="False" Description="Mauris amet vestibulum" Name="Augue habitant inceptos" RelativeImagePath="Mollis vestibulum" Stock="85"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="20" AmountAdded="27" Category="Tristique eget ultricies" Coleurfaehig="False" Description="Venenatis nascetur ipsum pharetra ornare" Name="Elit vivamus" Stock="56">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Nec adipiscing" Coleurfaehig="False" Description="Arcu nostra tincidunt diam" Name="Quisque ante" RelativeImagePath="Felis mus" Stock="91"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="91" AmountAdded="89" Category="Per eros vestibulum" Coleurfaehig="False" Description="Aliquet nisi" Name="Semper nibh" Stock="59">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Consequat metus parturient vestibulum sapien" Coleurfaehig="False" Description="Rutrum vulputate lorem curabitur aliquam" Name="Platea justo non primis lacus" RelativeImagePath="Phasellus enim erat magna massa" Stock="12"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="51" AmountAdded="88" Category="Orci commodo sit sagittis" Coleurfaehig="False" Description="Senectus tellus sociosqu tempor" Name="Vel taciti elementum" Stock="50">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Pulvinar odio sociis nulla sem" Coleurfaehig="False" Description="Blandit nisl neque" Name="Placerat morbi" RelativeImagePath="Convallis nunc dignissim netus sed" Stock="47"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="76" AmountAdded="95" Category="Adipiscing fermentum" Coleurfaehig="False" Description="Est parturient class" Name="Dapibus fringilla turpis dis" Stock="43">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Velit conubia vitae sed cubilia" Coleurfaehig="False" Description="Porta tortor suscipit purus" Name="Pede tempus" RelativeImagePath="Facilisis quam quis nam risus" Stock="44"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+			</Items:CategoryViewModel.Items>
+		</Items:CategoryViewModel>
+		<Items:CategoryViewModel Name="Curae varius aenean">
+			<Items:CategoryViewModel.Items>
+				<Items:ItemViewModel Available="True" AmountRemoved="83" AmountAdded="88" Category="Etiam urna cras" Coleurfaehig="False" Description="Leo vestibulum hendrerit himenaeos" Name="Adipiscing parturient duis feugiat fusce" Stock="97">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Donec nullam" Coleurfaehig="False" Description="Hac mauris vestibulum egestas" Name="Torquent habitasse ultrices" RelativeImagePath="Vehicula euismod vestibulum" Stock="28"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="14" AmountAdded="98" Category="Proin vestibulum volutpat maecenas" Coleurfaehig="False" Description="Per cursus dolor" Name="Augue adipiscing non iaculis" Stock="53">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Nulla gravida auctor congue" Coleurfaehig="False" Description="Aptent lorem" Name="Vestibulum adipiscing parturient mus" RelativeImagePath="Nec morbi vestibulum" Stock="83"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="31" AmountAdded="87" Category="Lectus fames" Coleurfaehig="False" Description="Parturient laoreet nam accumsan penatibus" Name="Amet malesuada" Stock="23">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Vestibulum vel lacinia adipiscing" Coleurfaehig="False" Description="Imperdiet sit" Name="Parturient sed sem nunc" RelativeImagePath="Dictum praesent vestibulum" Stock="18"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="18" AmountAdded="87" Category="Lacus vestibulum posuere tristique" Coleurfaehig="False" Description="Lorem habitant" Name="Ultricies venenatis ligula litora arcu" Stock="29">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Tincidunt libero faucibus ante justo" Coleurfaehig="False" Description="Felis porttitor dictumst eleifend" Name="Natoque bibendum" RelativeImagePath="Sed facilisi ipsum" Stock="24"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="19" AmountAdded="50" Category="Morbi vulputate vestibulum magnis" Coleurfaehig="False" Description="Lobortis eget hac neque" Name="Curabitur interdum diam" Stock="64">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Rhoncus est luctus" Coleurfaehig="False" Description="Inceptos massa potenti" Name="Magna dis" RelativeImagePath="Pretium metus" Stock="28"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+			</Items:CategoryViewModel.Items>
+		</Items:CategoryViewModel>
+		<Items:CategoryViewModel Name="Elit adipiscing parturient">
+			<Items:CategoryViewModel.Items>
+				<Items:ItemViewModel Available="True" AmountRemoved="14" AmountAdded="75" Category="Phasellus porta eros mus" Coleurfaehig="False" Description="Placerat nostra per sed" Name="Nec consequat parturient non" Stock="74">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Pharetra nulla montes" Coleurfaehig="False" Description="Vestibulum netus leo" Name="Vestibulum mattis nascetur enim" RelativeImagePath="Mauris adipiscing erat mollis" Stock="33"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="10" AmountAdded="17" Category="Pulvinar sagittis ornare vestibulum elementum" Coleurfaehig="False" Description="Adipiscing parturient vestibulum class nibh" Name="Facilisis dis est platea senectus" Stock="59">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Vestibulum sed" Coleurfaehig="False" Description="Risus velit" Name="Purus convallis sem" RelativeImagePath="Sit vel dignissim vitae nam" Stock="67"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="37" AmountAdded="88" Category="Suscipit sodales leo" Coleurfaehig="False" Description="Mus sapien fusce semper nec" Name="Torquent rutrum" Stock="77">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Habitasse etiam" Coleurfaehig="False" Description="Fringilla curae nisl adipiscing" Name="Nisi vestibulum fermentum" RelativeImagePath="Hac donec primis sociosqu" Stock="88"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="88" AmountAdded="73" Category="Vehicula sed taciti odio" Coleurfaehig="False" Description="Maecenas orci quisque imperdiet parturient" Name="Vestibulum volutpat tellus adipiscing" Stock="71">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Aliquam morbi integer vestibulum himenaeos" Coleurfaehig="False" Description="Viverra vestibulum non" Name="Nunc parturient lorem vestibulum ultrices" RelativeImagePath="Sociis per adipiscing hendrerit parturient" Stock="10"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="48" AmountAdded="14" Category="Nulla proin augue porttitor tempor" Coleurfaehig="False" Description="Dolor tristique sem bibendum" Name="Tincidunt aliquam aliquet" Stock="32">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Quam vivamus" Coleurfaehig="False" Description="Accumsan vestibulum" Name="Malesuada praesent penatibus" RelativeImagePath="Vestibulum pede" Stock="95"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+			</Items:CategoryViewModel.Items>
+		</Items:CategoryViewModel>
+		<Items:CategoryViewModel Name="Dictumst fames">
+			<Items:CategoryViewModel.Items>
+				<Items:ItemViewModel Available="True" AmountRemoved="89" AmountAdded="11" Category="Tempus habitant inceptos cubilia" Coleurfaehig="False" Description="Dis vestibulum cras" Name="Sed vulputate" Stock="23">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Nam parturient" Coleurfaehig="False" Description="Ultricies venenatis faucibus commodo" Name="Eleifend sit adipiscing facilisi blandit" RelativeImagePath="Conubia vel quis urna" Stock="57"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="27" AmountAdded="76" Category="Adipiscing amet nascetur" Coleurfaehig="False" Description="Senectus lacus sociosqu egestas" Name="Tortor pharetra placerat pulvinar sagittis" Stock="68">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Nunc lobortis" Coleurfaehig="False" Description="Interdum curabitur ipsum" Name="Duis dapibus felis est vestibulum" RelativeImagePath="Hac justo" Stock="71"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="79" AmountAdded="33" Category="Convallis dignissim nec elementum" Coleurfaehig="False" Description="Non per massa arcu mauris" Name="Adipiscing magna varius aenean" Stock="79">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Ultrices consequat vestibulum" Coleurfaehig="False" Description="Torquent euismod feugiat" Name="Suscipit parturient ante lorem leo" RelativeImagePath="Mus phasellus gravida vestibulum turpis" Stock="63"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="53" AmountAdded="52" Category="Vehicula habitasse vestibulum adipiscing hendrerit" Coleurfaehig="False" Description="Vestibulum enim" Name="Himenaeos parturient" Stock="86">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Laoreet elit" Coleurfaehig="False" Description="Aptent vestibulum iaculis" Name="Diam nullam facilisis parturient fermentum" RelativeImagePath="Auctor eget congue fringilla lacinia" Stock="92"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="34" AmountAdded="25" Category="Nulla potenti accumsan" Coleurfaehig="False" Description="Eros dictumst purus sem" Name="Vestibulum porta bibendum" Stock="83">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Praesent netus parturient lectus" Coleurfaehig="False" Description="Volutpat metus sed morbi dictum" Name="Vestibulum natoque cursus posuere" RelativeImagePath="Erat imperdiet neque maecenas adipiscing" Stock="31"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+			</Items:CategoryViewModel.Items>
+		</Items:CategoryViewModel>
+		<Items:CategoryViewModel Name="Risus velit pretium vitae rhoncus">
+			<Items:CategoryViewModel.Items>
+				<Items:ItemViewModel Available="True" AmountRemoved="40" AmountAdded="26" Category="Nisl facilisi vestibulum litora" Coleurfaehig="False" Description="Adipiscing donec faucibus" Name="Viverra curae aliquam" Stock="98">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Ligula eleifend penatibus dis porttitor" Coleurfaehig="False" Description="Libero malesuada" Name="Sodales sit nibh vel" RelativeImagePath="Nam nisi sed class" Stock="45"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="52" AmountAdded="30" Category="Magnis habitant inceptos tristique" Coleurfaehig="False" Description="Interdum mauris ultricies lobortis" Name="Mus mattis" Stock="59">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Vivamus fusce luctus aliquam nunc" Coleurfaehig="False" Description="Hac integer quisque" Name="Etiam parturient est vestibulum vestibulum" RelativeImagePath="Tincidunt leo adipiscing" Stock="35"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="95" AmountAdded="23" Category="Vel vestibulum" Coleurfaehig="False" Description="Adipiscing curabitur nulla" Name="Pharetra montes nostra vulputate ornare" Stock="99">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Sed quam vestibulum sem sit" Coleurfaehig="False" Description="Orci nec non parturient" Name="Mollis odio nascetur" RelativeImagePath="Lorem pede venenatis per morbi" Stock="55"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="20" AmountAdded="61" Category="Senectus quis" Coleurfaehig="False" Description="Primis parturient vestibulum" Name="Urna commodo" Stock="12">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Vestibulum phasellus sagittis adipiscing fames" Coleurfaehig="False" Description="Aliquet nam" Name="Platea placerat parturient proin" RelativeImagePath="Augue pulvinar dolor vestibulum blandit" Stock="60"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="99" AmountAdded="42" Category="Duis rutrum sapien nunc convallis" Coleurfaehig="False" Description="Amet gravida ante arcu dis" Name="Euismod feugiat" Stock="86">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Magna consequat dapibus egestas" Coleurfaehig="False" Description="Cras ipsum sed justo" Name="Felis conubia cubilia" RelativeImagePath="Lacus lorem" Stock="72"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+			</Items:CategoryViewModel.Items>
+		</Items:CategoryViewModel>
+		<Items:CategoryViewModel Name="Semper est diam eget">
+			<Items:CategoryViewModel.Items>
+				<Items:ItemViewModel Available="True" AmountRemoved="18" AmountAdded="46" Category="Parturient mus metus nec" Coleurfaehig="False" Description="Vestibulum morbi fermentum fringilla" Name="Enim ultrices vestibulum vehicula" Stock="90">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Leo suscipit elit torquent" Coleurfaehig="False" Description="Iaculis facilisis hac vestibulum" Name="Sociosqu massa dignissim sociis elementum" RelativeImagePath="Adipiscing lacinia" Stock="82"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="24" AmountAdded="45" Category="Vestibulum natoque" Coleurfaehig="False" Description="Adipiscing sit parturient" Name="Tempus netus tortor nibh" Stock="18">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Volutpat maecenas tempor neque vestibulum" Coleurfaehig="False" Description="Non eros per laoreet parturient" Name="Taciti tellus erat adipiscing" RelativeImagePath="Sed sem habitasse" Stock="54"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="21" AmountAdded="66" Category="Rhoncus eleifend malesuada" Coleurfaehig="False" Description="Facilisi penatibus" Name="Vestibulum sodales turpis viverra porta" Stock="29">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Sed pretium imperdiet dictumst" Coleurfaehig="False" Description="Vel nam praesent" Name="Vestibulum posuere hendrerit potenti himenaeos" RelativeImagePath="Nulla accumsan bibendum" Stock="29"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="59" AmountAdded="13" Category="Ultricies parturient aenean faucibus integer" Coleurfaehig="False" Description="Vulputate curabitur class vestibulum" Name="Vestibulum vitae habitant venenatis" Stock="79">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Nunc hac" Coleurfaehig="False" Description="Nisi nisl tincidunt est risus" Name="Dis porttitor purus varius adipiscing" RelativeImagePath="Aliquam tristique velit" Stock="17"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="22" AmountAdded="64" Category="Pede blandit commodo leo interdum" Coleurfaehig="False" Description="Nullam quam pharetra mus" Name="Fusce lobortis adipiscing nascetur" Stock="71">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Aliquam aliquet" Coleurfaehig="False" Description="Odio orci phasellus" Name="Quisque vivamus mauris" RelativeImagePath="Consequat curae inceptos donec etiam" Stock="96"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+			</Items:CategoryViewModel.Items>
+		</Items:CategoryViewModel>
+		<Items:CategoryViewModel Name="Parturient convallis">
+			<Items:CategoryViewModel.Items>
+				<Items:ItemViewModel Available="True" AmountRemoved="64" AmountAdded="71" Category="Per cras sed sociosqu suscipit" Coleurfaehig="False" Description="Congue ultrices sit facilisis vel" Name="Duis torquent sem" Stock="33">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Cubilia auctor sagittis non senectus" Coleurfaehig="False" Description="Dignissim urna lorem conubia" Name="Nec aptent placerat quis" RelativeImagePath="Elementum morbi pulvinar" Stock="48"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="89" AmountAdded="29" Category="Vestibulum volutpat fringilla dis habitasse" Coleurfaehig="False" Description="Cursus est elit hac" Name="Arcu diam maecenas hendrerit eget" Stock="37">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Ante vehicula proin fermentum" Coleurfaehig="False" Description="Vestibulum sed nulla" Name="Nunc dapibus nam" RelativeImagePath="Amet egestas" Stock="66"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="45" AmountAdded="81" Category="Gravida augue lectus penatibus" Coleurfaehig="False" Description="Libero tincidunt adipiscing dictumst ligula" Name="Mus porttitor" Stock="42">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Malesuada bibendum" Coleurfaehig="False" Description="Praesent leo" Name="Himenaeos imperdiet euismod" RelativeImagePath="Enim feugiat dictum accumsan" Stock="34"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="55" AmountAdded="52" Category="Vestibulum iaculis" Coleurfaehig="False" Description="Lacinia nam sed fames" Name="Facilisi vel erat" Stock="25">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Luctus magnis" Coleurfaehig="False" Description="Non dolor per" Name="Parturient nec eleifend litora tristique" RelativeImagePath="Sed sem ultricies sit" Stock="51"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="26" AmountAdded="86" Category="Natoque mauris posuere nibh" Coleurfaehig="False" Description="Lorem hac mollis leo magna" Name="Potenti inceptos pretium vulputate" Stock="17">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Laoreet est" Coleurfaehig="False" Description="Habitant felis dis ipsum justo" Name="Eros vestibulum faucibus venenatis" RelativeImagePath="Lacus mattis adipiscing" Stock="62"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+			</Items:CategoryViewModel.Items>
+		</Items:CategoryViewModel>
+		<Items:CategoryViewModel Name="Curabitur interdum lobortis nisi">
+			<Items:CategoryViewModel.Items>
+				<Items:ItemViewModel Available="True" AmountRemoved="35" AmountAdded="33" Category="Primis non aliquam placerat massa" Coleurfaehig="False" Description="Rutrum pulvinar" Name="Integer metus dignissim" Stock="15">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Convallis parturient ornare platea" Coleurfaehig="False" Description="Nostra rhoncus mus nisl" Name="Montes phasellus nascetur" RelativeImagePath="Sodales pharetra nec consequat viverra" Stock="24"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="80" AmountAdded="88" Category="Sociosqu facilisis suscipit fermentum netus" Coleurfaehig="False" Description="Vestibulum torquent fringilla ultrices" Name="Sociis nunc" Stock="12">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Senectus vel semper neque" Coleurfaehig="False" Description="Vivamus aliquam" Name="Quisque sapien sagittis per morbi" RelativeImagePath="Sed sem sit elementum" Stock="42"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="11" AmountAdded="23" Category="Parturient tellus" Coleurfaehig="False" Description="Tempor conubia" Name="Commodo imperdiet dis odio" Stock="12">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Vehicula nulla adipiscing himenaeos" Coleurfaehig="False" Description="Adipiscing aliquet parturient vestibulum" Name="Nam sed vestibulum" RelativeImagePath="Vestibulum taciti habitasse hendrerit blandit" Stock="99"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="58" AmountAdded="61" Category="Pede vestibulum varius" Coleurfaehig="False" Description="Accumsan quis euismod" Name="Adipiscing quam parturient aenean purus" Stock="30">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Vestibulum praesent" Coleurfaehig="False" Description="Tempus tortor leo porta cubilia" Name="Volutpat maecenas est hac orci" RelativeImagePath="Turpis dapibus mus nec egestas" Stock="31"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="26" AmountAdded="52" Category="Risus cras tincidunt aptent" Coleurfaehig="False" Description="Duis vulputate velit per facilisi" Name="Tristique ultricies venenatis eleifend" Stock="81">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Nullam porttitor" Coleurfaehig="False" Description="Mauris urna malesuada adipiscing" Name="Non vestibulum bibendum vestibulum feugiat" RelativeImagePath="Penatibus dictumst parturient" Stock="28"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+			</Items:CategoryViewModel.Items>
+		</Items:CategoryViewModel>
+		<Items:CategoryViewModel Name="Auctor curabitur">
+			<Items:CategoryViewModel.Items>
+				<Items:ItemViewModel Available="True" AmountRemoved="87" AmountAdded="90" Category="Adipiscing lacinia convallis faucibus sed" Coleurfaehig="False" Description="Sem sit vestibulum" Name="Dignissim dictum parturient" Stock="55">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Cursus consequat iaculis" Coleurfaehig="False" Description="Congue vitae" Name="Gravida phasellus" RelativeImagePath="Vestibulum vestibulum" Stock="89"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="91" AmountAdded="69" Category="Vel curae nam donec nascetur" Coleurfaehig="False" Description="Fusce natoque nunc vestibulum" Name="Libero parturient habitasse etiam" Stock="30">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Laoreet fermentum fringilla" Coleurfaehig="False" Description="Adipiscing class inceptos" Name="Elementum habitant vestibulum" RelativeImagePath="Lectus interdum facilisis lobortis" Stock="48"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="88" AmountAdded="97" Category="Morbi luctus placerat" Coleurfaehig="False" Description="Sed pulvinar sagittis senectus ante" Name="Vestibulum adipiscing nulla himenaeos" Stock="58">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Pretium vestibulum" Coleurfaehig="False" Description="Ligula litora lorem vestibulum pharetra" Name="Amet posuere" RelativeImagePath="Potenti adipiscing hendrerit parturient" Stock="37"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="42" AmountAdded="97" Category="Sodales arcu justo hac" Coleurfaehig="False" Description="Sociosqu suscipit eget montes" Name="Mollis diam" Stock="48">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Felis mauris ipsum" Coleurfaehig="False" Description="Augue dolor imperdiet" Name="Proin rhoncus dis est magnis" RelativeImagePath="Fames mattis parturient" Stock="85"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="63" AmountAdded="31" Category="Platea aliquam primis integer" Coleurfaehig="False" Description="Aliquam porttitor aliquet" Name="Quisque vivamus penatibus" Stock="46">
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Malesuada torquent lorem leo" Coleurfaehig="False" Description="Nostra enim ornare" Name="Elit lacus" RelativeImagePath="Vestibulum viverra" Stock="10"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+			</Items:CategoryViewModel.Items>
+		</Items:CategoryViewModel>
+	</Items:ItemListViewModel.Categories>
+	<Items:ItemListViewModel.Items>
+		<Items:ItemViewModel Available="True" AmountRemoved="14" AmountAdded="72" Category="Phasellus etiam adipiscing" Coleurfaehig="False" Description="Praesent vestibulum" Name="Dis fusce parturient duis est" Stock="46">
+			<Items:ItemViewModel.Changes>
+				<Items1:Change Amount="36" Date="09/20/2015 18:47:02" ID="19">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="77" Date="09/20/2015 18:47:02" ID="78">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="16" Date="09/20/2015 18:47:02" ID="41">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="49" Date="09/20/2015 18:47:02" ID="53">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="21" Date="09/20/2015 18:47:02" ID="47">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+			</Items:ItemViewModel.Changes>
+			<Items:ItemViewModel.FilteredChanges>
+				<Items1:Change Amount="23" Date="09/20/2015 18:47:02" ID="94">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="58" Date="09/20/2015 18:47:02" ID="13">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="46" Date="09/20/2015 18:47:02" ID="86">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="35" Date="09/20/2015 18:47:02" ID="80">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="66" Date="09/20/2015 18:47:02" ID="22">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+			</Items:ItemViewModel.FilteredChanges>
+			<Items:ItemViewModel.Model>
+				<Items1:Item Available="True" Category="Quisque curabitur donec" Coleurfaehig="False" Description="Nam class curae" Name="Cras aliquam aenean" RelativeImagePath="Integer vestibulum sed maecenas" Stock="84">
+					<Items1:Item.Changes>
+						<Items1:Change Amount="97" Date="09/20/2015 18:47:02" ID="25"/>
+						<Items1:Change Amount="88" Date="09/20/2015 18:47:02" ID="28"/>
+						<Items1:Change Amount="61" Date="09/20/2015 18:47:02" ID="92"/>
+						<Items1:Change Amount="30" Date="09/20/2015 18:47:02" ID="48"/>
+						<Items1:Change Amount="58" Date="09/20/2015 18:47:02" ID="66"/>
+					</Items1:Item.Changes>
+					<Items1:Item.ID>
+						<System:Guid/>
+					</Items1:Item.ID>
+					<Items1:Item.PriceSelling>
+						<System:Decimal/>
+					</Items1:Item.PriceSelling>
+					<Items1:Item.PriceBuying>
+						<System:Decimal/>
+					</Items1:Item.PriceBuying>
+				</Items1:Item>
+			</Items:ItemViewModel.Model>
+			<Items:ItemViewModel.PriceSelling>
+				<System:Decimal/>
+			</Items:ItemViewModel.PriceSelling>
+			<Items:ItemViewModel.PriceBuying>
+				<System:Decimal/>
+			</Items:ItemViewModel.PriceBuying>
+		</Items:ItemViewModel>
+		<Items:ItemViewModel Available="True" AmountRemoved="93" AmountAdded="53" Category="Leo mauris" Coleurfaehig="False" Description="Amet elementum inceptos proin nec" Name="Mus adipiscing dignissim nullam aptent" Stock="17">
+			<Items:ItemViewModel.Changes>
+				<Items1:Change Amount="64" Date="09/20/2015 18:47:02" ID="12">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="46" Date="09/20/2015 18:47:02" ID="27">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="93" Date="09/20/2015 18:47:02" ID="33">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="51" Date="09/20/2015 18:47:02" ID="14">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="72" Date="09/20/2015 18:47:02" ID="21">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+			</Items:ItemViewModel.Changes>
+			<Items:ItemViewModel.FilteredChanges>
+				<Items1:Change Amount="75" Date="09/20/2015 18:47:02" ID="34">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="12" Date="09/20/2015 18:47:02" ID="89">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="83" Date="09/20/2015 18:47:02" ID="61">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="33" Date="09/20/2015 18:47:02" ID="85">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="52" Date="09/20/2015 18:47:02" ID="34">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+			</Items:ItemViewModel.FilteredChanges>
+			<Items:ItemViewModel.Model>
+				<Items1:Item Available="True" Category="Nulla habitant vestibulum" Coleurfaehig="False" Description="Nunc consequat eleifend" Name="Accumsan bibendum lorem vivamus dictumst" RelativeImagePath="Convallis hac facilisi faucibus morbi" Stock="60">
+					<Items1:Item.Changes>
+						<Items1:Change Amount="80" Date="09/20/2015 18:47:02" ID="16"/>
+						<Items1:Change Amount="41" Date="09/20/2015 18:47:02" ID="43"/>
+						<Items1:Change Amount="85" Date="09/20/2015 18:47:02" ID="59"/>
+						<Items1:Change Amount="32" Date="09/20/2015 18:47:02" ID="96"/>
+						<Items1:Change Amount="83" Date="09/20/2015 18:47:02" ID="42"/>
+					</Items1:Item.Changes>
+					<Items1:Item.ID>
+						<System:Guid/>
+					</Items1:Item.ID>
+					<Items1:Item.PriceSelling>
+						<System:Decimal/>
+					</Items1:Item.PriceSelling>
+					<Items1:Item.PriceBuying>
+						<System:Decimal/>
+					</Items1:Item.PriceBuying>
+				</Items1:Item>
+			</Items:ItemViewModel.Model>
+			<Items:ItemViewModel.PriceSelling>
+				<System:Decimal/>
+			</Items:ItemViewModel.PriceSelling>
+			<Items:ItemViewModel.PriceBuying>
+				<System:Decimal/>
+			</Items:ItemViewModel.PriceBuying>
+		</Items:ItemViewModel>
+		<Items:ItemViewModel Available="True" AmountRemoved="87" AmountAdded="63" Category="Lobortis commodo sed vestibulum" Coleurfaehig="False" Description="Sem pharetra sit dolor" Name="Nascetur congue cursus vestibulum hendrerit" Stock="86">
+			<Items:ItemViewModel.Changes>
+				<Items1:Change Amount="48" Date="09/20/2015 18:47:02" ID="20">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="50" Date="09/20/2015 18:47:02" ID="40">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="87" Date="09/20/2015 18:47:02" ID="23">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="70" Date="09/20/2015 18:47:02" ID="31">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="87" Date="09/20/2015 18:47:02" ID="55">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+			</Items:ItemViewModel.Changes>
+			<Items:ItemViewModel.FilteredChanges>
+				<Items1:Change Amount="66" Date="09/20/2015 18:47:02" ID="19">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="82" Date="09/20/2015 18:47:02" ID="70">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="49" Date="09/20/2015 18:47:02" ID="45">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="59" Date="09/20/2015 18:47:02" ID="57">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="59" Date="09/20/2015 18:47:02" ID="83">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+			</Items:ItemViewModel.FilteredChanges>
+			<Items:ItemViewModel.Model>
+				<Items1:Item Available="True" Category="Interdum arcu per habitasse" Coleurfaehig="False" Description="Parturient aliquet blandit" Name="Auctor ante aliquam" RelativeImagePath="Facilisis augue non fermentum fringilla" Stock="76">
+					<Items1:Item.Changes>
+						<Items1:Change Amount="96" Date="09/20/2015 18:47:02" ID="72"/>
+						<Items1:Change Amount="74" Date="09/20/2015 18:47:02" ID="97"/>
+						<Items1:Change Amount="64" Date="09/20/2015 18:47:02" ID="93"/>
+						<Items1:Change Amount="88" Date="09/20/2015 18:47:02" ID="50"/>
+						<Items1:Change Amount="31" Date="09/20/2015 18:47:02" ID="39"/>
+					</Items1:Item.Changes>
+					<Items1:Item.ID>
+						<System:Guid/>
+					</Items1:Item.ID>
+					<Items1:Item.PriceSelling>
+						<System:Decimal/>
+					</Items1:Item.PriceSelling>
+					<Items1:Item.PriceBuying>
+						<System:Decimal/>
+					</Items1:Item.PriceBuying>
+				</Items1:Item>
+			</Items:ItemViewModel.Model>
+			<Items:ItemViewModel.PriceSelling>
+				<System:Decimal/>
+			</Items:ItemViewModel.PriceSelling>
+			<Items:ItemViewModel.PriceBuying>
+				<System:Decimal/>
+			</Items:ItemViewModel.PriceBuying>
+		</Items:ItemViewModel>
+		<Items:ItemViewModel Available="True" AmountRemoved="19" AmountAdded="19" Category="Felis parturient enim egestas ipsum" Coleurfaehig="False" Description="Porttitor senectus" Name="Imperdiet malesuada euismod penatibus feugiat" Stock="48">
+			<Items:ItemViewModel.Changes>
+				<Items1:Change Amount="50" Date="09/20/2015 18:47:02" ID="64">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="21" Date="09/20/2015 18:47:02" ID="72">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="98" Date="09/20/2015 18:47:02" ID="69">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="63" Date="09/20/2015 18:47:02" ID="12">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="88" Date="09/20/2015 18:47:02" ID="97">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+			</Items:ItemViewModel.Changes>
+			<Items:ItemViewModel.FilteredChanges>
+				<Items1:Change Amount="18" Date="09/20/2015 18:47:02" ID="88">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="81" Date="09/20/2015 18:47:02" ID="33">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="49" Date="09/20/2015 18:47:02" ID="14">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="71" Date="09/20/2015 18:47:02" ID="82">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="60" Date="09/20/2015 18:47:02" ID="12">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+			</Items:ItemViewModel.FilteredChanges>
+			<Items:ItemViewModel.Model>
+				<Items1:Item Available="True" Category="Himenaeos dapibus" Coleurfaehig="False" Description="Vel adipiscing pulvinar fames conubia" Name="Diam eget placerat" RelativeImagePath="Cubilia sagittis elit" Stock="88">
+					<Items1:Item.Changes>
+						<Items1:Change Amount="49" Date="09/20/2015 18:47:02" ID="55"/>
+						<Items1:Change Amount="28" Date="09/20/2015 18:47:02" ID="35"/>
+						<Items1:Change Amount="87" Date="09/20/2015 18:47:02" ID="20"/>
+						<Items1:Change Amount="84" Date="09/20/2015 18:47:02" ID="71"/>
+						<Items1:Change Amount="71" Date="09/20/2015 18:47:02" ID="23"/>
+					</Items1:Item.Changes>
+					<Items1:Item.ID>
+						<System:Guid/>
+					</Items1:Item.ID>
+					<Items1:Item.PriceSelling>
+						<System:Decimal/>
+					</Items1:Item.PriceSelling>
+					<Items1:Item.PriceBuying>
+						<System:Decimal/>
+					</Items1:Item.PriceBuying>
+				</Items1:Item>
+			</Items:ItemViewModel.Model>
+			<Items:ItemViewModel.PriceSelling>
+				<System:Decimal/>
+			</Items:ItemViewModel.PriceSelling>
+			<Items:ItemViewModel.PriceBuying>
+				<System:Decimal/>
+			</Items:ItemViewModel.PriceBuying>
+		</Items:ItemViewModel>
+		<Items:ItemViewModel Available="True" AmountRemoved="40" AmountAdded="46" Category="Tristique sed ultricies venenatis" Coleurfaehig="False" Description="Vulputate parturient eros est nibh" Name="Gravida torquent erat dis" Stock="70">
+			<Items:ItemViewModel.Changes>
+				<Items1:Change Amount="30" Date="09/20/2015 18:47:02" ID="11">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="34" Date="09/20/2015 18:47:02" ID="20">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="59" Date="09/20/2015 18:47:02" ID="79">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="30" Date="09/20/2015 18:47:02" ID="57">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="10" Date="09/20/2015 18:47:02" ID="62">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+			</Items:ItemViewModel.Changes>
+			<Items:ItemViewModel.FilteredChanges>
+				<Items1:Change Amount="20" Date="09/20/2015 18:47:02" ID="46">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="15" Date="09/20/2015 18:47:02" ID="87">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="45" Date="09/20/2015 18:47:02" ID="66">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="10" Date="09/20/2015 18:47:02" ID="41">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="13" Date="09/20/2015 18:47:02" ID="46">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+			</Items:ItemViewModel.FilteredChanges>
+			<Items:ItemViewModel.Model>
+				<Items1:Item Available="True" Category="Adipiscing dictum lectus nam" Coleurfaehig="False" Description="Vestibulum justo" Name="Sociosqu suscipit" RelativeImagePath="Tincidunt vestibulum" Stock="60">
+					<Items1:Item.Changes>
+						<Items1:Change Amount="10" Date="09/20/2015 18:47:02" ID="84"/>
+						<Items1:Change Amount="68" Date="09/20/2015 18:47:02" ID="88"/>
+						<Items1:Change Amount="83" Date="09/20/2015 18:47:02" ID="21"/>
+						<Items1:Change Amount="13" Date="09/20/2015 18:47:02" ID="83"/>
+						<Items1:Change Amount="25" Date="09/20/2015 18:47:02" ID="49"/>
+					</Items1:Item.Changes>
+					<Items1:Item.ID>
+						<System:Guid/>
+					</Items1:Item.ID>
+					<Items1:Item.PriceSelling>
+						<System:Decimal/>
+					</Items1:Item.PriceSelling>
+					<Items1:Item.PriceBuying>
+						<System:Decimal/>
+					</Items1:Item.PriceBuying>
+				</Items1:Item>
+			</Items:ItemViewModel.Model>
+			<Items:ItemViewModel.PriceSelling>
+				<System:Decimal/>
+			</Items:ItemViewModel.PriceSelling>
+			<Items:ItemViewModel.PriceBuying>
+				<System:Decimal/>
+			</Items:ItemViewModel.PriceBuying>
+		</Items:ItemViewModel>
+		<Items:ItemViewModel Available="True" AmountRemoved="69" AmountAdded="48" Category="Hac magna" Coleurfaehig="False" Description="Metus odio" Name="Massa praesent curabitur nunc" Stock="27">
+			<Items:ItemViewModel.Changes>
+				<Items1:Change Amount="12" Date="09/20/2015 18:47:02" ID="17">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="80" Date="09/20/2015 18:47:02" ID="71">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="33" Date="09/20/2015 18:47:02" ID="69">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="81" Date="09/20/2015 18:47:02" ID="23">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="60" Date="09/20/2015 18:47:02" ID="98">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+			</Items:ItemViewModel.Changes>
+			<Items:ItemViewModel.FilteredChanges>
+				<Items1:Change Amount="58" Date="09/20/2015 18:47:02" ID="51">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="77" Date="09/20/2015 18:47:02" ID="33">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="68" Date="09/20/2015 18:47:02" ID="27">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="25" Date="09/20/2015 18:47:02" ID="17">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="97" Date="09/20/2015 18:47:02" ID="34">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+			</Items:ItemViewModel.FilteredChanges>
+			<Items:ItemViewModel.Model>
+				<Items1:Item Available="True" Category="Maecenas vestibulum lorem nisl" Coleurfaehig="False" Description="Nisi vehicula vestibulum lacus" Name="Libero ultrices" RelativeImagePath="Volutpat ligula" Stock="89">
+					<Items1:Item.Changes>
+						<Items1:Change Amount="20" Date="09/20/2015 18:47:02" ID="87"/>
+						<Items1:Change Amount="39" Date="09/20/2015 18:47:02" ID="81"/>
+						<Items1:Change Amount="80" Date="09/20/2015 18:47:02" ID="91"/>
+						<Items1:Change Amount="84" Date="09/20/2015 18:47:02" ID="23"/>
+						<Items1:Change Amount="93" Date="09/20/2015 18:47:02" ID="70"/>
+					</Items1:Item.Changes>
+					<Items1:Item.ID>
+						<System:Guid/>
+					</Items1:Item.ID>
+					<Items1:Item.PriceSelling>
+						<System:Decimal/>
+					</Items1:Item.PriceSelling>
+					<Items1:Item.PriceBuying>
+						<System:Decimal/>
+					</Items1:Item.PriceBuying>
+				</Items1:Item>
+			</Items:ItemViewModel.Model>
+			<Items:ItemViewModel.PriceSelling>
+				<System:Decimal/>
+			</Items:ItemViewModel.PriceSelling>
+			<Items:ItemViewModel.PriceBuying>
+				<System:Decimal/>
+			</Items:ItemViewModel.PriceBuying>
+		</Items:ItemViewModel>
+		<Items:ItemViewModel Available="True" AmountRemoved="51" AmountAdded="48" Category="Pretium neque mus" Coleurfaehig="False" Description="Nec rhoncus facilisi" Name="Quis dictumst eleifend urna" Stock="29">
+			<Items:ItemViewModel.Changes>
+				<Items1:Change Amount="84" Date="09/20/2015 18:47:02" ID="12">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="85" Date="09/20/2015 18:47:02" ID="44">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="17" Date="09/20/2015 18:47:02" ID="75">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="64" Date="09/20/2015 18:47:02" ID="86">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="39" Date="09/20/2015 18:47:02" ID="14">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+			</Items:ItemViewModel.Changes>
+			<Items:ItemViewModel.FilteredChanges>
+				<Items1:Change Amount="80" Date="09/20/2015 18:47:02" ID="40">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="13" Date="09/20/2015 18:47:02" ID="67">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="26" Date="09/20/2015 18:47:02" ID="96">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="78" Date="09/20/2015 18:47:02" ID="62">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="19" Date="09/20/2015 18:47:02" ID="93">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+			</Items:ItemViewModel.FilteredChanges>
+			<Items:ItemViewModel.Model>
+				<Items1:Item Available="True" Category="Lacinia laoreet natoque posuere potenti" Coleurfaehig="False" Description="Morbi leo litora" Name="Orci pede quam phasellus iaculis" RelativeImagePath="Accumsan bibendum adipiscing" Stock="40">
+					<Items1:Item.Changes>
+						<Items1:Change Amount="23" Date="09/20/2015 18:47:02" ID="32"/>
+						<Items1:Change Amount="29" Date="09/20/2015 18:47:02" ID="97"/>
+						<Items1:Change Amount="50" Date="09/20/2015 18:47:02" ID="66"/>
+						<Items1:Change Amount="25" Date="09/20/2015 18:47:02" ID="48"/>
+						<Items1:Change Amount="46" Date="09/20/2015 18:47:02" ID="76"/>
+					</Items1:Item.Changes>
+					<Items1:Item.ID>
+						<System:Guid/>
+					</Items1:Item.ID>
+					<Items1:Item.PriceSelling>
+						<System:Decimal/>
+					</Items1:Item.PriceSelling>
+					<Items1:Item.PriceBuying>
+						<System:Decimal/>
+					</Items1:Item.PriceBuying>
+				</Items1:Item>
+			</Items:ItemViewModel.Model>
+			<Items:ItemViewModel.PriceSelling>
+				<System:Decimal/>
+			</Items:ItemViewModel.PriceSelling>
+			<Items:ItemViewModel.PriceBuying>
+				<System:Decimal/>
+			</Items:ItemViewModel.PriceBuying>
+		</Items:ItemViewModel>
+		<Items:ItemViewModel Available="True" AmountRemoved="72" AmountAdded="83" Category="Nulla convallis adipiscing per" Coleurfaehig="False" Description="Interdum elementum nunc mollis amet" Name="Dignissim inceptos viverra" Stock="32">
+			<Items:ItemViewModel.Changes>
+				<Items1:Change Amount="48" Date="09/20/2015 18:47:02" ID="55">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="41" Date="09/20/2015 18:47:02" ID="42">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="10" Date="09/20/2015 18:47:02" ID="93">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="70" Date="09/20/2015 18:47:02" ID="38">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="11" Date="09/20/2015 18:47:02" ID="92">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+			</Items:ItemViewModel.Changes>
+			<Items:ItemViewModel.FilteredChanges>
+				<Items1:Change Amount="48" Date="09/20/2015 18:47:02" ID="67">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="46" Date="09/20/2015 18:47:02" ID="99">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="98" Date="09/20/2015 18:47:02" ID="51">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="67" Date="09/20/2015 18:47:02" ID="23">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="93" Date="09/20/2015 18:47:02" ID="36">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+			</Items:ItemViewModel.FilteredChanges>
+			<Items:ItemViewModel.Model>
+				<Items1:Item Available="True" Category="Sodales mauris cras habitant duis" Coleurfaehig="False" Description="Non faucibus parturient" Name="Luctus magnis consequat mattis" RelativeImagePath="Vestibulum vestibulum netus" Stock="71">
+					<Items1:Item.Changes>
+						<Items1:Change Amount="66" Date="09/20/2015 18:47:02" ID="48"/>
+						<Items1:Change Amount="13" Date="09/20/2015 18:47:02" ID="72"/>
+						<Items1:Change Amount="41" Date="09/20/2015 18:47:02" ID="57"/>
+						<Items1:Change Amount="45" Date="09/20/2015 18:47:02" ID="60"/>
+						<Items1:Change Amount="33" Date="09/20/2015 18:47:02" ID="72"/>
+					</Items1:Item.Changes>
+					<Items1:Item.ID>
+						<System:Guid/>
+					</Items1:Item.ID>
+					<Items1:Item.PriceSelling>
+						<System:Decimal/>
+					</Items1:Item.PriceSelling>
+					<Items1:Item.PriceBuying>
+						<System:Decimal/>
+					</Items1:Item.PriceBuying>
+				</Items1:Item>
+			</Items:ItemViewModel.Model>
+			<Items:ItemViewModel.PriceSelling>
+				<System:Decimal/>
+			</Items:ItemViewModel.PriceSelling>
+			<Items:ItemViewModel.PriceBuying>
+				<System:Decimal/>
+			</Items:ItemViewModel.PriceBuying>
+		</Items:ItemViewModel>
+		<Items:ItemViewModel Available="True" AmountRemoved="94" AmountAdded="64" Category="Quisque vivamus diam vestibulum eget" Coleurfaehig="False" Description="Enim sem fringilla sit parturient" Name="Elit nostra vestibulum ornare adipiscing" Stock="18">
+			<Items:ItemViewModel.Changes>
+				<Items1:Change Amount="28" Date="09/20/2015 18:47:02" ID="35">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="65" Date="09/20/2015 18:47:02" ID="70">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="62" Date="09/20/2015 18:47:02" ID="33">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="32" Date="09/20/2015 18:47:02" ID="50">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="70" Date="09/20/2015 18:47:02" ID="26">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+			</Items:ItemViewModel.Changes>
+			<Items:ItemViewModel.FilteredChanges>
+				<Items1:Change Amount="64" Date="09/20/2015 18:47:02" ID="14">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="95" Date="09/20/2015 18:47:02" ID="57">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="46" Date="09/20/2015 18:47:02" ID="18">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="65" Date="09/20/2015 18:47:02" ID="58">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="62" Date="09/20/2015 18:47:02" ID="95">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+			</Items:ItemViewModel.FilteredChanges>
+			<Items:ItemViewModel.Model>
+				<Items1:Item Available="True" Category="Purus nascetur arcu pharetra" Coleurfaehig="False" Description="Sed porta facilisis" Name="Ante montes aliquam parturient" RelativeImagePath="Fermentum lobortis integer" Stock="22">
+					<Items1:Item.Changes>
+						<Items1:Change Amount="28" Date="09/20/2015 18:47:02" ID="95"/>
+						<Items1:Change Amount="14" Date="09/20/2015 18:47:02" ID="13"/>
+						<Items1:Change Amount="32" Date="09/20/2015 18:47:02" ID="39"/>
+						<Items1:Change Amount="94" Date="09/20/2015 18:47:02" ID="54"/>
+						<Items1:Change Amount="28" Date="09/20/2015 18:47:02" ID="76"/>
+					</Items1:Item.Changes>
+					<Items1:Item.ID>
+						<System:Guid/>
+					</Items1:Item.ID>
+					<Items1:Item.PriceSelling>
+						<System:Decimal/>
+					</Items1:Item.PriceSelling>
+					<Items1:Item.PriceBuying>
+						<System:Decimal/>
+					</Items1:Item.PriceBuying>
+				</Items1:Item>
+			</Items:ItemViewModel.Model>
+			<Items:ItemViewModel.PriceSelling>
+				<System:Decimal/>
+			</Items:ItemViewModel.PriceSelling>
+			<Items:ItemViewModel.PriceBuying>
+				<System:Decimal/>
+			</Items:ItemViewModel.PriceBuying>
+		</Items:ItemViewModel>
+		<Items:ItemViewModel Available="True" AmountRemoved="34" AmountAdded="40" Category="Platea class" Coleurfaehig="False" Description="Hendrerit adipiscing curae" Name="Vestibulum nam sed vestibulum cubilia" Stock="59">
+			<Items:ItemViewModel.Changes>
+				<Items1:Change Amount="80" Date="09/20/2015 18:47:02" ID="23">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="86" Date="09/20/2015 18:47:02" ID="75">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="61" Date="09/20/2015 18:47:02" ID="75">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="13" Date="09/20/2015 18:47:02" ID="27">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="52" Date="09/20/2015 18:47:02" ID="76">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+			</Items:ItemViewModel.Changes>
+			<Items:ItemViewModel.FilteredChanges>
+				<Items1:Change Amount="49" Date="09/20/2015 18:47:02" ID="98">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="37" Date="09/20/2015 18:47:02" ID="81">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="57" Date="09/20/2015 18:47:02" ID="45">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="62" Date="09/20/2015 18:47:02" ID="27">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="72" Date="09/20/2015 18:47:02" ID="22">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+			</Items:ItemViewModel.FilteredChanges>
+			<Items:ItemViewModel.Model>
+				<Items1:Item Available="True" Category="Vitae habitasse conubia sagittis" Coleurfaehig="False" Description="Erat aliquam aliquet pulvinar blandit" Name="Placerat vel" RelativeImagePath="Risus velit commodo eros" Stock="35">
+					<Items1:Item.Changes>
+						<Items1:Change Amount="22" Date="09/20/2015 18:47:02" ID="46"/>
+						<Items1:Change Amount="95" Date="09/20/2015 18:47:02" ID="90"/>
+						<Items1:Change Amount="47" Date="09/20/2015 18:47:02" ID="99"/>
+						<Items1:Change Amount="16" Date="09/20/2015 18:47:02" ID="48"/>
+						<Items1:Change Amount="54" Date="09/20/2015 18:47:02" ID="17"/>
+					</Items1:Item.Changes>
+					<Items1:Item.ID>
+						<System:Guid/>
+					</Items1:Item.ID>
+					<Items1:Item.PriceSelling>
+						<System:Decimal/>
+					</Items1:Item.PriceSelling>
+					<Items1:Item.PriceBuying>
+						<System:Decimal/>
+					</Items1:Item.PriceBuying>
+				</Items1:Item>
+			</Items:ItemViewModel.Model>
+			<Items:ItemViewModel.PriceSelling>
+				<System:Decimal/>
+			</Items:ItemViewModel.PriceSelling>
+			<Items:ItemViewModel.PriceBuying>
+				<System:Decimal/>
+			</Items:ItemViewModel.PriceBuying>
+		</Items:ItemViewModel>
+	</Items:ItemListViewModel.Items>
+	<Items:ItemListViewModel.SelectedItem>
+		<Items:ItemViewModel Available="True" AmountRemoved="44" AmountAdded="37" Category="Taciti parturient non egestas per" Coleurfaehig="False" Description="Tristique euismod vestibulum" Name="Massa eros volutpat" Stock="96">
+			<Items:ItemViewModel.Changes>
+				<Items1:Change Amount="51" Date="09/20/2015 18:47:02" ID="53">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="34" Date="09/20/2015 18:47:02" ID="15">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="83" Date="09/20/2015 18:47:02" ID="25">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="28" Date="09/20/2015 18:47:02" ID="32">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="82" Date="09/20/2015 18:47:02" ID="58">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="88" Date="09/20/2015 18:47:02" ID="59">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="50" Date="09/20/2015 18:47:02" ID="77">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="67" Date="09/20/2015 18:47:02" ID="65">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="68" Date="09/20/2015 18:47:02" ID="68">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="49" Date="09/20/2015 18:47:02" ID="16">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+			</Items:ItemViewModel.Changes>
+			<Items:ItemViewModel.FilteredChanges>
+				<Items1:Change Amount="26" Date="09/20/2015 18:47:02" ID="31">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="25" Date="09/20/2015 18:47:02" ID="32">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="39" Date="09/20/2015 18:47:02" ID="21">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="63" Date="09/20/2015 18:47:02" ID="26">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="19" Date="09/20/2015 18:47:02" ID="58">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="52" Date="09/20/2015 18:47:02" ID="31">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="49" Date="09/20/2015 18:47:02" ID="95">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="93" Date="09/20/2015 18:47:02" ID="27">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="40" Date="09/20/2015 18:47:02" ID="64">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="45" Date="09/20/2015 18:47:02" ID="97">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+			</Items:ItemViewModel.FilteredChanges>
+			<Items:ItemViewModel.Model>
+				<Items1:Item Available="True" Category="Mus adipiscing nec magna" Coleurfaehig="False" Description="Tincidunt cubilia erat sapien" Name="Rutrum blandit commodo ultrices conubia" RelativeImagePath="Semper dapibus sociis vehicula vestibulum" Stock="49">
+					<Items1:Item.Changes>
+						<Items1:Change Amount="90" Date="09/20/2015 18:47:02" ID="48"/>
+						<Items1:Change Amount="28" Date="09/20/2015 18:47:02" ID="32"/>
+						<Items1:Change Amount="24" Date="09/20/2015 18:47:02" ID="80"/>
+						<Items1:Change Amount="64" Date="09/20/2015 18:47:02" ID="30"/>
+						<Items1:Change Amount="36" Date="09/20/2015 18:47:02" ID="93"/>
+						<Items1:Change Amount="65" Date="09/20/2015 18:47:02" ID="80"/>
+						<Items1:Change Amount="36" Date="09/20/2015 18:47:02" ID="69"/>
+						<Items1:Change Amount="25" Date="09/20/2015 18:47:02" ID="68"/>
+						<Items1:Change Amount="87" Date="09/20/2015 18:47:02" ID="46"/>
+						<Items1:Change Amount="42" Date="09/20/2015 18:47:02" ID="22"/>
+					</Items1:Item.Changes>
+					<Items1:Item.ID>
+						<System:Guid/>
+					</Items1:Item.ID>
+					<Items1:Item.PriceSelling>
+						<System:Decimal/>
+					</Items1:Item.PriceSelling>
+					<Items1:Item.PriceBuying>
+						<System:Decimal/>
+					</Items1:Item.PriceBuying>
+				</Items1:Item>
+			</Items:ItemViewModel.Model>
+			<Items:ItemViewModel.PriceSelling>
+				<System:Decimal/>
+			</Items:ItemViewModel.PriceSelling>
+			<Items:ItemViewModel.PriceBuying>
+				<System:Decimal/>
+			</Items:ItemViewModel.PriceBuying>
+		</Items:ItemViewModel>
+	</Items:ItemListViewModel.SelectedItem>
+	<Items:ItemListViewModel.SelectedCategory>
+		<Items:CategoryViewModel Name="Maecenas vestibulum sed">
+			<Items:CategoryViewModel.Items>
+				<Items:ItemViewModel Available="True" AmountRemoved="18" AmountAdded="69" Category="Gravida tempus accumsan" Coleurfaehig="False" Description="Iaculis consequat varius" Name="Tortor turpis nisi phasellus" Stock="54">
+					<Items:ItemViewModel.Changes>
+						<Items1:Change Amount="77" Date="09/20/2015 18:47:02" ID="31"/>
+						<Items1:Change Amount="86" Date="09/20/2015 18:47:02" ID="91"/>
+						<Items1:Change Amount="57" Date="09/20/2015 18:47:02" ID="12"/>
+						<Items1:Change Amount="28" Date="09/20/2015 18:47:02" ID="78"/>
+						<Items1:Change Amount="93" Date="09/20/2015 18:47:02" ID="16"/>
+					</Items:ItemViewModel.Changes>
+					<Items:ItemViewModel.FilteredChanges>
+						<Items1:Change Amount="88" Date="09/20/2015 18:47:02" ID="29"/>
+						<Items1:Change Amount="10" Date="09/20/2015 18:47:02" ID="11"/>
+						<Items1:Change Amount="92" Date="09/20/2015 18:47:02" ID="72"/>
+						<Items1:Change Amount="94" Date="09/20/2015 18:47:02" ID="11"/>
+						<Items1:Change Amount="50" Date="09/20/2015 18:47:02" ID="33"/>
+					</Items:ItemViewModel.FilteredChanges>
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Vestibulum tempor sit vestibulum" Coleurfaehig="False" Description="Adipiscing feugiat" Name="Tellus ultricies venenatis vulputate" RelativeImagePath="Curabitur sem parturient praesent nibh" Stock="44"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="55" AmountAdded="95" Category="Metus parturient" Coleurfaehig="False" Description="Est neque nullam odio" Name="Laoreet natoque morbi" Stock="34">
+					<Items:ItemViewModel.Changes>
+						<Items1:Change Amount="26" Date="09/20/2015 18:47:02" ID="55"/>
+						<Items1:Change Amount="74" Date="09/20/2015 18:47:02" ID="50"/>
+						<Items1:Change Amount="75" Date="09/20/2015 18:47:02" ID="14"/>
+						<Items1:Change Amount="92" Date="09/20/2015 18:47:02" ID="51"/>
+						<Items1:Change Amount="77" Date="09/20/2015 18:47:02" ID="99"/>
+					</Items:ItemViewModel.Changes>
+					<Items:ItemViewModel.FilteredChanges>
+						<Items1:Change Amount="35" Date="09/20/2015 18:47:02" ID="33"/>
+						<Items1:Change Amount="69" Date="09/20/2015 18:47:02" ID="37"/>
+						<Items1:Change Amount="40" Date="09/20/2015 18:47:02" ID="85"/>
+						<Items1:Change Amount="38" Date="09/20/2015 18:47:02" ID="13"/>
+						<Items1:Change Amount="86" Date="09/20/2015 18:47:02" ID="83"/>
+					</Items:ItemViewModel.FilteredChanges>
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Sed dignissim dis" Coleurfaehig="False" Description="Nam nunc convallis" Name="Nisl lacinia adipiscing vel" RelativeImagePath="Aenean mauris" Stock="66"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="85" AmountAdded="40" Category="Fermentum mus adipiscing aptent auctor" Coleurfaehig="False" Description="Non per cursus quis dictumst" Name="Congue nec" Stock="38">
+					<Items:ItemViewModel.Changes>
+						<Items1:Change Amount="63" Date="09/20/2015 18:47:02" ID="92"/>
+						<Items1:Change Amount="14" Date="09/20/2015 18:47:02" ID="68"/>
+						<Items1:Change Amount="49" Date="09/20/2015 18:47:02" ID="43"/>
+						<Items1:Change Amount="80" Date="09/20/2015 18:47:02" ID="30"/>
+						<Items1:Change Amount="67" Date="09/20/2015 18:47:02" ID="20"/>
+					</Items:ItemViewModel.Changes>
+					<Items:ItemViewModel.FilteredChanges>
+						<Items1:Change Amount="13" Date="09/20/2015 18:47:02" ID="16"/>
+						<Items1:Change Amount="40" Date="09/20/2015 18:47:02" ID="23"/>
+						<Items1:Change Amount="76" Date="09/20/2015 18:47:02" ID="51"/>
+						<Items1:Change Amount="52" Date="09/20/2015 18:47:02" ID="19"/>
+						<Items1:Change Amount="56" Date="09/20/2015 18:47:02" ID="93"/>
+					</Items:ItemViewModel.FilteredChanges>
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Porta bibendum leo" Coleurfaehig="False" Description="Hac netus quam posuere vestibulum" Name="Elementum orci facilisis pede" RelativeImagePath="Potenti nulla vestibulum" Stock="29"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="50" AmountAdded="82" Category="Vestibulum rhoncus" Coleurfaehig="False" Description="Sem sit velit" Name="Libero ligula" Stock="47">
+					<Items:ItemViewModel.Changes>
+						<Items1:Change Amount="42" Date="09/20/2015 18:47:02" ID="65"/>
+						<Items1:Change Amount="92" Date="09/20/2015 18:47:02" ID="19"/>
+						<Items1:Change Amount="38" Date="09/20/2015 18:47:02" ID="46"/>
+						<Items1:Change Amount="69" Date="09/20/2015 18:47:02" ID="50"/>
+						<Items1:Change Amount="22" Date="09/20/2015 18:47:02" ID="97"/>
+					</Items:ItemViewModel.Changes>
+					<Items:ItemViewModel.FilteredChanges>
+						<Items1:Change Amount="46" Date="09/20/2015 18:47:02" ID="16"/>
+						<Items1:Change Amount="59" Date="09/20/2015 18:47:02" ID="58"/>
+						<Items1:Change Amount="24" Date="09/20/2015 18:47:02" ID="56"/>
+						<Items1:Change Amount="66" Date="09/20/2015 18:47:02" ID="44"/>
+						<Items1:Change Amount="51" Date="09/20/2015 18:47:02" ID="94"/>
+					</Items:ItemViewModel.FilteredChanges>
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Sed vestibulum pretium" Coleurfaehig="False" Description="Hendrerit urna dictum purus lectus" Name="Fringilla habitasse parturient" RelativeImagePath="Risus cras himenaeos" Stock="76"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="10" AmountAdded="49" Category="Interdum vel malesuada nam" Coleurfaehig="False" Description="Lobortis nascetur curae penatibus aliquam" Name="Viverra vestibulum class" Stock="82">
+					<Items:ItemViewModel.Changes>
+						<Items1:Change Amount="72" Date="09/20/2015 18:47:02" ID="26"/>
+						<Items1:Change Amount="16" Date="09/20/2015 18:47:02" ID="86"/>
+						<Items1:Change Amount="77" Date="09/20/2015 18:47:02" ID="77"/>
+						<Items1:Change Amount="45" Date="09/20/2015 18:47:02" ID="45"/>
+						<Items1:Change Amount="31" Date="09/20/2015 18:47:02" ID="87"/>
+					</Items:ItemViewModel.Changes>
+					<Items:ItemViewModel.FilteredChanges>
+						<Items1:Change Amount="37" Date="09/20/2015 18:47:02" ID="40"/>
+						<Items1:Change Amount="81" Date="09/20/2015 18:47:02" ID="44"/>
+						<Items1:Change Amount="71" Date="09/20/2015 18:47:02" ID="26"/>
+						<Items1:Change Amount="94" Date="09/20/2015 18:47:02" ID="88"/>
+						<Items1:Change Amount="73" Date="09/20/2015 18:47:02" ID="31"/>
+					</Items:ItemViewModel.FilteredChanges>
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Inceptos vitae" Coleurfaehig="False" Description="Adipiscing parturient facilisi imperdiet" Name="Sodales eleifend duis nunc" RelativeImagePath="Amet faucibus habitant vestibulum" Stock="62"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="74" AmountAdded="76" Category="Arcu commodo dis diam eget" Coleurfaehig="False" Description="Cubilia est adipiscing tincidunt hac" Name="Elit enim conubia pulvinar mattis" Stock="14">
+					<Items:ItemViewModel.Changes>
+						<Items1:Change Amount="59" Date="09/20/2015 18:47:02" ID="28"/>
+						<Items1:Change Amount="78" Date="09/20/2015 18:47:02" ID="95"/>
+						<Items1:Change Amount="19" Date="09/20/2015 18:47:02" ID="21"/>
+						<Items1:Change Amount="24" Date="09/20/2015 18:47:02" ID="52"/>
+						<Items1:Change Amount="36" Date="09/20/2015 18:47:02" ID="80"/>
+					</Items:ItemViewModel.Changes>
+					<Items:ItemViewModel.FilteredChanges>
+						<Items1:Change Amount="44" Date="09/20/2015 18:47:02" ID="51"/>
+						<Items1:Change Amount="30" Date="09/20/2015 18:47:02" ID="91"/>
+						<Items1:Change Amount="46" Date="09/20/2015 18:47:02" ID="76"/>
+						<Items1:Change Amount="85" Date="09/20/2015 18:47:02" ID="62"/>
+						<Items1:Change Amount="58" Date="09/20/2015 18:47:02" ID="97"/>
+					</Items:ItemViewModel.FilteredChanges>
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Etiam magnis aliquet blandit" Coleurfaehig="False" Description="Vivamus aliquam litora sed" Name="Porttitor integer quisque" RelativeImagePath="Luctus donec ante pharetra placerat" Stock="33"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="27" AmountAdded="88" Category="Egestas augue" Coleurfaehig="False" Description="Mauris sagittis euismod nisl dolor" Name="Nibh ultricies nisi" Stock="28">
+					<Items:ItemViewModel.Changes>
+						<Items1:Change Amount="62" Date="09/20/2015 18:47:02" ID="80"/>
+						<Items1:Change Amount="33" Date="09/20/2015 18:47:02" ID="50"/>
+						<Items1:Change Amount="67" Date="09/20/2015 18:47:02" ID="62"/>
+						<Items1:Change Amount="53" Date="09/20/2015 18:47:02" ID="61"/>
+						<Items1:Change Amount="82" Date="09/20/2015 18:47:02" ID="48"/>
+					</Items:ItemViewModel.Changes>
+					<Items:ItemViewModel.FilteredChanges>
+						<Items1:Change Amount="66" Date="09/20/2015 18:47:02" ID="81"/>
+						<Items1:Change Amount="78" Date="09/20/2015 18:47:02" ID="34"/>
+						<Items1:Change Amount="34" Date="09/20/2015 18:47:02" ID="78"/>
+						<Items1:Change Amount="14" Date="09/20/2015 18:47:02" ID="30"/>
+						<Items1:Change Amount="69" Date="09/20/2015 18:47:02" ID="61"/>
+					</Items:ItemViewModel.FilteredChanges>
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Proin mus" Coleurfaehig="False" Description="Eros morbi dapibus" Name="Parturient fusce lorem erat" RelativeImagePath="Leo nulla tristique" Stock="28"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="58" AmountAdded="98" Category="Orci platea" Coleurfaehig="False" Description="Sociosqu rutrum" Name="Felis gravida primis" Stock="82">
+					<Items:ItemViewModel.Changes>
+						<Items1:Change Amount="68" Date="09/20/2015 18:47:02" ID="79"/>
+						<Items1:Change Amount="84" Date="09/20/2015 18:47:02" ID="28"/>
+						<Items1:Change Amount="48" Date="09/20/2015 18:47:02" ID="20"/>
+						<Items1:Change Amount="69" Date="09/20/2015 18:47:02" ID="16"/>
+						<Items1:Change Amount="77" Date="09/20/2015 18:47:02" ID="40"/>
+					</Items:ItemViewModel.Changes>
+					<Items:ItemViewModel.FilteredChanges>
+						<Items1:Change Amount="29" Date="09/20/2015 18:47:02" ID="68"/>
+						<Items1:Change Amount="22" Date="09/20/2015 18:47:02" ID="61"/>
+						<Items1:Change Amount="33" Date="09/20/2015 18:47:02" ID="75"/>
+						<Items1:Change Amount="69" Date="09/20/2015 18:47:02" ID="35"/>
+						<Items1:Change Amount="74" Date="09/20/2015 18:47:02" ID="55"/>
+					</Items:ItemViewModel.FilteredChanges>
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Odio vulputate ornare vestibulum" Coleurfaehig="False" Description="Vestibulum nunc venenatis" Name="Senectus fames feugiat mollis nec" RelativeImagePath="Non montes nostra" Stock="40"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="94" AmountAdded="53" Category="Posuere per potenti" Coleurfaehig="False" Description="Ultrices curabitur sapien vehicula phasellus" Name="Torquent urna" Stock="20">
+					<Items:ItemViewModel.Changes>
+						<Items1:Change Amount="84" Date="09/20/2015 18:47:02" ID="22"/>
+						<Items1:Change Amount="73" Date="09/20/2015 18:47:02" ID="16"/>
+						<Items1:Change Amount="24" Date="09/20/2015 18:47:02" ID="37"/>
+						<Items1:Change Amount="20" Date="09/20/2015 18:47:02" ID="66"/>
+						<Items1:Change Amount="68" Date="09/20/2015 18:47:02" ID="32"/>
+					</Items:ItemViewModel.Changes>
+					<Items:ItemViewModel.FilteredChanges>
+						<Items1:Change Amount="77" Date="09/20/2015 18:47:02" ID="49"/>
+						<Items1:Change Amount="10" Date="09/20/2015 18:47:02" ID="42"/>
+						<Items1:Change Amount="28" Date="09/20/2015 18:47:02" ID="75"/>
+						<Items1:Change Amount="13" Date="09/20/2015 18:47:02" ID="87"/>
+						<Items1:Change Amount="75" Date="09/20/2015 18:47:02" ID="68"/>
+					</Items:ItemViewModel.FilteredChanges>
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Justo parturient natoque" Coleurfaehig="False" Description="Iaculis quam lacinia suscipit" Name="Adipiscing pede" RelativeImagePath="Ipsum laoreet quis" Stock="48"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+				<Items:ItemViewModel Available="True" AmountRemoved="36" AmountAdded="71" Category="Elementum tellus viverra aliquam tempor" Coleurfaehig="False" Description="Adipiscing maecenas praesent" Name="Cras sem duis nunc facilisis" Stock="59">
+					<Items:ItemViewModel.Changes>
+						<Items1:Change Amount="18" Date="09/20/2015 18:47:02" ID="73"/>
+						<Items1:Change Amount="38" Date="09/20/2015 18:47:02" ID="38"/>
+						<Items1:Change Amount="70" Date="09/20/2015 18:47:02" ID="44"/>
+						<Items1:Change Amount="14" Date="09/20/2015 18:47:02" ID="36"/>
+						<Items1:Change Amount="18" Date="09/20/2015 18:47:02" ID="29"/>
+					</Items:ItemViewModel.Changes>
+					<Items:ItemViewModel.FilteredChanges>
+						<Items1:Change Amount="43" Date="09/20/2015 18:47:02" ID="41"/>
+						<Items1:Change Amount="25" Date="09/20/2015 18:47:02" ID="42"/>
+						<Items1:Change Amount="87" Date="09/20/2015 18:47:02" ID="20"/>
+						<Items1:Change Amount="10" Date="09/20/2015 18:47:02" ID="35"/>
+						<Items1:Change Amount="67" Date="09/20/2015 18:47:02" ID="75"/>
+					</Items:ItemViewModel.FilteredChanges>
+					<Items:ItemViewModel.Model>
+						<Items1:Item Available="True" Category="Lacus lorem taciti dignissim" Coleurfaehig="False" Description="Vestibulum sed sociis" Name="Pretium semper rhoncus consequat convallis" RelativeImagePath="Vestibulum volutpat sodales" Stock="19"/>
+					</Items:ItemViewModel.Model>
+					<Items:ItemViewModel.PriceSelling>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceSelling>
+					<Items:ItemViewModel.PriceBuying>
+						<System:Decimal/>
+					</Items:ItemViewModel.PriceBuying>
+				</Items:ItemViewModel>
+			</Items:CategoryViewModel.Items>
+		</Items:CategoryViewModel>
+	</Items:ItemListViewModel.SelectedCategory>
+</Items:ItemListViewModel>

@@ -1,0 +1,80 @@
+<h2>Version 1.3.1:</h2>
+23. 9. 2015<br/>
+<ol>
+<li>Es gibt jetzt die Möglichkeit unter Getränkeverwaltung einen Zählvorgang zu starten, bei dem man alle Items aufgelistet bekommt, neue Items hinzufügen kann, etc.</li>
+<li>Die Mail Vorlagen Dateien und Zählungsdaten werden jetzt unter Eigene Dokumente abgelegt</li>
+<li>DEBUG: Die Loginbox lässt sich jetzt nicht mehr mit Drag'n'Drop umgehen.</li>
+<li>DEBUG: Die Tabs im Hauptfenster können jetzt nicht mehr auf dauer ausgewählt bleiben.</li>
+<li>Die List Box gibt jetzt keine Fehlermeldung mehr aus, wenn der Login falsch ist, sondern zeigt den Fehler im Fenster an</li>
+</ol>
+<h2>Version 1.3.0:</h2>
+20. 9. 2015<br/>
+<ol>
+<li>DEBUG: Bei Revert wird jetzt das Guthaben wieder gutgeschrieben.</li>
+<li>Mail config hat jetzt einen eigenen Unterordner.</li>
+<li>Mail wird nicht mehr an StandardLoginUser versandt, sondern kann jetzt über ein Dropdown-Menü eingestellt werden.</li>
+<li>Der MailScheduler kann jetzt gestaffelt Mails verschicken. Wie viele Mails pro Zyklus geschickt werden kann der User einstellen, ebenso den Zyklus.</li>
+<li>Bei einer Exception wird jetzt eine Mail an andreas@pazureck.de versandt, anstatt dass ein Fenster aufgeht.</li>
+<li>Der Logout geschieht jetzt automatisch nach einer vom Nutzer festlegbaren Zeit.</li>
+<li>Bei einem Neustart des Bierstrichlers werden alle Nutzer, die vorher anwesend waren wieder in die Anwesenheitsliste geschoben.</li>
+<li>Das Fragespiel listet jetzt die richtigen Antworten, wenn eine falsche Antwort gegeben wurde.</li>
+</ol>
+<h2>Version 1.2.1:</h2>
+<ol>
+<li>Gruppierung von Einträgen bei den Histories in tageweiser Form</li>
+<li>Debug: Der Filter für die Zählung lässt sich jetzt korrekt einstellen.</li>
+<li>Neue Webcam eingebaut.</li>
+</ol>
+<h2>Version 1.2.0:</h2>
+<ol>
+<li>Neues Deploymentsystem mit automatischen Updates per ClickOnce</li>
+<li>Zertifikat zum Deploy erstellt</li>
+<li>Addlist umgebaut.</li>
+</ol>
+<h2>Version 1.1.3:</h2>
+<ol>
+<li>Bierwart kann jetzt den Zugang und Abgang von Getränken für einen bestimmten Zeitraum ansehen.</li>
+<li>Minuten, Stunden, Tage u. Monate werden jetzt mit einer Kommastelle angezeigt.</li>
+<li>Adminbereich Liste Maximalgröße eingeführt und das Stretchen anderer Expander Elemente verhindert.</li>
+</ol>
+<h2>Version 1.1.2:</h2>
+<ol>
+<li>DEBUG: Die ausklappbare Liste lässt erschien nicht mehr, wenn man das Tab gewechselt hat.</li>
+<li>Die Biercharts können jetzt auf der Getränkeliste angezeigt werden.</li>
+<li>Beim Aktuellen Benutzer werden jetzt Vorsprung und Rückstand angezeigt.</li>
+<li>Die Antworten für das Fragespiel werden jetzt zufällig angeordnet</li>
+<li>Man kann jetzt Kategorien für Fragen komplett umbenennen</li>
+<li>Fragen können importiert werden.</li>
+</ol>
+<h2>Version 1.1.1:</h2>
+<ol>
+<li>DEBUG: Crash, wenn noch keine Item History vorhanden ist behoben.</li>
+<li>DEBUG: Versehentliches Stricheln, wenn jemand noch auf der Anwesendenliste markiert ist, behoben.</li>
+<li>Addliste fährt jetzt animiert heraus.</li>
+<li>Bei der Addliste gibt es jetzt einen Tooltip im ActiveUser Style</li>
+<li>Personliste und Itemliste haben jetzt ein Delay, bevor sie speichern (50ms) -> bessere Performance</li>
+</ol>
+<h2>Version 1.1.0:</h2>
+<ol>
+<li>Es können jetzt Aktionen rückgängig gemacht werden (Als Bierwart).</li>
+<li>Es gibt jetzt eine kleine Hilfe für das Nutzer hinzufügen (in der Item List), sowie Fehlermeldungen, wenn ein Nutzer in der AddList markiert wurde und es versucht wird auf ihn zu stricheln.</li>
+<li>Der Login kann jetzt auch mit Initialen durchgeführt werden.</li>
+<li>Es gibt jetzt ein Fragespiel, bei dem die Nutzer ihre eigenen Fragen eingeben können.</li>
+</ol>
+<h2>Version 1.0.5:</h2>
+<ol>
+<li>Es können jetzt auch Items entfernt werden (also die Anzahl veringert werden)</li>
+<li>Items speichern ist jetzt auch threadsafe</li>
+<li>Es gibt jetzt eine "Recently Drunk" Liste</li>
+</ol>
+<h2>Version 1.0.4:</h2>
+<ol>
+<li>Es kann jetzt ein Faktor eingestellt werden, falls jemand negatives Guthaben hat. Das Bier wird dann um diesen Betrag teurer.</li>
+<li>Der Faktor kann in den Nutzereinstellungen überschrieben werden, dann kostet jedes Bier genau so viel wie bei positivem Guthaben.</li>
+<li>Bei der Webcam kann der Ausschnittsrahmen jetzt nicht mehr aus dem Bildbereich vorschoben werden.</li>
+<li>Add und Remove auf der Anwesenheitsliste kann jetzt auch mit Drag und Drop gemacht werden.</li>
+<li>Die Verkaufspreise können nicht mehr niedriger sein als die Einkaufspreise, außer es wird absichtlich umgangen.</li>
+<li>Es gibt jetzt die Möglichkeit eine Sicherheitskopie der Datenbanken für die Personen und für die Items anzulegen. (Programm Administration)</li>
+<li>Moderatoren können jetzt auch die Nutzer in Bundesbrüder, Gäste und Korpos einteilen.</li>
+<li>Das Bildbearbeitungsfenster kann jetzt vergrößert u. Verkleinert werden. Es hat auch einen Scrollviewer, falls das Bild zu groß ist.</li>
+</ol>

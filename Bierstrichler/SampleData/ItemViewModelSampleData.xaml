@@ -1,0 +1,185 @@
+﻿<Items:ItemViewModel xmlns:Items="clr-namespace:Bierstrichler.ViewModels.Items" xmlns:Items1="clr-namespace:Bierstrichler.Data.Items;assembly=Bierstrichler.Data" xmlns:System="clr-namespace:System;assembly=mscorlib" Available="True" Category="Duis vivamus fermentum" Coleurfaehig="False" Description="Curae habitasse sed hendrerit dis" Name="Adipiscing fringilla" Stock="91">
+	<Items:ItemViewModel.Changes>
+		<Items1:Change Amount="40" Date="03/25/2015 14:57:20" ID="78">
+			<Items1:Change.Customer>
+				<System:Guid/>
+			</Items1:Change.Customer>
+			<Items1:Change.Initiator>
+				<System:Guid/>
+			</Items1:Change.Initiator>
+		</Items1:Change>
+		<Items1:Change Amount="19" Date="03/25/2015 14:57:20" ID="85">
+			<Items1:Change.Customer>
+				<System:Guid/>
+			</Items1:Change.Customer>
+			<Items1:Change.Initiator>
+				<System:Guid/>
+			</Items1:Change.Initiator>
+		</Items1:Change>
+		<Items1:Change Amount="20" Date="03/25/2015 14:57:20" ID="88">
+			<Items1:Change.Customer>
+				<System:Guid/>
+			</Items1:Change.Customer>
+			<Items1:Change.Initiator>
+				<System:Guid/>
+			</Items1:Change.Initiator>
+		</Items1:Change>
+		<Items1:Change Amount="77" Date="03/25/2015 14:57:20" ID="77">
+			<Items1:Change.Customer>
+				<System:Guid/>
+			</Items1:Change.Customer>
+			<Items1:Change.Initiator>
+				<System:Guid/>
+			</Items1:Change.Initiator>
+		</Items1:Change>
+		<Items1:Change Amount="89" Date="03/25/2015 14:57:20" ID="16">
+			<Items1:Change.Customer>
+				<System:Guid/>
+			</Items1:Change.Customer>
+			<Items1:Change.Initiator>
+				<System:Guid/>
+			</Items1:Change.Initiator>
+		</Items1:Change>
+		<Items1:Change Amount="24" Date="03/25/2015 14:57:20" ID="77">
+			<Items1:Change.Customer>
+				<System:Guid/>
+			</Items1:Change.Customer>
+			<Items1:Change.Initiator>
+				<System:Guid/>
+			</Items1:Change.Initiator>
+		</Items1:Change>
+		<Items1:Change Amount="50" Date="03/25/2015 14:57:20" ID="84">
+			<Items1:Change.Customer>
+				<System:Guid/>
+			</Items1:Change.Customer>
+			<Items1:Change.Initiator>
+				<System:Guid/>
+			</Items1:Change.Initiator>
+		</Items1:Change>
+		<Items1:Change Amount="28" Date="03/25/2015 14:57:20" ID="50">
+			<Items1:Change.Customer>
+				<System:Guid/>
+			</Items1:Change.Customer>
+			<Items1:Change.Initiator>
+				<System:Guid/>
+			</Items1:Change.Initiator>
+		</Items1:Change>
+		<Items1:Change Amount="91" Date="03/25/2015 14:57:20" ID="68">
+			<Items1:Change.Customer>
+				<System:Guid/>
+			</Items1:Change.Customer>
+			<Items1:Change.Initiator>
+				<System:Guid/>
+			</Items1:Change.Initiator>
+		</Items1:Change>
+		<Items1:Change Amount="12" Date="03/25/2015 14:57:20" ID="43">
+			<Items1:Change.Customer>
+				<System:Guid/>
+			</Items1:Change.Customer>
+			<Items1:Change.Initiator>
+				<System:Guid/>
+			</Items1:Change.Initiator>
+		</Items1:Change>
+	</Items:ItemViewModel.Changes>
+	<Items:ItemViewModel.Model>
+		<Items1:Item Available="True" Category="Dignissim mauris elementum facilisis praesent" Coleurfaehig="False" Description="Aenean cras consequat nam maecenas" Name="Aliquam curabitur integer phasellus" RelativeImagePath="Convallis vestibulum class quisque" Stock="62">
+			<Items1:Item.Changes>
+				<Items1:Change Amount="61" Date="03/25/2015 14:57:20" ID="82">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="52" Date="03/25/2015 14:57:20" ID="78">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="84" Date="03/25/2015 14:57:20" ID="26">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="75" Date="03/25/2015 14:57:20" ID="18">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="95" Date="03/25/2015 14:57:20" ID="88">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="58" Date="03/25/2015 14:57:20" ID="33">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="51" Date="03/25/2015 14:57:20" ID="85">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="82" Date="03/25/2015 14:57:20" ID="84">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="29" Date="03/25/2015 14:57:20" ID="72">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+				<Items1:Change Amount="84" Date="03/25/2015 14:57:20" ID="59">
+					<Items1:Change.Customer>
+						<System:Guid/>
+					</Items1:Change.Customer>
+					<Items1:Change.Initiator>
+						<System:Guid/>
+					</Items1:Change.Initiator>
+				</Items1:Change>
+			</Items1:Item.Changes>
+			<Items1:Item.ID>
+				<System:Guid/>
+			</Items1:Item.ID>
+			<Items1:Item.PriceSelling>
+				<System:Decimal/>
+			</Items1:Item.PriceSelling>
+			<Items1:Item.PriceBuying>
+				<System:Decimal/>
+			</Items1:Item.PriceBuying>
+		</Items1:Item>
+	</Items:ItemViewModel.Model>
+	<Items:ItemViewModel.PriceSelling>
+		<System:Decimal/>
+	</Items:ItemViewModel.PriceSelling>
+	<Items:ItemViewModel.PriceBuying>
+		<System:Decimal/>
+	</Items:ItemViewModel.PriceBuying>
+</Items:ItemViewModel>

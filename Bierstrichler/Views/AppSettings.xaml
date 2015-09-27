@@ -1,0 +1,217 @@
+﻿<UserControl x:Class="Bierstrichler.Views.AppSettings"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:pvws="clr-namespace:Bierstrichler.Views.Persons"
+			 xmlns:ex="http://schemas.xceed.com/wpf/xaml/toolkit"
+			 xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+			 xmlns:Custom="http://www.galasoft.ch/mvvmlight"
+             xmlns:c="clr-namespace:Bierstrichler.CustomControls"
+             xmlns:xcam="clr-namespace:Microsoft.Expression.Encoder.Devices;assembly=Microsoft.Expression.Encoder"
+             xmlns:converters="clr-namespace:Bierstrichler.Converters"
+             xmlns:Enums="clr-namespace:Bierstrichler.Data.Enums;assembly=Bierstrichler.Data"
+             xmlns:Global="clr-namespace:Bierstrichler.Data.Global;assembly=Bierstrichler.Data"
+			 mc:Ignorable="d" 
+			 d:DesignHeight="666" d:DesignWidth="693"
+			 x:Name="UC">
+    <UserControl.Resources>
+        <converters:EnumToIntConverter x:Key="EnumToIntConverter"/>
+        <converters:EnumToDisplayValueConverter x:Key="EnumToDisplayValue"/>
+    </UserControl.Resources>
+        <TabControl Background="Transparent">
+            <TabItem Header="Application Settings" Background="Transparent">
+            <WrapPanel Margin="0,0,0,-114">
+                <Expander Header="Login Verhalten" BorderBrush="Black" Background="White" Margin="3" IsExpanded="True" Padding="2">
+                    <StackPanel>
+                        <CheckBox IsChecked="{Binding LoginActive}" Margin="3">
+                            Autologin?
+                            <CheckBox.ToolTip>
+                                <TextBlock TextWrapping="Wrap" Width="300">Automatischer Login mit dem User, der unter Autologinuser angegeben ist. <Run Foreground="Red">Achtung!</Run> Es muss kein Passwort mehr eingegeben werden.</TextBlock>
+                            </CheckBox.ToolTip>
+                        </CheckBox>
+                        <ListView ItemsSource="{Binding AllPersons.Persons}" Margin="5"
+                          SelectedItem="{Binding DataContext.Selected, ElementName=UC}"
+                          MinHeight="150" MinWidth="150" MaxHeight="400" MaxWidth="300">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Name}"/>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackPanel>
+                </Expander>
+                <Expander Header="Import und Export" BorderBrush="Black" Background="White" Margin="3" IsExpanded="True" Padding="2">
+                    <StackPanel>
+                        <Button Command="{Binding DeleteHistoryCommand}" Margin="3" Padding="3">
+                            <Button.ToolTip>
+                                <ToolTip Width="200">
+                                    Exportiert zuerst die History und setzt sie dann zurück.
+                                </ToolTip>
+                            </Button.ToolTip>
+                            Delete History Data
+                        </Button>
+                        <Button Command="{Binding ExportDataCommand}" Margin="3" Padding="3">
+                            <Button.ToolTip>
+                                <ToolTip Width="200">
+                                    Exportiert alle Personen und Items, sowie deren History als XML Datei.
+                                </ToolTip>
+                            </Button.ToolTip>
+                            Export Data
+                        </Button>
+                        <Button Command="{Binding ImportDataCommand}" Margin="3" Padding="3">
+                            <Button.ToolTip>
+                                <ToolTip Width="200">
+                                    Importiert alle Personen und Items einschließlich deren History aus einer XML-Datei.
+                                </ToolTip>
+                            </Button.ToolTip>
+                            Import Data
+                        </Button>
+                    </StackPanel>
+                </Expander>
+                <Expander BorderBrush="Black" Background="White" Margin="3" IsExpanded="True" Padding="2" Header="Sicherheitskopien">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label>Personenliste</Label>
+                        <StackPanel Orientation="Horizontal" Grid.Column="1">
+                            <TextBox Margin="2" Text="{Binding PersonListSecureCopy}" MinWidth="200" x:Name="personPathTextBox"/>
+                            <Button Command="{Binding SelectFolderCommand}" Width="30" Margin="2,2,2,2" CommandParameter="{Binding ElementName=personPathTextBox}" Content="..."/>
+                        </StackPanel>
+                        <Label Grid.Row="1">Itemliste</Label>
+                        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+                            <TextBox Margin="2" Text="{Binding ItemListSecureCopy}" Grid.Row="1" Grid.Column="1" MinWidth="200" x:Name="itemPathTextBox"/>
+                            <Button Command="{Binding SelectFolderCommand}" Width="30" Margin="2,2,2,2" CommandParameter="{Binding ElementName=itemPathTextBox}" Content="..."/>
+                        </StackPanel>
+                    </Grid>
+                </Expander>
+                <Expander BorderBrush="Black" Background="White" Margin="3" IsExpanded="True" Padding="2" Header="Finanzen">
+                    <StackPanel>
+                        <Label Content="Negativfaktor"/>
+                        <c:NumericTextBox Value="{Binding NegativeDepositFactor}" FormatString="#.00" AllowOnlyPositiveNumbers="True" x:Name="nfbox1" />
+                    </StackPanel>
+                </Expander>
+                <Expander BorderBrush="Black" Background="White" Margin="3" IsExpanded="True" Padding="2" Header="Fragespiel">
+                    <StackPanel>
+                        <CheckBox IsChecked="{Binding QuestionGameActive}">Angeschalten?</CheckBox>
+                        <Label>Clicks bis zur nächsten Frage</Label>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="Minimal:" Width="60"/>
+                            <c:NumericTextBox Margin="3" Value="{Binding QuestionMinClicks}" FormatString="0" AllowOnlyPositiveNumbers="True" AllowOnlyNaturalNumbers="True" MinWidth="50"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="Maximal:" Width="60"/>
+                            <c:NumericTextBox Margin="3" Value="{Binding QuestionMaxClicks}" FormatString="0" AllowOnlyPositiveNumbers="True" AllowOnlyNaturalNumbers="True" MinWidth="50"/>
+                        </StackPanel>
+                        <Button Content="Fragen importieren" Command="{Binding ImportQuestionsCommand}" Margin="3" />
+                    </StackPanel>
+                </Expander>
+                <Expander BorderBrush="Black" Background="White" Margin="3" IsExpanded="True" Padding="2" Header="Webcam">
+                    <StackPanel>
+                        <Label>Camera Source</Label>
+                        <ComboBox x:Name="cbCamSource" SelectedItem="{Binding WebCamSource}">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate DataType="xcam:EncoderDevice">
+                                    <TextBlock Text="{Binding Name}"/>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                    </StackPanel>
+                </Expander>
+            </WrapPanel>
+        </TabItem>
+        <TabItem Header="MailHistory">
+            <StackPanel>
+                <Expander BorderBrush="Black" Background="White" IsExpanded="True" Padding="2">
+                    <Expander.Header>
+                        <DockPanel HorizontalAlignment="Stretch">
+                            <TextBlock><Run Text="Mail Einstellungen"/></TextBlock>
+                            <ComboBox ItemsSource="{Binding AllPersons.Persons}" x:Name="SendMailUser" DockPanel.Dock="Right" MinWidth="150" Margin="3,2,2,2">
+                            </ComboBox>
+                            <TextBlock DockPanel.Dock="Right" RenderTransformOrigin="0.564,0.5">To User</TextBlock>
+                            <Button DockPanel.Dock="Right" Margin="5,2,2,2" Command="{Binding SendTestInvoiceCommand}" CommandParameter="{Binding SelectedItem, ElementName=SendMailUser}" Content="Send Test Invoice" Padding="3"/>
+                            <Button DockPanel.Dock="Right" Margin="5,2,2,2" Command="{Binding SendTestMailCommand}" CommandParameter="{Binding SelectedItem, ElementName=SendMailUser}" Content="Send Test Mail" Padding="3"/>
+                        </DockPanel>
+                    </Expander.Header>
+                    <StackPanel>
+                    <Grid VerticalAlignment="Top">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                        <Label Content="Server"/>
+                        <ex:WatermarkTextBox Watermark="smtp.mySMTPServer.com:587" Grid.Column="1" Margin="2" MinWidth="180" Text="{Binding ServerName}"/>
+                        <Label Grid.Row="1" Content="Email-Adresse"/>
+                        <ex:WatermarkTextBox Watermark="myName@myprovier.com" Grid.Row="1" Grid.Column="1" MinWidth="180" Margin="2" Text="{Binding MailAddress}"/>
+                        <Label Grid.Row="2" Content="Login Name"/>
+                        <TextBox Grid.Row="2" Grid.Column="1" MinWidth="180" Margin="2" Text="{Binding UserName}"/>
+                        <Label Grid.Row="3" Content="Passwort"/>
+                        <PasswordBox Grid.Row="3" Grid.Column="2" Margin="2" MinWidth="180" x:Name="pwd">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="PasswordChanged">
+                                    <Custom:EventToCommand Command="{Binding ChangePasswordCommand}"
+        						CommandParameter="{Binding ElementName=pwd}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </PasswordBox>
+                        <Label Grid.Row="4" Content="Anzeigename"/>
+                            <ex:WatermarkTextBox Grid.Row="4" Grid.Column="1" Watermark="Max Mustermann" MinWidth="180" Text="{Binding DisplayName}"/>
+                            <Label Grid.Row="5">Rechnungszyklus</Label>
+                            <ComboBox Grid.Row="5" Grid.Column="2" SelectedIndex="{Binding InvoicePeriod, Converter={StaticResource EnumToIntConverter}}" ItemsSource="{converters:EnumToItemsSource {x:Type Enums:InvoicePeriod}}"/>
+                            <TextBlock Grid.Row="6" Grid.ColumnSpan="2">Letzte Rechnung versandt am: <Run Text="{Binding LastInvoice, StringFormat=dd. MM. yyyy, Mode=OneWay}"/>. Nächste Rechnung wird versandt am: <Run Text="{Binding NextInvoice, StringFormat=dd. MM. yyyy, Mode=OneWay}"/></TextBlock>
+                    </Grid>
+                        <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft">
+                            <TextBox MinWidth="80" Text="{Binding MailSendInterval, StringFormat=hh\\:mm}" Margin="3"/>
+                            <Label>Zyklus zum Mailversand</Label>
+                            <TextBox MinWidth="50" Text="{Binding MailMaxMailsPerCall}" Margin="3"/>
+                            <Label>Mails pro Zyklus</Label>
+                        </StackPanel>
+                    </StackPanel>
+                </Expander>
+                
+                
+            </StackPanel>
+        </TabItem>
+        <TabItem Header="Debug">
+            <DockPanel LastChildFill="True">
+                <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+                    <Label>LogLevel</Label>
+                    <ComboBox SelectedIndex="{Binding LogLevel, Converter={StaticResource EnumToIntConverter}}" ItemsSource="{converters:EnumToItemsSource {x:Type Global:LogLevel}}"/>
+                    <Label>Max Entries to display</Label>
+                    <TextBox Text="{Binding MaxNumOfEntries}" MinWidth="30" Margin="3"/>
+                </StackPanel>
+                <ScrollViewer>
+                    <ItemsControl ItemsSource="{Binding LogEntries}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock>
+                                        <Run Text="{Binding Date, Mode=OneWay}"/> - <Run Text="{Binding Level, Mode=OneWay, Converter={StaticResource EnumToDisplayValue}}"/>: <Run Text="{Binding Message, Mode=OneWay}"/>
+                                    </TextBlock>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+            </DockPanel>
+            
+        </TabItem>
+    </TabControl>
+		
+</UserControl>

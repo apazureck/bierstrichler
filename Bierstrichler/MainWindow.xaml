@@ -1,0 +1,92 @@
+﻿<Window x:Class="Bierstrichler.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:views="clr-namespace:Bierstrichler.Views"
+		xmlns:itemviews="clr-namespace:Bierstrichler.Views.Items"
+		xmlns:personviews="clr-namespace:Bierstrichler.Views.Persons"
+		xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+		xmlns:ml="http://www.galasoft.ch/mvvmlight"
+		xmlns:c="clr-namespace:Bierstrichler.Converters"
+        xmlns:q="clr-namespace:Bierstrichler.Views.Questions"
+		Title="Bierstrichler" Height="{Binding Height}" Width="{Binding Width}"
+		Top="{Binding Top}" Left="{Binding Left}">
+	<Window.Resources>
+		<BooleanToVisibilityConverter x:Key="booleanToVisibilityConverter"/>
+		<c:NullToVisibilityCollapsedConverter x:Key="nullToVisibilityCollapsedConverter"/>
+	</Window.Resources>
+	<Grid ScrollViewer.VerticalScrollBarVisibility="Disabled">
+		<Rectangle Stroke="Black">
+			<Rectangle.Fill>
+				<LinearGradientBrush EndPoint="0.787,0.177" MappingMode="RelativeToBoundingBox" StartPoint="0.332,0.864">
+					<GradientStop Color="#FF8B1111" Offset="0.935"/>
+					<GradientStop Color="#FF193BD4" Offset="0.1"/>
+					<GradientStop Color="#FFCDA028" Offset="0.516"/>
+				</LinearGradientBrush>
+			</Rectangle.Fill>
+			</Rectangle>
+		<Rectangle Stroke="Black" Fill="White">
+			<Rectangle.OpacityMask>
+				<RadialGradientBrush Center="0.474,0.769" GradientOrigin="0.474,0.769" RadiusY="0.91" RadiusX="0.475">
+					<RadialGradientBrush.RelativeTransform>
+						<TransformGroup>
+							<ScaleTransform CenterY="0.5" CenterX="0.5" ScaleY="1" ScaleX="1"/>
+							<SkewTransform AngleY="0" AngleX="0" CenterY="0.5" CenterX="0.5"/>
+							<RotateTransform Angle="-135.648" CenterY="0.5" CenterX="0.5"/>
+							<TranslateTransform/>
+						</TransformGroup>
+					</RadialGradientBrush.RelativeTransform>
+					<GradientStop Color="#00000000" Offset="0.762"/>
+					<GradientStop Color="White" Offset="1"/>
+				</RadialGradientBrush>
+			</Rectangle.OpacityMask>
+		</Rectangle>
+		<Image Margin="-143,-304,-335.94,-204" Source="Zirkel_Ost_Schwarz.png" Stretch="Fill" Opacity="0.39">
+			<Image.Effect>
+				<BlurEffect Radius="10"/>
+			</Image.Effect>
+		</Image>
+		<DockPanel LastChildFill="True">
+			<views:StatusBar DockPanel.Dock="Bottom" x:Name="StatusBar" DataContext="{Binding StatusBar}"/>
+			<TabControl x:Name="tabCtrl" SelectedItem="{Binding SelectedTab}">
+				<TabControl.Background>
+					<SolidColorBrush Color="White" Opacity="0.5"/>
+				</TabControl.Background>
+				<TabItem Header="Strichelliste" DataContext="{Binding DashList}" x:Name="tiDashList">
+					<views:DashList/>
+				</TabItem>
+                <TabItem Header="Fragenkatalog"
+						 x:Name="tiQgame">
+                    <q:QuestionList DataContext="{Binding Questions}"/>
+                </TabItem>
+                <TabItem Header="User Administration" Visibility="{Binding IsModerator, 
+							Converter={StaticResource booleanToVisibilityConverter}}"
+						 x:Name="tiUserAdmin">
+                    <personviews:UserAdministration DataContext="{Binding AllPersons}" 
+						VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                </TabItem>
+                <TabItem Header="Getränkeverwaltung" Visibility="{Binding IsBeerAdmin, 
+							Converter={StaticResource booleanToVisibilityConverter}}"
+						 x:Name="tiDrinks">
+                    <itemviews:DrinkControl  HorizontalAlignment="Stretch"
+						VerticalAlignment="Stretch" DataContext="{Binding AllItems}"/>
+                </TabItem>
+                <TabItem Header="Statistiken" x:Name="tiStatistics" Visibility="{Binding IsBeerAdmin, 
+							Converter={StaticResource booleanToVisibilityConverter}}">
+                    <views:StatisticView/>
+                </TabItem>
+                <TabItem Header="Program Administration" Visibility="{Binding IsAdministrator, 
+							Converter={StaticResource booleanToVisibilityConverter}}"
+						 x:Name="tiProgramAdmin">
+                    <views:AppSettings HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+						DataContext="{Binding AppSettings}"/>
+                </TabItem>
+                <TabItem Header="Eigene Einstellungen" Visibility="{Binding CurrentVendor, 
+							Converter={StaticResource nullToVisibilityCollapsedConverter}}"
+						 x:Name="tiUserInformation">
+                    <personviews:UserEdit DataContext="{Binding CurrentVendorViewModel}"/>
+                </TabItem>
+            </TabControl>
+		
+		</DockPanel>
+	</Grid>
+</Window>

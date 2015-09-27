@@ -1,0 +1,53 @@
+﻿<Window x:Class="Bierstrichler.Views.CashFlow.PayInWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:c="clr-namespace:Bierstrichler.CustomControls"
+        Title="Einzahlung tätigen" Height="172.672" Width="300" x:Name="parent"
+        xmlns:v="clr-namespace:Bierstrichler.Validators">
+    <Window.Resources>
+        <ControlTemplate x:Key="validationTemplate">
+            <DockPanel>
+                <!--<Grid DockPanel.Dock="Right" Width="16" Height="16" VerticalAlignment="Center" Margin="3 0 0 0">
+                    <Ellipse Width="16" Height="16" Fill="Red"/>
+                    <Ellipse Width="3" Height="8" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0 2 0 0" Fill="White"/>
+                    <Ellipse Width="2" Height="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 0 0 2" Fill="White"/>
+                </Grid>-->
+                <Border BorderBrush="Red" BorderThickness="2" CornerRadius="2">
+                    <AdornedElementPlaceholder/>
+                </Border>
+            </DockPanel>
+        </ControlTemplate>
+        <Style x:Key="textBoxInError" TargetType="{x:Type TextBox}">
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="true">
+                    <Setter Property="ToolTip"
+        Value="{Binding RelativeSource={x:Static RelativeSource.Self},
+                        Path=(Validation.Errors)[0].ErrorContent}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <StackPanel>
+            <Label>Betrag</Label>
+            <c:NumericTextBox x:Name="betrag" Margin="5" KeyDown="betrag_KeyDown" 
+                              AllowOnlyPositiveNumbers="True" Style="{StaticResource textBoxInError}"
+                              Validation.ErrorTemplate="{StaticResource validationTemplate}"
+                              Value="{Binding Betrag, ElementName=parent}">
+                <c:NumericTextBox.Text>
+                    <Binding Path="Text" ElementName="parent" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <v:PositiveDecimalValidationRule/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </c:NumericTextBox.Text>
+            </c:NumericTextBox>
+            <Label>Bitte das Passwort erneut eingeben.</Label>
+            <PasswordBox Margin="5" x:Name="PassWordBox" KeyDown="PasswordBox_KeyDown"/>
+            <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft">
+                <Button Margin="5" Click="Button_Cancel_Click">Abbrechen</Button>
+                <Button Margin="5" Click="Button_OK_Click">OK</Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

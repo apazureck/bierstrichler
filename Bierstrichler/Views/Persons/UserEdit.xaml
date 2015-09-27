@@ -1,0 +1,273 @@
+﻿<UserControl x:Class="Bierstrichler.Views.Persons.UserEdit"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+			 xmlns:converters="clr-namespace:Bierstrichler.Converters"
+			 xmlns:Enums="clr-namespace:Bierstrichler.Data.Enums;assembly=Bierstrichler.Data"
+			 xmlns:views="clr-namespace:Bierstrichler.Views"
+			 xmlns:persons="clr-namespace:Bierstrichler.Views.Persons"
+			 xmlns:custom="clr-namespace:Bierstrichler.CustomControls"
+			 xmlns:xt="http://schemas.xceed.com/wpf/xaml/toolkit"
+			 xmlns:hc="clr-namespace:Bierstrichler.Converters.History"
+			 xmlns:e="clr-namespace:Bierstrichler.Extensions"
+			 mc:Ignorable="d" 
+			 d:DesignHeight="689.995" d:DesignWidth="674"
+			 x:Name="UC">
+	<UserControl.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary>
+					<converters:AddressToStringConverter x:Key="AddressToStringConverter"/>
+					<converters:MailAddressToStringConverter x:Key="MailAddressToStringConverter"/>
+					<converters:NullToVisibilityCollapsedConverter x:Key="NullToVisibilityConverter"/>
+					<converters:EnumToIntConverter x:Key="EnumToIntConverter"/>
+					<BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+					<converters:NullToBoolFalseConverter x:Key="nullToBoolFalse"/>
+					<hc:ItemNameFromConsumedConverter x:Key="itemNameFromConsumed"/>
+					<converters:EnumToDisplayValueConverter x:Key="enumToDisplayValue"/>
+					<ContextMenu x:Key="RowMenu">
+						<MenuItem Header="Änderung rückgängig machen"
+									  Visibility="{Binding DataContext.IsChangeFinanceAllowed, Converter={StaticResource BooleanToVisibilityConverter}}"
+									  Command="{Binding DataContext.RevertChangeCommand}"
+									  CommandParameter="{Binding SelectedValue}"/>
+					</ContextMenu>
+					
+					<Style x:Key="DefaultRowStyle" TargetType="{x:Type DataGridRow}">
+						<Setter Property="ContextMenu" Value="{StaticResource RowMenu}"/>
+						<Setter Property="e:ContextMenuServiceExtensions.DataContext" Value="{Binding RelativeSource={RelativeSource AncestorType=DataGrid}}"/>
+					</Style>
+
+					<converters:DateTimeToEveningConverter x:Key="DateTimeToDateConverter"/>
+					<CollectionViewSource x:Key="HistoryCollectionView" Source="{Binding History}">
+						<CollectionViewSource.GroupDescriptions>
+							<PropertyGroupDescription PropertyName="Date" Converter="{StaticResource DateTimeToDateConverter}"/>
+						</CollectionViewSource.GroupDescriptions>
+					</CollectionViewSource>
+					
+				</ResourceDictionary>
+				<ResourceDictionary Source="../../Resources/CustomControls.xaml"/>
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+
+	</UserControl.Resources>
+	<ScrollViewer x:Name="scrollViewer" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+		<DockPanel LastChildFill="True">
+			<StackPanel Orientation="Horizontal" FlowDirection="RightToLeft" 
+						Visibility="{Binding IsCurrentVendorModerator, Converter={StaticResource BooleanToVisibilityConverter}}" DockPanel.Dock="Top">
+				<ComboBox ItemsSource="{converters:EnumToItemsSource {x:Type Enums:UserType}}"
+						  SelectedIndex="{Binding UserType, Converter={StaticResource EnumToIntConverter}}"
+						  Width="105" Margin="5"></ComboBox>
+				<TextBlock Margin="5">Benutzertyp</TextBlock>
+			</StackPanel>
+			<WrapPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" DockPanel.Dock="Top">
+				<Expander Header="General" IsExpanded="True" BorderBrush="Black" Margin="3" Padding="5"
+						  Background="White">
+					<Grid Margin="5">
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto"/>
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="Auto"/>
+							<ColumnDefinition/>
+						</Grid.ColumnDefinitions>
+						<ContentControl Style="{StaticResource ImageControlWithButtons}" Width="150" Margin="3" BorderBrush="Black" BorderThickness="1">
+							<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+								<TextBlock>Nutzerfoto</TextBlock>
+								<Button Content="Datei..."  Width="75" Height="20" Margin="10,10,10,10" Command="{Binding AddImageCommand}" ToolTip="Setze ein lokales Bild als Nutzerbild"/>
+								<Button Content="Webcam" Width="75" Height="20" Margin="10, 0, 10, 10" Command="{Binding TakePictureCommand}" ToolTip="Nimm ein Foto mit der Webcam auf."/>
+								<Button Content="Bearbeiten" Width="75" Height="20" Margin="10, 0, 10, 10" Command="{Binding ModifyPictureCommand}" ToolTip="Bearbeite das aufgenommene Bild."/>
+							</StackPanel>
+						</ContentControl>
+						<Grid Grid.Column="1">
+							<Grid.RowDefinitions>
+								<RowDefinition Height="Auto"/>
+								<RowDefinition Height="Auto"/>
+								<RowDefinition Height="Auto"/>
+								<RowDefinition Height="Auto"/>
+								<RowDefinition Height="Auto"/>
+								<RowDefinition Height="Auto"/>
+								<RowDefinition Height="Auto"/>
+								<RowDefinition Height="Auto"/>
+								<RowDefinition Height="Auto"/>
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="Auto"/>
+								<ColumnDefinition/>
+							</Grid.ColumnDefinitions>
+							<TextBlock TextWrapping="Wrap" Text="Vorname"/>
+							<TextBox TextWrapping="Wrap" Text="{Binding Vorname}" Grid.Column="1" Margin="5,0,5,5" MinWidth="180"/>
+							<TextBlock TextWrapping="Wrap" Text="Nachname" Grid.Row="1"/>
+							<TextBox TextWrapping="Wrap" Text="{Binding Nachname}" Grid.Column="1" Grid.Row="1" Margin="5,0,5,5" MinWidth="180"/>
+							<TextBlock TextWrapping="Wrap" Text="Email" Grid.Row="2" TextAlignment="Right"/>
+							<xt:WatermarkTextBox Watermark="max.mustermann@provider.de" TextWrapping="Wrap" Text="{Binding Email, Converter={StaticResource MailAddressToStringConverter}}" MinWidth="180" Grid.Column="1" Grid.Row="2" Margin="5,0,5,5"/>
+							<TextBlock TextWrapping="Wrap" Text="Adresse" Grid.Row="3" TextAlignment="Right"/>
+							<xt:WatermarkTextBox Watermark="Spittlertorzwinger 4, 90402 Nürnberg, Deutschland" TextWrapping="Wrap" Text="{Binding Adresse, Converter={StaticResource AddressToStringConverter}}" MinWidth="180"  Grid.Column="1" Grid.Row="3" Margin="5,0,5,5"/>
+							<TextBlock TextWrapping="Wrap" Text="Geschlecht" Grid.Row="4" TextAlignment="Right"/>
+							<ComboBox Grid.Column="1" Grid.Row="4" Margin="5,0,5,5" SelectedIndex="{Binding Geschlecht, Converter={StaticResource EnumToIntConverter}}" ItemsSource="{converters:EnumToItemsSource {x:Type Enums:Gender}}"/>
+							<TextBlock TextWrapping="Wrap" Text="Passwort" Grid.Row="5" TextAlignment="Right"/>
+							<PasswordBox HorizontalAlignment="Stretch" Grid.Row="5" Margin="5,0,5,5" MinWidth="180"
+										 Grid.Column="1" KeyDown="PasswordBox_KeyDown" 
+										 LostFocus="PasswordBox_LostFocus"/>
+							<CheckBox Grid.Row="6" Grid.Column="2" IsChecked="{Binding IsListedInBeerCharts}" ToolTip="Falls die Person (z.B. Person für Coleurbesuch, Fuxia, o.ä.) nicht in den&#xa; Biercharts aufgelistet werden soll, muss der Haken hier entfernt werden.">
+								In den Biercharts auflisten?
+							</CheckBox>
+							<CheckBox Grid.Row="7" Grid.Column="2" IsChecked="{Binding RequirePasswordWhenAdding}" ToolTip="Falls aktiviert wird das angegebene Passwort verlangt,&#xa;wenn der Benutzer auf die Anwesenheitsliste gesetzt wird.">
+								Passwort bei Aktivierung?
+							</CheckBox>
+							<TextBlock TextWrapping="Wrap" Text="Logout" Grid.Row="8" TextAlignment="Right"/>
+							<ComboBox Grid.Column="1" Grid.Row="8" Margin="5,0,5,5" SelectedIndex="{Binding LogoutBehavior, Converter={StaticResource EnumToIntConverter}}" ItemsSource="{converters:EnumToItemsSource {x:Type Enums:LogoutBehavior}}"/>
+						</Grid>
+					</Grid>
+				</Expander>
+				<Expander Header="Finanzen" IsExpanded="True" BorderBrush="Black" Margin="3"
+						  Padding="5" Background="White">
+					<Grid>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto"/>
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="Auto"/>
+							<ColumnDefinition/>
+						</Grid.ColumnDefinitions>
+						<TextBlock TextWrapping="Wrap" Text="Minimalguthaben" TextAlignment="Right"/>
+						<custom:NumericTextBox TextWrapping="Wrap" Value="{Binding MinGuthaben, StringFormat=C}" Grid.Column="1" Margin="5,0,5,5" ToolTip="Falls das Guthaben unterschritten wird,&#xa; wird die Unterschreitungsaktion ausgeführt"/>
+						<!--<TextBlock TextWrapping="Wrap" Text="Guthaben aufladen bis" Grid.Row="2"/>
+						<TextBox TextWrapping="Wrap" Text="{Binding AutoloadGuthaben}" Grid.Column="1" Grid.Row="2" Margin="5,0,5,5"/>-->
+						<TextBlock TextWrapping="Wrap" Text="Unterschreitungsaktion" Grid.Row="1" TextAlignment="Right"/>
+						<ComboBox Grid.Column="1" Grid.Row="1" Margin="5,0,5,5" ItemsSource="{converters:EnumToItemsSource {x:Type Enums:ThresholdBehavior}}" SelectedIndex="{Binding ThresholdBehavior, Converter={StaticResource EnumToIntConverter}}" ToolTip="Die hier eingestellte Aktion wird ausgeführt,&#xa;wenn das Minimalguthaben unterschritten wird."/>
+						<!--<TextBlock TextWrapping="Wrap" Text="Automatisch ausloggen nach" Grid.Row="3" TextAlignment="Right"/>-->
+						<!--<ComboBox Grid.Column="1" Grid.Row="3" Margin="5,0,5,5" ItemsSource="{converters:EnumToItemsSource {x:Type Enums:LogoutBehavior}}" SelectedIndex="3"/>-->
+						<CheckBox IsEnabled="{Binding IsChangeFinanceAllowed}" Content="Zahlt Einkaufspreise?" Grid.Row="5" Grid.Column="1" Margin="0,0,0,5" IsChecked="{Binding PaysBuingPrice}" ToolTip="Wenn aktiviert, zahlt der Nutzer nur den Einkaufspreis."/>
+						<CheckBox Content="Negativguthabenaufschlag ignorieren" IsEnabled="{Binding IsChangeFinanceAllowed}" Grid.Row="6" Grid.Column="1" Margin="0,0,0,5" IsChecked="{Binding SkipNegativeSurcharge}" ToolTip="Wenn aktiviert, zahlt der Nutzer keinen Negativaufschlag,&#xa;wenn er im negativen Guthaben ist."/>
+					</Grid>
+				</Expander>
+				<Expander Header="Rechte" IsExpanded="True" BorderBrush="Black" Margin="3" Padding="5"
+						  Background="White">
+					<StackPanel Margin="10,5,5,5" IsEnabled="{Binding IsCurrentVendorAdmin}">
+						<CheckBox ToolTip="Auf Gäste darf gestrichelt werden" IsChecked="{Binding IsGuest}">Gast</CheckBox>
+						<CheckBox ToolTip="Arbeiter dürfen sich einloggen und stricheln" IsChecked="{Binding IsWorker}">Arbeiter</CheckBox>
+						<CheckBox ToolTip="Kassiere dürfen Einzahlungen Entgegennehmen" IsChecked="{Binding IsCashier}">Kassier</CheckBox>
+						<CheckBox ToolTip="Darf neue Nutzer erstellen" IsChecked="{Binding IsModerator}">Moderator</CheckBox>
+						<CheckBox ToolTip="Der Bierwart darf die Getränkeliste verwalten" IsChecked="{Binding IsBeerAdmin}">Bierwart</CheckBox>
+						<CheckBox ToolTip="Administratoren dürfen Accounts erstellen, ändern und löschen, sowie globale Einstellungen vornehmen." IsChecked="{Binding IsAdministrator}">Administrator</CheckBox>
+					</StackPanel>
+				</Expander>
+				<Expander Header="History" IsExpanded="True" Visibility="Collapsed">
+					<DataGrid ItemsSource="{Binding History}" AutoGenerateColumns="False" IsReadOnly="True" Margin="0,5,10,10">
+						<DataGrid.Columns>
+							<!--<DataGridTextColumn Width="Auto" Header="#" Binding="{Binding ID}"/>-->
+							<DataGridTextColumn Width="Auto" Header="Datum" Binding="{Binding Path=Date, StringFormat=yyyy-MM-dd H:mm:ss}"/>
+							<DataGridTextColumn Width="Auto" Header="Betrag" Binding="{Binding Amount}"/>
+							<DataGridTextColumn Width="Auto" Header="Empfänger" Binding="{Binding Customer}"/>
+							<DataGridTextColumn Width="Auto" Header="Verantwortlicher" Binding="{Binding Initiator}"/>
+						</DataGrid.Columns>
+					</DataGrid>
+				</Expander>
+				<Expander Header="Korporation" IsExpanded="True" Visibility="Collapsed" BorderBrush="Black" Margin="3">
+					<!-- Visibility="{Binding IsKorpo, Converter={StaticResource BooleanToVisibilityConverter}}"-->
+					<Grid>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto"/>
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="Auto"/>
+							<ColumnDefinition/>
+						</Grid.ColumnDefinitions>
+						<TextBlock TextWrapping="Wrap" Text="Vulgo" TextAlignment="Right"/>
+						<TextBox TextWrapping="Wrap" Text="{Binding Vulgo}" Grid.Column="1" Margin="5,0,5,5"/>
+						<TextBlock TextWrapping="Wrap" DataContext="{Binding Bund}" Text="Mitglied bei" Grid.Row="1" TextAlignment="Right"/>
+						<views:KorporationView Grid.Column="1" Grid.Row="1"/>
+						<TextBlock TextWrapping="Wrap" Text="Status" Grid.Row="2"/>
+						<ComboBox Grid.Column="1" Grid.Row="2" Margin="5,0,5,5" ItemsSource="{converters:EnumToItemsSource {x:Type Enums:Status}}" SelectedIndex="0"/>
+						<TextBlock TextWrapping="Wrap" Text="Rezeptionsdatum" Grid.Row="3"/>
+						<DatePicker Grid.Row="3" Grid.Column="1" SelectedDate="{Binding Rezeptionsdatum}"/>
+					</Grid>
+				</Expander>
+				<!-- Visibility="{Binding IsBundesbruder, Converter={StaticResource BooleanToVisibilityConverter}}" -->
+				<Expander Header="Korpo" Visibility="{Binding IsKorpo, Converter={StaticResource BooleanToVisibilityConverter}}" IsExpanded="True"
+						  BorderBrush="Black" Margin="3" Padding="5" Background="White">
+					<Grid>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto"/>
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="Auto"/>
+							<ColumnDefinition/>
+						</Grid.ColumnDefinitions>
+						<TextBlock Margin="3">Vulgo:</TextBlock>
+						<TextBox Grid.Column="1" Padding="3" MinWidth="150" Margin="3" Text="{Binding Vulgo}"/>
+						<TextBlock Margin="3" Grid.Row="1">Status:</TextBlock>
+						<ComboBox Grid.Row="1" Grid.Column="1"
+								  ItemsSource="{converters:EnumToItemsSource {x:Type Enums:Status}}"
+								  SelectedIndex="{Binding Status, Converter={StaticResource EnumToIntConverter}}"
+								  Width="150" Margin="3"/>
+						<TextBlock Grid.Row="2" Margin="3">Rezeptionsdatum:</TextBlock>
+						<DatePicker Grid.Row="2" Grid.Column="1" Margin="3" SelectedDate="{Binding Rezeptionsdatum}"
+									FirstDayOfWeek="Monday" DisplayDateStart="01/01/1900"/>
+					</Grid>
+					<!--<persons:ChargenListView DataContext="{Binding ChargenListe}" Margin="8,0,-8,0"/>-->
+				</Expander>
+			</WrapPanel>
+			<Label FontSize="20" FontWeight="Bold" DockPanel.Dock="Top">Verbrauch</Label>
+			<DataGrid Margin="5" ItemsSource="{Binding Source={StaticResource HistoryCollectionView}}" IsReadOnly="True" 
+						  AutoGenerateColumns="False" RowStyle="{StaticResource DefaultRowStyle}" DockPanel.Dock="Bottom">
+				<DataGrid.Columns>
+					<DataGridTextColumn Header="ID" Binding="{Binding ID}"/>
+					<DataGridTextColumn Header="Datum" Binding="{Binding Date, StringFormat=dd. M. yy - HH:mm}"/>
+					<DataGridTextColumn Header="Typ" Binding="{Binding Type, Converter={StaticResource enumToDisplayValue}}"/>
+					<DataGridTextColumn Header="Getränk" Binding="{Binding Converter={StaticResource itemNameFromConsumed}}"/>
+					<DataGridTextColumn Header="Betrag" Binding="{Binding Value, StringFormat=C}"/>
+				</DataGrid.Columns>
+				<DataGrid.GroupStyle>
+					<GroupStyle>
+						<GroupStyle.HeaderTemplate>
+							<DataTemplate>
+								<StackPanel>
+									<TextBlock Text="{Binding Name}">
+									</TextBlock>
+								</StackPanel>
+							</DataTemplate>
+						</GroupStyle.HeaderTemplate>
+						<GroupStyle.ContainerStyle>
+							<Style TargetType="{x:Type GroupItem}">
+								<Setter Property="Template">
+									<Setter.Value>
+										<ControlTemplate TargetType="{x:Type GroupItem}">
+											<Expander>
+												<Expander.Header>
+													<TextBlock>
+														<Run Text="{Binding Name, Mode=OneWay}"/> <Run Text="{Binding Path=ItemCount, Mode=OneWay}"/> Einträge
+													</TextBlock>
+												</Expander.Header>
+												<ItemsPresenter />
+											</Expander>
+										</ControlTemplate>
+									</Setter.Value>
+								</Setter>
+							</Style>
+						</GroupStyle.ContainerStyle>
+					</GroupStyle>
+				</DataGrid.GroupStyle>
+			</DataGrid>
+		</DockPanel>
+		</ScrollViewer>
+</UserControl>

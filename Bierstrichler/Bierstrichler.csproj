@@ -1,0 +1,628 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{806EF17C-E372-4C7A-8642-7A964C0A6BB5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bierstrichler</RootNamespace>
+    <AssemblyName>Bierstrichler</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <ExpressionBlendVersion>12.0.51020.0</ExpressionBlendVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>ftp://ftp.pazureck.de:21/bierstrichler/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Background</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://www.pazureck.de/bierstrichler/</InstallUrl>
+    <ProductName>Bierstrichler</ProductName>
+    <PublisherName>Ostmark</PublisherName>
+    <WebPage>index.htm</WebPage>
+    <ApplicationRevision>23</ApplicationRevision>
+    <ApplicationVersion>1.3.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Dapino-Beach-Beer.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>99D707D571B4BA195EFA8866EF04E5A7896CB0FB</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>_certificates\BierstrichlerCert.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>Custom</TargetZone>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.2.0.37222, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MvvmLightLibs.5.2.0.0\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.2.0.37222, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MvvmLightLibs.5.2.0.0\lib\net45\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.2.0.37226, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MvvmLightLibs.5.2.0.0\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="GongSolutions.Wpf.DragDrop, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\gong-wpf-dragdrop.1.0.0-ALPHA010\lib\net40\GongSolutions.Wpf.DragDrop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Drawing" />
+    <Reference Include="Microsoft.Expression.Effects" />
+    <Reference Include="Microsoft.Expression.Encoder, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Expression.Interactions" />
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="SerializableSecureString, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_lib\SerializableSecureString.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.2.0.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="X509Generators, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_lib\X509Generators.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=2.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.5\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=2.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.5\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=2.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.5\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=2.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.5\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.DataGrid, Version=2.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.5\lib\net40\Xceed.Wpf.DataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=2.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.5\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AttachedProperties\AttachmentsDataGrid.cs" />
+    <Compile Include="Behavior\BindableSelectedItemBehavior.cs" />
+    <Compile Include="Behavior\PasswordHelper.cs" />
+    <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="Converters\DateTimeToDateConverter.cs" />
+    <Compile Include="Converters\DateToVisibilityConverter.cs" />
+    <Compile Include="Converters\EnumToDisplayValueConverter.cs" />
+    <Compile Include="Converters\AddressToStringConverter.cs" />
+    <Compile Include="Converters\EnumToVisibilityConverter.cs" />
+    <Compile Include="Converters\EnumToVisibilityCollapsedConverter.cs" />
+    <Compile Include="Converters\History\ItemDateFromConsumedConverter.cs" />
+    <Compile Include="Converters\History\ItemNameFromConsumedConverter.cs" />
+    <Compile Include="Converters\History\ItemNameFromGuid.cs" />
+    <Compile Include="Converters\InverseBooleanConverter.cs" />
+    <Compile Include="Converters\IsNotMinus.cs" />
+    <Compile Include="Converters\MultiValueConverters\ShowAddUserHintMultiValueConverter.cs" />
+    <Compile Include="Converters\NullToBoolFalseConverter.cs" />
+    <Compile Include="Converters\NumberToCurrentCultureStringFormatConverter.cs" />
+    <Compile Include="Converters\StringIsNullOrEmptyToVisibilityConvertrer.cs" />
+    <Compile Include="Converters\BooleanConverter.cs" />
+    <Compile Include="Converters\BooleanToInvisibilityConverter.cs" />
+    <Compile Include="Converters\DataGridRowNumberConverter.cs" />
+    <Compile Include="Converters\EnumToIntConverter.cs" />
+    <Compile Include="Converters\EnumToItemsSource.cs" />
+    <Compile Include="Converters\MailAddressToStringConverter.cs" />
+    <Compile Include="Converters\NullToVisibilityCollapsedConverter.cs" />
+    <Compile Include="Converters\NullToVisibileConverter.cs" />
+    <Compile Include="Converters\NullToVisibilityHiddenConverter.cs" />
+    <Compile Include="Converters\PersonNameConverter.cs" />
+    <Compile Include="Converters\StringToVisibilityCollapsedConverter.cs" />
+    <Compile Include="Converters\ValueThreeColorsConverter.cs" />
+    <Compile Include="Converters\ValueToForegroundColorConverter.cs" />
+    <Compile Include="CustomControls\Adorners\ResizeRotateAdorner.cs" />
+    <Compile Include="CustomControls\Adorners\ResizeRotateChrome.cs" />
+    <Compile Include="CustomControls\Adorners\SizeAdorner.cs" />
+    <Compile Include="CustomControls\Adorners\SizeChrome.cs" />
+    <Compile Include="CustomControls\DesignerItemDecorator.cs" />
+    <Compile Include="CustomControls\HideableGridSplitter.cs" />
+    <Compile Include="CustomControls\Image.cs" />
+    <Compile Include="CustomControls\MoveThumb.cs" />
+    <Compile Include="CustomControls\NumericTextBox.cs" />
+    <Compile Include="CustomControls\RectangularWrapPanel.cs" />
+    <Compile Include="CustomControls\ResizeThumb.cs" />
+    <Compile Include="Events\PersonViewModelEventArgs.cs" />
+    <Compile Include="Events\SelectedItemChangedEventArgs.cs" />
+    <Compile Include="Events\TextChangedEventargs.cs" />
+    <Compile Include="Extensions\ContextMenuServiceExtensions.cs" />
+    <Compile Include="Functional\BindingProxy.cs" />
+    <Compile Include="Functional\DashBoard.cs" />
+    <Compile Include="Functional\DialogFactory.cs" />
+    <Compile Include="Functional\DragDropContainer.cs" />
+    <Compile Include="Functional\EmailItem.cs" />
+    <Compile Include="Functional\ExtensionMethods\Extensions.cs" />
+    <Compile Include="Functional\MailScheduler.cs" />
+    <Compile Include="Functional\OutlinedTextBlock.cs" />
+    <Compile Include="Functional\QuestionMaster.cs" />
+    <Compile Include="Functional\SecureStringSerializer.cs" />
+    <Compile Include="Functional\TextPath.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="TemplateSelectors\PersonListGroupStyleTemplateSelector.cs" />
+    <Compile Include="Validators\DecimalValidationRules.cs" />
+    <Compile Include="ViewModels\AppSettingsViewModel.cs" />
+    <Compile Include="ViewModels\BeerChartsViewModel.cs" />
+    <Compile Include="ViewModels\DashListViewModel.cs" />
+    <Compile Include="Events\Delegates.cs" />
+    <Compile Include="ViewModels\FastObservableCollection.cs" />
+    <Compile Include="ViewModels\Items\CategoryViewModel.cs" />
+    <Compile Include="ViewModels\Items\CountItem.cs" />
+    <Compile Include="ViewModels\Items\ItemCountingListViewModel.cs" />
+    <Compile Include="ViewModels\Items\ItemListViewModel.cs" />
+    <Compile Include="ViewModels\Items\ItemViewModel.cs" />
+    <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\Persons\PersonListViewModel.cs" />
+    <Compile Include="ViewModels\Persons\PersonViewModel.cs" />
+    <Compile Include="ViewModels\Questions\PairViewModel.cs" />
+    <Compile Include="ViewModels\Questions\QuestionListViewModel.cs" />
+    <Compile Include="ViewModels\Questions\QuestionViewModel.cs" />
+    <Compile Include="ViewModels\StatusBarViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="Views\AppSettings.xaml.cs">
+      <DependentUpon>AppSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BeerChartsView.xaml.cs">
+      <DependentUpon>BeerChartsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CashFlow\SpecialPaymentWindow.xaml.cs">
+      <DependentUpon>SpecialPaymentWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CashFlow\PayInWindow.xaml.cs">
+      <DependentUpon>PayInWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Custom\ChangeImageDialog.xaml.cs">
+      <DependentUpon>ChangeImageDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Custom\CameraWindowDialog.xaml.cs">
+      <DependentUpon>CameraWindowDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Custom\Kanne.xaml.cs">
+      <DependentUpon>Kanne.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Custom\SelectQuestionsToImportDialog.xaml.cs">
+      <DependentUpon>SelectQuestionsToImportDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\CountItemsDialog.xaml.cs">
+      <DependentUpon>CountItemsDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\DrinkToolTip.xaml.cs">
+      <DependentUpon>DrinkToolTip.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Custom\EditabeTextblock.xaml.cs">
+      <DependentUpon>EditabeTextblock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\KorporationView.xaml.cs">
+      <DependentUpon>KorporationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Persons\ActiveConsumer.xaml.cs">
+      <DependentUpon>ActiveConsumer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Custom\AlphabeticalBar.xaml.cs">
+      <DependentUpon>AlphabeticalBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\DrinkControl.xaml.cs">
+      <DependentUpon>DrinkControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\DrinkList.xaml.cs">
+      <DependentUpon>DrinkList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Items\ItemDisplay.xaml.cs">
+      <DependentUpon>ItemDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Persons\AddNewPersonDialog.xaml.cs">
+      <DependentUpon>AddNewPersonDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Persons\Lists\ChargenListView.xaml.cs">
+      <DependentUpon>ChargenListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Custom\ReenterPasswordDialog.xaml.cs">
+      <DependentUpon>ReenterPasswordDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Persons\Lists\PersonListView.xaml.cs">
+      <DependentUpon>PersonListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Persons\Lists\PersonAdminList.xaml.cs">
+      <DependentUpon>PersonAdminList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Persons\Lists\PersonDashList.xaml.cs">
+      <DependentUpon>PersonDashList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Persons\UserAdministration.xaml.cs">
+      <DependentUpon>UserAdministration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Persons\NewUserEdit.xaml.cs">
+      <DependentUpon>NewUserEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Persons\UserEdit.xaml.cs">
+      <DependentUpon>UserEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Custom\LoginBox.xaml.cs">
+      <DependentUpon>LoginBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Questions\QuestionDialog.xaml.cs">
+      <DependentUpon>QuestionDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Questions\QuestionList.xaml.cs">
+      <DependentUpon>QuestionList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Questions\QuestionView.xaml.cs">
+      <DependentUpon>QuestionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StatisticView.xaml.cs">
+      <DependentUpon>StatisticView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StatusBar.xaml.cs">
+      <DependentUpon>StatusBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DashList.xaml.cs">
+      <DependentUpon>DashList.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Resources\CustomControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\DesignerItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\GlobalSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\GroupStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\ResizeRotateChrome.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\SizeChrome.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ToolTips.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Simple Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AppSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BeerChartsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CashFlow\SpecialPaymentWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CashFlow\PayInWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Custom\ChangeImageDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Custom\CameraWindowDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Custom\Kanne.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Custom\SelectQuestionsToImportDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Items\CountItemsDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Items\DrinkToolTip.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Custom\EditabeTextblock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\KorporationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Persons\ActiveConsumer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Custom\AlphabeticalBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Items\DrinkControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Items\DrinkList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Items\ItemDisplay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Persons\AddNewPersonDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Persons\Lists\ChargenListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Custom\ReenterPasswordDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Persons\Lists\PersonListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Persons\Lists\PersonAdminList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Persons\Lists\PersonDashList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Persons\UserAdministration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Persons\NewUserEdit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Persons\UserEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Custom\LoginBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Questions\QuestionDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Questions\QuestionList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Questions\QuestionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StatisticView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StatusBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DashList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="_certificates\BierstrichlerCert.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BierData\Bierstrichler.Data.csproj">
+      <Project>{a637c863-6c98-4fdf-a067-c025937e745b}</Project>
+      <Name>Bierstrichler.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebcamControl\WebcamControl.vbproj">
+      <Project>{72108e55-77ec-4c0c-9b6f-a5d882726a6b}</Project>
+      <Name>WebcamControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <DesignData Include="SampleData\ItemListViewModelSampleData.xaml" />
+    <DesignData Include="SampleData\ItemSampleData.xaml" />
+    <DesignData Include="SampleData\ItemViewModelSampleData.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Dapino-Beach-Beer.ico" />
+    <Resource Include="Zirkel_Ost_Schwarz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\help-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Documentation\Changelog.txt" />
+    <Content Include="_deploy\Ostmark_Wappen_Cropped.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="_deploy\standardInvoice.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="_lib\WebcamControl.dll" />
+    <Resource Include="Kanne.jpg" />
+    <Content Include="_deploy\standardReminder.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="_lib\SerializableSecureString.dll" />
+    <Resource Include="_lib\WebCam_Capture.dll" />
+    <Resource Include="_lib\X509Generators.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataStore\ItemListViewModel\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
