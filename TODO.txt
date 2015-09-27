@@ -1,0 +1,14 @@
+- Mailscheduler: Code kommentieren unkd aufräumen
+- Umbau auf mvvmlight
+- bessere Webcam und Bild zuschneiden
+- Bilder ausmisten, wenn Applikation heruntergefahren wird
+- Verbindung/Sync mit Datenbank
+
+// Planned Changes
+- Drag and Drop für Getränke möglich (links auf die Anwesendenliste)
+- Umbau und customizationmöglichkeiten für die itemliste
+- Custom Designs einbauen
+- Aktives Log verbessern
+
+// DONE
+- Möglichkeit Bier zu zählen

@@ -1,0 +1,9 @@
+// Known Bugs
+- Webcam bleibt nicht bestehen wenn ausgewählt
+- User kann noch per Drag and Drop hinzugefügt werden, obwohl Passwort eingestellt ist
+- Passwort wird auch abgefragt, wenn User auf AllPersonsList gezogen wird.
+
+// Solved Bugs
+- Bei Drag und Drop keine Passwortabfrage
+- Fehler beim Einzahlen, wenn noch keine Biere getrunken wurden (Vermutlich in der Anzeige)
+- Fehler bei der Anzeige, wenn weniger als 3 Getränke
