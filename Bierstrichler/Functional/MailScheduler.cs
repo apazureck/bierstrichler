@@ -37,7 +37,7 @@ namespace Bierstrichler.Functional
         private static string UserName { get { return Properties.Settings.Default.MailDisplayName; } }
         private static SecureString Password { get { return SecureStringSerializer.DecryptString(Properties.Settings.Default.MailPassword); } }
         private static int MaxMailsPerCall { get { return Properties.Settings.Default.MailMaxMailsPerCall; } }
-        static string MailFolder { get { return Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Bierstrichler\data\email\"; } }
+        static string MailFolder { get { return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),"Bierstrichler" + "email"); } }
 
         static DateTime NextInvoice
         {
@@ -437,6 +437,7 @@ namespace Bierstrichler.Functional
                 }
                 catch (Exception ex)
                 {
+                    Log.WriteErrorFromException("Fehler beim Senden der Email: ", ex);
                     if (DebugMode)
                     {
                         StringBuilder sb = new StringBuilder();
@@ -527,6 +528,8 @@ namespace Bierstrichler.Functional
                 Log.WriteError("Send Mail Error: " + e.Error + " UserState: " + e.UserState);
                 Debug.WriteLine(e.Error + " UserState: " + e.UserState);
             }
+            else
+                Log.WriteInformation("Email successfully sent.");
         }
 
         private static string AddHistoryToMail(string s, List<Data.Items.Consumed> conList)
@@ -573,6 +576,7 @@ namespace Bierstrichler.Functional
 
         internal static void SendTestMail(Person p)
         {
+            DebugMode = true;
             MailMessage mail = new MailMessage();
             mail.From = new MailAddress(MailAddress);
             mail.To.Add(new MailAddress(p.Email));
@@ -580,6 +584,7 @@ namespace Bierstrichler.Functional
             mail.Body = "Testmail";
 
             SendMailNow(mail);
+            DebugMode = false;
         }
 
         /// <summary>

@@ -11,11 +11,7 @@
 
 using Bierstrichler.Converters;
 using Bierstrichler.CustomControls;
-using Bierstrichler.Functional;
-using Bierstrichler.Views.Items;
-using GongSolutions.Wpf.DragDrop;
 using System;
-using System.ComponentModel;
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Automation;

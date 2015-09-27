@@ -202,7 +202,7 @@ namespace Bierstrichler.Data.Global
         /// <param name="exception">Exception, die ausgegeben werden soll</param>
         public static string WriteErrorFromException(string message, Exception exception)
         {
-            string exMessage = " Reason: ";
+            string exMessage = " Reason: \r\n";
             MakeRecursiveMessageFromException(exception, ref exMessage);
             WriteError(message + exMessage);
             return exMessage;
@@ -210,12 +210,12 @@ namespace Bierstrichler.Data.Global
 
         public static void MakeRecursiveMessageFromException(Exception exception, ref string message)
         {
-            message += exception.Message;
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(exception.Message);
+
+            message += sb.ToString();
             if (exception.InnerException != null)
-            {
-                message += " : ";
                 MakeRecursiveMessageFromException(exception.InnerException, ref message);
-            }
                 
         }
 

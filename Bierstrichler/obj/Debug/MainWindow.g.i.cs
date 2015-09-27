@@ -14,6 +14,7 @@ using Bierstrichler.Views;
 using Bierstrichler.Views.Items;
 using Bierstrichler.Views.Persons;
 using Bierstrichler.Views.Questions;
+using GalaSoft.MvvmLight.Command;
 using System;
 using System.Diagnostics;
 using System.Windows;

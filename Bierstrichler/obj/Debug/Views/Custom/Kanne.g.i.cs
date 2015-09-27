@@ -9,8 +9,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using Bierstrichler.CustomControls;
-using DiagramDesigner;
 using System;
 using System.Diagnostics;
 using System.Windows;
@@ -32,7 +30,6 @@ using System.Windows.Media.TextFormatting;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Shell;
-using WebcamControl;
 
 
 namespace Bierstrichler.Views.Custom {

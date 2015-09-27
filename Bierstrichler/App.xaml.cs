@@ -24,6 +24,7 @@ using System.Linq;
 using System.Reflection;
 using System.Resources;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -419,15 +420,43 @@ namespace Bierstrichler
 
         private void Application_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
         {
-#if !DEBUG
-            string errmsg = Log.WriteErrorFromException("Application Crash", e.Exception) + "\n\nCurrent User: \n";
-            //MessageBox.Show(errmsg, "Die Anwendung hat eine Ausnahme versursacht.", MessageBoxButton.OK, MessageBoxImage.Error);
-            MailScheduler.SendMailNow("andreas@pazureck.de", "Bierstrichler Bugreport " + DateTime.Now.ToString(), errmsg);
-            e.Handled = true;
+#if DEBUG
             try
             {
-                if (App.Current.ShutdownMode == System.Windows.ShutdownMode.OnExplicitShutdown)
-                    App.Current.Shutdown();
+                e.Handled = true;
+                string errmsg = Log.WriteErrorFromException("Application Crash", e.Exception) + "\n\nCurrent User: \n" + CurrentVendor.Name;
+                //MessageBox.Show(errmsg, "Die Anwendung hat eine Ausnahme versursacht.", MessageBoxButton.OK, MessageBoxImage.Error);
+                StringBuilder sb = new StringBuilder();
+                sb.AppendLine("A bug occurred: Following Exceptions were thrown:");
+                Exception ex = e.Exception;
+                do
+                {
+                    sb.AppendLine();
+                    sb.AppendLine("Exception Type: " + ex.GetType().Name);
+                    sb.AppendLine("Exception Method: " + ex.TargetSite);
+                    sb.AppendLine("Exception Message:");
+                    sb.AppendLine(ex.Message);
+                    sb.AppendLine();
+                    sb.AppendLine("Call Stack:");
+                    sb.AppendLine(ex.StackTrace);
+                    ex = ex.InnerException;
+                }
+                while (ex != null);
+                try
+                {
+                    Log.WriteDebug("Trying to send Error Message.");
+                    MailScheduler.SendMailNow("andreas@pazureck.de", "Bierstrichler Bugreport " + DateTime.Now.ToString(), sb.ToString());
+                }
+                catch (Exception ex2)
+                {
+                    Log.WriteErrorFromException("Could not send Error Message", ex2);
+                }
+                try
+                {
+                    if (App.Current.ShutdownMode == System.Windows.ShutdownMode.OnExplicitShutdown)
+                        App.Current.Shutdown();
+                }
+                catch { }
             }
             catch { }
 #endif

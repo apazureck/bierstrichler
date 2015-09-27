@@ -9,10 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using Bierstrichler.Converters;
-using Bierstrichler.Views.Persons;
 using GalaSoft.MvvmLight.Command;
-using GongSolutions.Wpf.DragDrop;
 using System;
 using System.ComponentModel;
 using System.Diagnostics;

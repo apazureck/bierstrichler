@@ -9,13 +9,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using Bierstrichler.Converters;
-using Bierstrichler.Converters.History;
-using Bierstrichler.CustomControls;
-using Bierstrichler.Data.Enums;
-using Bierstrichler.Extensions;
-using Bierstrichler.Views;
-using Bierstrichler.Views.Persons;
 using System;
 using System.Diagnostics;
 using System.Windows;
