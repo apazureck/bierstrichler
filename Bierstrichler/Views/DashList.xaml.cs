@@ -14,6 +14,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Bierstrichler.Views
 {
@@ -39,14 +40,22 @@ namespace Bierstrichler.Views
         {
             get { return oldWidth; }
             set {
-                if (notinitialized)
+                if (value>oldWidth)
                 {
                     oldWidth = value;
+                    closeTimer.Stop();
+                    closeTimer.Interval = new TimeSpan(0, 0, 1);
+                    closeTimer.Tick += delegate (object sender, EventArgs e)
+                    {
+                        allPersonsPanel.Width = 0;
+                        closeTimer.Stop();
+                    };
+                    closeTimer.Start();
                 }
             }
         }
 
-        bool notinitialized = true;
+        private DispatcherTimer closeTimer = new DispatcherTimer();
 
         private void ShowAddUser_Unchecked(object sender, RoutedEventArgs e)
         {
@@ -54,12 +63,10 @@ namespace Bierstrichler.Views
             allPersonsPanel.BeginAnimation(FrameworkElement.WidthProperty, da);
         }
 
-        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        private void AllPersonsList_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            allPersonsPanel.Width = allPersonsPanel.ActualWidth;
-            OldWidth = allPersonsPanel.Width;
-            notinitialized = false;
-            allPersonsPanel.Width = 0;
+            if (e.WidthChanged)
+                OldWidth = allPersonsPanel.ActualWidth;
         }
     }
 }

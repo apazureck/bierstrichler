@@ -173,3 +173,13 @@ C:\Users\Hudrifudri\Documents\Visual Studio 2013\Projects\Bierstrichler\Bierstri
 C:\Users\Hudrifudri\Documents\Visual Studio 2013\Projects\Bierstrichler\Bierstrichler\obj\Debug\Bierstrichler.application
 C:\Users\Hudrifudri\Documents\Visual Studio 2013\Projects\Bierstrichler\Bierstrichler\obj\Debug\Bierstrichler.exe
 C:\Users\Hudrifudri\Documents\Visual Studio 2013\Projects\Bierstrichler\Bierstrichler\obj\Debug\Bierstrichler.pdb
+C:\Users\Hudrifudri\Documents\Visual Studio 2013\Projects\Bierstrichler\Bierstrichler\bin\Debug\de\System.Windows.Interactivity.resources.dll
+C:\Users\Hudrifudri\Documents\Visual Studio 2013\Projects\Bierstrichler\Bierstrichler\bin\Debug\en\System.Windows.Interactivity.resources.dll
+C:\Users\Hudrifudri\Documents\Visual Studio 2013\Projects\Bierstrichler\Bierstrichler\bin\Debug\es\System.Windows.Interactivity.resources.dll
+C:\Users\Hudrifudri\Documents\Visual Studio 2013\Projects\Bierstrichler\Bierstrichler\bin\Debug\fr\System.Windows.Interactivity.resources.dll
+C:\Users\Hudrifudri\Documents\Visual Studio 2013\Projects\Bierstrichler\Bierstrichler\bin\Debug\it\System.Windows.Interactivity.resources.dll
+C:\Users\Hudrifudri\Documents\Visual Studio 2013\Projects\Bierstrichler\Bierstrichler\bin\Debug\ja\System.Windows.Interactivity.resources.dll
+C:\Users\Hudrifudri\Documents\Visual Studio 2013\Projects\Bierstrichler\Bierstrichler\bin\Debug\ko\System.Windows.Interactivity.resources.dll
+C:\Users\Hudrifudri\Documents\Visual Studio 2013\Projects\Bierstrichler\Bierstrichler\bin\Debug\ru\System.Windows.Interactivity.resources.dll
+C:\Users\Hudrifudri\Documents\Visual Studio 2013\Projects\Bierstrichler\Bierstrichler\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+C:\Users\Hudrifudri\Documents\Visual Studio 2013\Projects\Bierstrichler\Bierstrichler\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll

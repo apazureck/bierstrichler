@@ -160,7 +160,8 @@ namespace Bierstrichler.ViewModels
                 Person p = App.Persons.Find(x => x.ID == new Guid(sv[0]));
                 DateTime LogoutDate = DateTime.Parse(sv[1]);
                 if (p is Consumer && !((Consumer)p).Gesperrt)
-                    AddPersonToPresentList((Consumer)p, LogoutDate);
+                    if(LogoutDate>DateTime.Now)
+                        AddPersonToPresentList((Consumer)p, LogoutDate);
             }
         }
 
@@ -295,7 +296,10 @@ namespace Bierstrichler.ViewModels
                 case Enums.LogoutBehavior.TenMinutes:
                     return lout.AddMinutes(10);
                 case Enums.LogoutBehavior.TheNextMorning:
-                    return new DateTime(lout.Year, lout.Month, lout.Hour >= 8 ? lout.Day + 1 : lout.Day, 8, 0, 0);
+                    if (lout.Hour < 8)
+                        return new DateTime(lout.Year, lout.Month, lout.Day, 8, 0, 0);
+                    else
+                        return new DateTime(lout.Year, lout.Month, lout.Day, 8, 0, 0).AddDays(1);
                 case Enums.LogoutBehavior.ThirtyMinutes:
                     return lout.AddMinutes(30);
                 case Enums.LogoutBehavior.ThreeHours:

@@ -63,6 +63,7 @@ namespace Bierstrichler.ViewModels
             Properties.Settings.Default.ApplicationPosX = mw.Left;
             Properties.Settings.Default.ApplicationPosY = mw.Top;
             Properties.Settings.Default.ApplicationWidth = mw.Width;
+            Properties.Settings.Default.Save();
         }
 
         public StatusBarViewModel StatusBar { get; private set; }

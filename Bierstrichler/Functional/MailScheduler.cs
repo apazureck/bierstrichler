@@ -37,7 +37,7 @@ namespace Bierstrichler.Functional
         private static string UserName { get { return Properties.Settings.Default.MailDisplayName; } }
         private static SecureString Password { get { return SecureStringSerializer.DecryptString(Properties.Settings.Default.MailPassword); } }
         private static int MaxMailsPerCall { get { return Properties.Settings.Default.MailMaxMailsPerCall; } }
-        static string MailFolder { get { return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),"Bierstrichler" + "email"); } }
+        static string MailFolder { get { return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),"Bierstrichler", "email"); } }
 
         static DateTime NextInvoice
         {

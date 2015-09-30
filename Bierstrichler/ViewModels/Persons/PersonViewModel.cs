@@ -36,6 +36,7 @@ namespace Bierstrichler.ViewModels.Persons
 {
     public class PersonViewModel : ViewModelBase
     {
+        public event PersonChangedEventHandler PersonClassHasChanged;
         public Person Model { get; private set; }
 
         #region Properties
@@ -185,7 +186,7 @@ namespace Bierstrichler.ViewModels.Persons
             {
                 try
                 {
-                    App.Persons.Remove(Model);
+                    //App.Persons.Remove(Model);
                     switch (value)
                     {
                         case Data.Enums.UserType.Bundesbruder:
@@ -221,7 +222,8 @@ namespace Bierstrichler.ViewModels.Persons
                         default:
                             throw new ArgumentException("Ungültiger Wert für das Enum", "UserType");
                     }
-                    App.Persons.Add(Model);
+                    if (PersonClassHasChanged != null)
+                        PersonClassHasChanged(this, new PersonEventArgs(Model));
                     RaisePropertyChangedForAll();
                 }
                 catch { }

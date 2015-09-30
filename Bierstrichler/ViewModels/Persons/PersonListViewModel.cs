@@ -103,7 +103,16 @@ namespace Bierstrichler.ViewModels.Persons
 
         private void AddViewModelToList(Person p)
         {
-            Persons.Add(new PersonViewModel(p));
+            PersonViewModel pvm = new PersonViewModel(p);
+            Persons.Add(pvm);
+            pvm.PersonClassHasChanged += pvm_PersonClassHasChanged;
+        }
+
+        void pvm_PersonClassHasChanged(object sender, PersonEventArgs e)
+        {
+            //Persons.Remove((PersonViewModel)sender);
+            //Persons.Add((PersonViewModel)sender);
+            //RaisePropertyChangedForAll();
         }
 
         #region Commands

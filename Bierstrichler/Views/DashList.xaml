@@ -10,8 +10,7 @@
              xmlns:views="clr-namespace:Bierstrichler.Views"
              xmlns:conv="clr-namespace:Bierstrichler.Converters"
              xmlns:itemviews="clr-namespace:Bierstrichler.Views.Items"
-             xmlns:custom="clr-namespace:Bierstrichler.CustomControls"
-             Loaded="UserControl_Loaded">
+             xmlns:custom="clr-namespace:Bierstrichler.CustomControls">
     <UserControl.Resources>
         <BooleanToVisibilityConverter x:Key="booleanToVisibility"/>
         <conv:NullToVisibilityHiddenConverter x:Key="nullToVisibility"/>
@@ -39,7 +38,7 @@
                     <Button DockPanel.Dock="Left" Height="40" Width="40" Margin="5"
                         Command="{Binding RemovePersonFromPresentListCommand}" CommandParameter="{Binding PresentPersons.Selected}">-&gt;</Button>
                 </StackPanel>
-                <personviews:PersonListView DataContext="{Binding}" MinWidth="200" Width="249"
+                <personviews:PersonListView DataContext="{Binding}" MinWidth="200" SizeChanged="AllPersonsList_SizeChanged"
                                    Margin="0,0,5,0" x:Name="AllPersonsList" HorizontalAlignment="Stretch"/>
             </DockPanel>
             <DockPanel Grid.Column="4" DockPanel.Dock="Top">

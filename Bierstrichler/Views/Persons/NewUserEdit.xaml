@@ -33,16 +33,16 @@
 	</UserControl.Resources>
 	<ScrollViewer x:Name="scrollViewer" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
 		<DockPanel LastChildFill="True">
-			<StackPanel Orientation="Horizontal" FlowDirection="RightToLeft" 
+			<StackPanel Orientation="Horizontal"
 						Visibility="{Binding IsCurrentVendorModerator, Converter={StaticResource BooleanToVisibilityConverter}}" DockPanel.Dock="Top">
-				<ComboBox ItemsSource="{converters:EnumToItemsSource {x:Type Enums:UserType}}"
+                <TextBlock Margin="5">1. Schritt: Benutzertyp auswählen</TextBlock>
+                <ComboBox ItemsSource="{converters:EnumToItemsSource {x:Type Enums:UserType}}"
 						  SelectedIndex="{Binding UserType, Converter={StaticResource EnumToIntConverter}}"
 						  Width="105" Margin="5"></ComboBox>
-				<TextBlock Margin="5">Benutzertyp</TextBlock>
-			</StackPanel>
+            </StackPanel>
             <StackPanel DockPanel.Dock="Bottom"/>
-            <WrapPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-				<Expander Header="General" IsExpanded="True" BorderBrush="Black" Margin="3" Padding="5"
+            <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+				<Expander Header="General" BorderBrush="Black" Margin="3" Padding="5"
 						  Background="White">
 					<Grid Margin="5">
 						<Grid.RowDefinitions>
@@ -98,7 +98,7 @@
 						</Grid>
 					</Grid>
 				</Expander>
-				<Expander Header="Finanzen" IsExpanded="True" BorderBrush="Black" Margin="3"
+				<Expander Header="Finanzen" BorderBrush="Black" Margin="3"
 						  Padding="5" Background="White">
 					<Grid>
 						<Grid.RowDefinitions>
@@ -126,18 +126,7 @@
 						<CheckBox Content="Negativguthabenaufschlag ignorieren" IsEnabled="{Binding IsChangeFinanceAllowed}" Grid.Row="6" Grid.Column="1" Margin="0,0,0,5" IsChecked="{Binding SkipNegativeSurcharge}" ToolTip="Wenn aktiviert, zahlt der Nutzer keinen Negativaufschlag,&#xa;wenn er im negativen Guthaben ist."/>
 					</Grid>
 				</Expander>
-				<Expander Header="Rechte" IsExpanded="True" BorderBrush="Black" Margin="3" Padding="5"
-						  Background="White">
-					<StackPanel Margin="10,5,5,5" IsEnabled="{Binding IsCurrentVendorAdmin}">
-						<CheckBox ToolTip="Auf Gäste darf gestrichelt werden" IsChecked="{Binding IsGuest}">Gast</CheckBox>
-						<CheckBox ToolTip="Arbeiter dürfen sich einloggen und stricheln" IsChecked="{Binding IsWorker}">Arbeiter</CheckBox>
-						<CheckBox ToolTip="Kassiere dürfen Einzahlungen Entgegennehmen" IsChecked="{Binding IsCashier}">Kassier</CheckBox>
-						<CheckBox ToolTip="Darf neue Nutzer erstellen" IsChecked="{Binding IsModerator}">Moderator</CheckBox>
-						<CheckBox ToolTip="Der Bierwart darf die Getränkeliste verwalten" IsChecked="{Binding IsBeerAdmin}">Bierwart</CheckBox>
-						<CheckBox ToolTip="Administratoren dürfen Accounts erstellen, ändern und löschen, sowie globale Einstellungen vornehmen." IsChecked="{Binding IsAdministrator}">Administrator</CheckBox>
-					</StackPanel>
-				</Expander>
-				<Expander Header="History" IsExpanded="True" Visibility="Collapsed">
+                <Expander Header="History" Visibility="Collapsed">
 					<DataGrid ItemsSource="{Binding History}" AutoGenerateColumns="False" IsReadOnly="True" Margin="0,5,10,10">
 						<DataGrid.Columns>
 							<!--<DataGridTextColumn Width="Auto" Header="#" Binding="{Binding ID}"/>-->
@@ -204,7 +193,7 @@
 					</Grid>
 					<!--<persons:ChargenListView DataContext="{Binding ChargenListe}" Margin="8,0,-8,0"/>-->
 				</Expander>
-			</WrapPanel>
+			</StackPanel>
 		</DockPanel>
 		</ScrollViewer>
 </UserControl>

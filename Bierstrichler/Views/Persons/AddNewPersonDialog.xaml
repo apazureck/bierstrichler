@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:l="clr-namespace:Bierstrichler.Views.Persons"
              mc:Ignorable="d" 
-             d:DesignHeight="346.269" d:DesignWidth="417.91" MaxWidth="500" SizeToContent="Height" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
+             d:DesignHeight="779.105" d:DesignWidth="417.91" MaxWidth="500" SizeToContent="Height" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
     <DockPanel>
         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" FlowDirection="RightToLeft">
             <Button Content="Abbrechen" Width="auto" Margin="5" MinWidth="40" Click="Button_Cancel_Click" IsCancel="True"/>

@@ -13,11 +13,23 @@
         Source="{Binding Persons}">
             <CollectionViewSource.GroupDescriptions>
                 <PropertyGroupDescription PropertyName="Category"/>
+                <PropertyGroupDescription PropertyName="Status" />
             </CollectionViewSource.GroupDescriptions>
             <CollectionViewSource.SortDescriptions>
                 <cm:SortDescription PropertyName="Nachname" />
             </CollectionViewSource.SortDescriptions>
         </CollectionViewSource>
+        <Style x:Key="ContainerStyle" TargetType="{x:Type GroupItem}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Expander Header="{Binding Name}" IsExpanded="True">
+                            <ItemsPresenter Margin="10,2,0,2" />
+                        </Expander>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </UserControl.Resources>
     <ListView ItemsSource="{Binding Source={StaticResource ItemCollectionView}}" SelectedItem="{Binding Selected}"
               x:Name="listView" d:DataContext="{d:DesignData /SampleData/ItemViewModelSampleData.xaml}">
@@ -25,25 +37,12 @@
     		<SolidColorBrush Color="White" Opacity="0.5"/>
     	</ListView.Background>
         <ListView.GroupStyle>
-            <GroupStyle>
-                <GroupStyle.HeaderTemplate>
-                    <DataTemplate>
-                        <Border BorderBrush="Black" BorderThickness="1" Margin="1,1,1,1">
-                            <TextBlock Text="{Binding Name}" FontWeight="Bold" Margin="1"/>
-                        </Border>
-                    </DataTemplate>
-                </GroupStyle.HeaderTemplate>
-                <GroupStyle.Panel>
-                    <ItemsPanelTemplate>
-                        <StackPanel Orientation="Vertical"/>
-                    </ItemsPanelTemplate>
-                </GroupStyle.Panel>
-            </GroupStyle>
+            <GroupStyle ContainerStyle="{StaticResource ContainerStyle}"/>
         </ListView.GroupStyle>
         <ListView.ItemTemplate>
             <DataTemplate>
                 <StackPanel Orientation="Horizontal">
-                    <Image Source="{Binding Image}" Height="30" Stretch="Uniform"/>
+                    <!--<Image Source="{Binding Image}" Height="30" Stretch="Uniform"/>-->
                     <TextBlock Text="{Binding Name}"/>
                 </StackPanel>
             </DataTemplate>

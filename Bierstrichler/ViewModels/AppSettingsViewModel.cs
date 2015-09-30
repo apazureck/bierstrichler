@@ -22,6 +22,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Xml.Serialization;
+using System.Windows.Threading;
 
 namespace Bierstrichler.ViewModels
 {
@@ -30,10 +31,37 @@ namespace Bierstrichler.ViewModels
         public AppSettingsViewModel()
         {
             PropertyChanged += AppSettingsViewModel_PropertyChanged;
+            Model.SettingChanging += Model_SettingChanging;
             Log.MessageLogged += Log_MessageLogged;
         }
 
-        object logListLock = new object();
+        Bierstrichler.Properties.Settings Model { get { return Properties.Settings.Default; } }
+
+        #region Fields
+
+        private object logListLock = new object();
+
+        #endregion Fields
+
+        #region Eventhandlers
+
+        void Model_SettingChanging(object sender, System.Configuration.SettingChangingEventArgs e)
+        {
+            DispatcherTimer dt = new DispatcherTimer(DispatcherPriority.ApplicationIdle, App.Current.Dispatcher);
+            dt.Interval = new TimeSpan(0, 0, 2);
+            dt.Tick += delegate(object sender2, EventArgs e2)
+                {
+                    try
+                    {
+                        Log.WriteDebug("Model_SettingChanged Timer event occurred for Property " + e.SettingName);
+                        dt.Stop();
+                        RaisePropertyChanged(e.SettingName);
+                    }
+                    catch { }
+                };
+            dt.Start();
+        }
+
         void Log_MessageLogged(object sender, Data.Events.LogEventArgs e)
         {
             lock(logListLock)
@@ -53,8 +81,21 @@ namespace Bierstrichler.ViewModels
             }
         }
 
-        private int maxNumOfEntries = 50;
+        void AppSettingsViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            Task.Run(() =>
+            {
+                Model.Save();
+            });
+        }
 
+        #endregion Eventhandlers
+
+        #region Properties
+
+        #region Support
+
+        private int maxNumOfEntries = 50;
         public int MaxNumOfEntries
         {
             get { return maxNumOfEntries; }
@@ -65,7 +106,6 @@ namespace Bierstrichler.ViewModels
                 RaisePropertyChanged();
             }
         }
-
 
         private FastObservableCollection<LogEntry> logEntries = new FastObservableCollection<LogEntry>();
 
@@ -79,122 +119,119 @@ namespace Bierstrichler.ViewModels
             }
         }
 
-        private LogLevel logLevel;
+        public PersonListViewModel AllPersons
+        {
+            get { return App.MainWindowViewModel.AllPersons; }
+            set { App.MainWindowViewModel.AllPersons = value; RaisePropertyChanged(); }
+        }
+
+        #endregion Support
+
+        #region Wrapped
 
         public LogLevel LogLevel
         {
-            get { return Properties.Settings.Default.LogLevel; }
+            get { return Model.LogLevel; }
             set
             {
-                Properties.Settings.Default.LogLevel = value;
+                Model.LogLevel = value;
                 Log.LogLevel = value;
                 Log.WriteInformation("Changed LogLevel to " + value.ToString());
                 RaisePropertyChanged();
             }
         }
 
-
-        void AppSettingsViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        public bool AutoLoginActive
         {
-            Task.Run(() =>
-                {
-                    Settings.Save();
-                });
-        }
-
-        Bierstrichler.Properties.Settings Model { get { return Properties.Settings.Default; } }
-
-        private Properties.Settings Settings { get { return Bierstrichler.Properties.Settings.Default; } }
-        public bool LoginActive
-        {
-            get { return Settings.AutoLoginActive; }
+            get { return Model.AutoLoginActive; }
             set
             {
-                Settings.AutoLoginActive = value;
+                Model.AutoLoginActive = value;
                 Log.WriteInformation(App.CurrentVendor.Name + " changed Autologin to \"" + value.ToString() + "\"");
                 RaisePropertyChanged();
             }
         }
+
         public decimal NegativeDepositFactor
         {
-            get { return Settings.NegativeDepositFactor; }
+            get { return Model.NegativeDepositFactor; }
             set
             {
                 Log.WriteInformation(App.CurrentVendor.Name + " changed the negative Deposit factor from " + NegativeDepositFactor.ToString() + " to " + value.ToString());
-                Settings.NegativeDepositFactor = value;
+                Model.NegativeDepositFactor = value;
                 RaisePropertyChanged();
             }
         }
-        public PersonViewModel Selected
+
+        public PersonViewModel StandardUser
         {
-            get 
+            get
             {
                 foreach (PersonViewModel pvm in AllPersons.Persons)
-                    if (pvm.Model.ID.Equals(Settings.StandardUser))
+                    if (pvm.Model.ID.Equals(Model.StandardUser))
                         return pvm;
                 return null;
             }
             set
             {
-                Settings.StandardUser = value.Model.ID;
+                Model.StandardUser = value.Model.ID;
                 Log.WriteInformation(App.CurrentVendor.Name + " changed the Autologin User to " + value.Name);
                 RaisePropertyChanged();
             }
         }
-        public PersonListViewModel AllPersons 
-        { 
-            get { return App.MainWindowViewModel.AllPersons; } 
-            set { App.MainWindowViewModel.AllPersons = value; RaisePropertyChanged(); } 
-        }
 
-        public string ServerName
+        #region Mail
+        public string MailServer
         {
-            get { return Properties.Settings.Default.MailServer; }
-            set 
+            get { return Model.MailServer; }
+            set
             {
-                Properties.Settings.Default.MailServer = value.Trim();
+                Model.MailServer = value.Trim();
                 RaisePropertyChanged();
             }
         }
 
-        public string DisplayName 
+        public string MailDisplayName
         {
-            get { return Properties.Settings.Default.MailDisplayName; }
+            get { return Model.MailDisplayName; }
             set
             {
-                Properties.Settings.Default.MailDisplayName = value.Trim();
+                Model.MailDisplayName = value.Trim();
                 RaisePropertyChanged();
             }
         }
 
         public string MailAddress
         {
-            get { return Properties.Settings.Default.MailAddress; }
+            get { return Model.MailAddress; }
             set
             {
-                Properties.Settings.Default.MailAddress = value.Trim();
+                Model.MailAddress = value.Trim();
                 RaisePropertyChanged();
             }
         }
 
-        public string UserName
+        public string MailLoginName
         {
-            get { return Properties.Settings.Default.MailLoginName; }
+            get { return Model.MailLoginName; }
             set
             {
-                Properties.Settings.Default.MailLoginName = value.Trim();
+                Model.MailLoginName = value.Trim();
                 RaisePropertyChanged();
             }
         }
-        public SecureString Password
+
+        public SecureString MailPassword
         {
-            get { return SecureStringSerializer.DecryptString(Properties.Settings.Default.MailPassword); }
+            get { return SecureStringSerializer.DecryptString(Model.MailPassword); }
             set
             {
-                Properties.Settings.Default.MailPassword = SecureStringSerializer.EncryptString(value);
+                Model.MailPassword = SecureStringSerializer.EncryptString(value);
                 RaisePropertyChanged();
             }
         }
+
+        #endregion Mail
 
         public string ItemListSecureCopy
         {
@@ -225,6 +262,30 @@ namespace Bierstrichler.ViewModels
                 RaisePropertyChanged();
             }
         }
+
+        public int WebCamSourceIndex
+        {
+            get 
+            {
+                try
+                {
+                    Collection<EncoderDevice> edl = EncoderDevices.FindDevices(EncoderDeviceType.Video);
+                    EncoderDevice ed = edl.FirstOrDefault(x => x.Name == Model.WebCamSource);
+                    return edl.IndexOf(ed);
+                }
+                catch { return -1; }
+            }
+            set
+            {
+                Collection<EncoderDevice> edl = EncoderDevices.FindDevices(EncoderDeviceType.Video);
+                Model.WebCamSource = edl[value].Name;
+                RaisePropertyChanged();
+            }
+        }
+
+        #endregion Wrapped
+
+        #endregion Properties
 
         #region Questiongame
         public bool QuestionGameActive
@@ -469,7 +530,7 @@ namespace Bierstrichler.ViewModels
         {
             if (param is PasswordBox)
             {
-                Password = ((PasswordBox)param).SecurePassword;
+                MailPassword = ((PasswordBox)param).SecurePassword;
             }
         }
 
