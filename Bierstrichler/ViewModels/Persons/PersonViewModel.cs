@@ -476,7 +476,7 @@ namespace Bierstrichler.ViewModels.Persons
 
         public Status Status
         {
-            get { return Model is Korpo ? ((Korpo)Model).Status : Status.Unknown; }
+            get { return Model is Korpo ? ((Korpo)Model).Status : Data.Enums.Status.Unknown; }
             set
             {
                 if (Model is Korpo)
@@ -705,7 +705,7 @@ namespace Bierstrichler.ViewModels.Persons
                 return;
             if(c.Type == ConsumeType.Purchase)
             {
-                Item itm = App.Items.Find(x => x.ID == c.ItemID);
+                Item itm = App.Items.Find(x => x == c.Item);
                 itm.RemoveHistoryChange(c);
                 if (((Consumer)Model).PaysBuingPrice)
                     this.Guthaben += itm.PriceBuying;

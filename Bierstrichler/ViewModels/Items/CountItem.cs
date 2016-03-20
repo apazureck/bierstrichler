@@ -136,9 +136,9 @@ namespace Bierstrichler.ViewModels.Items
             }
         }
 
-        public Guid ID
+        public int ID
         {
-            get { return Model.ID; }
+            get { return Model.Id; }
         }
 
         public ItemViewModel Correspondant

@@ -76,9 +76,9 @@ namespace Bierstrichler.ViewModels.Items
             }
         }
 
-        public Guid ID
+        public int Id
         {
-            get { return Model.ID; }
+            get { return Model.Id; }
         }
 
         public string Description

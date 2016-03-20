@@ -168,13 +168,13 @@ namespace Bierstrichler.ViewModels
             get
             {
                 foreach (PersonViewModel pvm in AllPersons.Persons)
-                    if (pvm.Model.ID.Equals(Model.StandardUser))
+                    if (pvm.Model.Id.Equals(Model.StandardUser))
                         return pvm;
                 return null;
             }
             set
             {
-                Model.StandardUser = value.Model.ID;
+                Model.StandardUser = value.Model.Id;
                 Log.WriteInformation(App.CurrentVendor.Name + " changed the Autologin User to " + value.Name);
                 RaisePropertyChanged();
             }

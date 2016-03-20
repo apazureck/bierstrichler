@@ -17,6 +17,8 @@ namespace Bierstrichler.Data.Enums
         [Description("Auszahlung")]
         Payout,
         [Description("Spezial")]
-        SpecialPayment
+        SpecialPayment,
+        Add,
+        Remove
     }
 }

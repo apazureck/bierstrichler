@@ -3,7 +3,6 @@ using Bierstrichler.Data.Events;
 using Bierstrichler.Data.Global;
 using Bierstrichler.Data.Items;
 using Bierstrichler.Data.Persons;
-using Bierstrichler.Data.Persons.Korpos;
 using Bierstrichler.Data.Questions;
 using Bierstrichler.Data.Serialization;
 using Bierstrichler.Events;
@@ -280,8 +279,7 @@ namespace Bierstrichler
                         Guest = true,
                         Moderator = true,
                         Worker = true
-                    },
-                    ID = new Guid()
+                    }
                 };
                 StartApplicationMainWindow();
             } 
@@ -289,7 +287,7 @@ namespace Bierstrichler
             {
                 try
                 {
-                    Person p = Persons.Find(x => x.ID.Equals(Bierstrichler.Properties.Settings.Default.StandardUser));
+                    Person p = Persons.Find(x => x.Id.Equals(Bierstrichler.Properties.Settings.Default.StandardUser));
                     if (p == null)
                         throw new Exception();
                     App.CurrentVendor = p;
@@ -309,7 +307,7 @@ namespace Bierstrichler
                             Moderator = false,
                             Worker = false
                         },
-                        ID = new Guid()
+                        //ID = new Guid()
                     };
                 }
                 StartApplicationMainWindow();

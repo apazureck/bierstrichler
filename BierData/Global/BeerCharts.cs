@@ -36,7 +36,7 @@ namespace Bierstrichler.Functional
             {
                 try
                 {
-                    Item itm = Items.Find(x => x.ID == con.ItemID);
+                    Item itm = Items.Find(x => x == con.Item);
                     if (itm!=null&&itm.Coleurfaehig)
                         i++;
                 }

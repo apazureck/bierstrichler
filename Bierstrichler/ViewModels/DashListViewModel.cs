@@ -27,7 +27,7 @@ namespace Bierstrichler.ViewModels
 
         private StringCollection LoggedInUsers { get { return Properties.Settings.Default.LoggedInUsers; } }
 
-        private Dictionary<Guid, DispatcherTimer> logoutTimers = new Dictionary<Guid, DispatcherTimer>();
+        private Dictionary<int, DispatcherTimer> logoutTimers = new Dictionary<int, DispatcherTimer>();
 
         #region Properties
 
@@ -157,7 +157,7 @@ namespace Bierstrichler.ViewModels
             foreach(string s in loggedInUsers)
             {
                 string[] sv = s.Split(';');
-                Person p = App.Persons.Find(x => x.ID == new Guid(sv[0]));
+                Person p = App.Persons.Find(x => x.Id == Convert.ToInt32(sv[0]));
                 DateTime LogoutDate = DateTime.Parse(sv[1]);
                 if (p is Consumer && !((Consumer)p).Gesperrt)
                     if(LogoutDate>DateTime.Now)
@@ -243,13 +243,13 @@ namespace Bierstrichler.ViewModels
             AllPersons.Remove(c);
             if(logoutDate == default(DateTime))
                 logoutDate = SetLogoutTime(c);
-            Bierstrichler.Properties.Settings.Default.LoggedInUsers.Add(c.ID.ToString() + ";" + logoutDate.ToString());
-            CreateLogoutTimer(c.ID, logoutDate);
+            Bierstrichler.Properties.Settings.Default.LoggedInUsers.Add(c.Id.ToString() + ";" + logoutDate.ToString());
+            CreateLogoutTimer(c.Id, logoutDate);
             Bierstrichler.Properties.Settings.Default.Save();
             Log.WriteInformation(App.CurrentVendor.Name + " moved " + c.Name + " to Present List.");
         }
 
-        private void CreateLogoutTimer(Guid guid, DateTime LogoutTime)
+        private void CreateLogoutTimer(int id, DateTime LogoutTime)
         {
             DispatcherTimer logoutTimer = new DispatcherTimer();
             TimeSpan spanTillLogout = LogoutTime.Subtract(DateTime.Now);
@@ -257,13 +257,13 @@ namespace Bierstrichler.ViewModels
             {
                 logoutTimer.Interval = spanTillLogout;
                 logoutTimer.Tick += logoutTimer_Tick;
-                logoutTimer.Tag = guid;
+                logoutTimer.Tag = id;
                 logoutTimer.Start();
-                logoutTimers.Add(guid, logoutTimer);
+                logoutTimers.Add(id, logoutTimer);
             }
             catch
             {
-                logoutTimers.Add(guid, null);
+                logoutTimers.Add(id, null);
             }
         }
 
@@ -272,11 +272,11 @@ namespace Bierstrichler.ViewModels
             DispatcherTimer logoutTimer = sender as DispatcherTimer;
             if (logoutTimer == null)
                 return;
-            if (!(logoutTimer.Tag is Guid))
+            if (!(logoutTimer.Tag is int))
                 return;
-            Guid UserID = (Guid)logoutTimer.Tag;
+            int UserID = (int)logoutTimer.Tag;
             if(logoutTimers.ContainsKey(UserID))
-                RemovePersonFromPresentList(App.Persons.Find(x => x.ID == UserID));
+                RemovePersonFromPresentList(App.Persons.Find(x => x.Id == UserID));
         }
 
         /// <summary>
@@ -344,13 +344,13 @@ namespace Bierstrichler.ViewModels
             // remove Timer
             try
             {
-                if(logoutTimers[p.ID]!=null)
+                if(logoutTimers[p.Id]!=null)
                 {
-                    logoutTimers[p.ID].Stop();
-                    logoutTimers[p.ID].Tick -= logoutTimer_Tick;
-                    logoutTimers.Remove(p.ID);
+                    logoutTimers[p.Id].Stop();
+                    logoutTimers[p.Id].Tick -= logoutTimer_Tick;
+                    logoutTimers.Remove(p.Id);
                 }
-                logoutTimers.Remove(p.ID);
+                logoutTimers.Remove(p.Id);
             }
             catch
             {
@@ -359,7 +359,7 @@ namespace Bierstrichler.ViewModels
 
             // Remove from saved list
             for (int i = 0; i < LoggedInUsers.Count; i++)
-                if (LoggedInUsers[i].Contains(p.ID.ToString()))
+                if (LoggedInUsers[i].Contains(p.Id.ToString()))
                 {
                     foundIndex = i;
                     break;

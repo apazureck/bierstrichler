@@ -534,16 +534,16 @@ namespace Bierstrichler.Functional
 
         private static string AddHistoryToMail(string s, List<Data.Items.Consumed> conList)
         {
-            Dictionary<Guid, int> differentItems = new Dictionary<Guid, int>();
+            Dictionary<Item, int> differentItems = new Dictionary<Item, int>();
             foreach (Data.Items.Consumed con in conList)
-                if (differentItems.ContainsKey(con.ItemID))
-                    differentItems[con.ItemID]++;
-                else if (!con.ItemID.Equals(Guid.Empty))
-                    differentItems.Add(con.ItemID, 1);
+                if (differentItems.ContainsKey(con.Item))
+                    differentItems[con.Item]++;
+                else if (!con.Item.Equals(Guid.Empty))
+                    differentItems.Add(con.Item, 1);
             StringBuilder sb = new StringBuilder();
             char[] copy = s.ToCharArray();
 
-            foreach (KeyValuePair<Guid, int> item in differentItems)
+            foreach (KeyValuePair<Item, int> item in differentItems)
             {
                 try
                 {
@@ -559,11 +559,11 @@ namespace Bierstrichler.Functional
             return sb.ToString();
         }
 
-        private static string ReplaceItem(char[] copy, KeyValuePair<Guid, int> item)
+        private static string ReplaceItem(char[] copy, KeyValuePair<Item, int> item)
         {
             string line = new String(copy);
             Dictionary<string, object> repVals = new Dictionary<string, object>(3);
-            Item i = App.Items.Find(x => x.ID.Equals(item.Key));
+            Item i = App.Items.Find(x => x.Equals(item.Key));
             repVals.Add("ItemName", i.Name);
             repVals.Add("TotalPrize", i.PriceSelling * item.Value);
             repVals.Add("NumOfConsumed", item.Value);

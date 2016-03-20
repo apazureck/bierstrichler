@@ -183,3 +183,5 @@ C:\Users\Hudrifudri\Documents\Visual Studio 2013\Projects\Bierstrichler\Bierstri
 C:\Users\Hudrifudri\Documents\Visual Studio 2013\Projects\Bierstrichler\Bierstrichler\bin\Debug\ru\System.Windows.Interactivity.resources.dll
 C:\Users\Hudrifudri\Documents\Visual Studio 2013\Projects\Bierstrichler\Bierstrichler\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
 C:\Users\Hudrifudri\Documents\Visual Studio 2013\Projects\Bierstrichler\Bierstrichler\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+C:\Users\Hudrifudri\Documents\Visual Studio 2013\Projects\Bierstrichler\Bierstrichler\bin\Debug\EntityFramework.dll
+C:\Users\Hudrifudri\Documents\Visual Studio 2013\Projects\Bierstrichler\Bierstrichler\bin\Debug\EntityFramework.xml

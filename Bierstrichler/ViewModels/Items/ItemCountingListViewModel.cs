@@ -99,13 +99,13 @@ namespace Bierstrichler.ViewModels.Items
         protected override void ItemListViewModel_ItemAdded(object sender, Data.Events.ItemEventArgs e)
         {
             base.ItemListViewModel_ItemAdded(sender, e);
-            Countings.Add(new CountItem(Items.FirstOrDefault(x => x.ID == e.Item.ID)));
+            Countings.Add(new CountItem(Items.FirstOrDefault(x => x.Model == e.Item)));
         }
 
         protected override void ItemListViewModel_ItemRemoved(object sender, Data.Events.ItemEventArgs e)
         {
             base.ItemListViewModel_ItemRemoved(sender, e);
-            Countings.Remove(Countings.FirstOrDefault(x => x.ID == e.Item.ID));
+            Countings.Remove(Countings.FirstOrDefault(x => x.ID == e.Item.Id));
         }
 
         private void CountAllItems()

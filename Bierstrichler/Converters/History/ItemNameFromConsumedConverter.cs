@@ -22,7 +22,7 @@ namespace Bierstrichler.Converters.History
                 case Data.Enums.ConsumeType.Payout:
                     return "Auszahlung";
                 case Data.Enums.ConsumeType.Purchase:
-                    Item i = App.Items.Find(x => x.ID.Equals(c.ItemID));
+                    Item i = App.Items.Find(x => x.Equals(c.Item));
                     if (i == null)
                         return "Fehler!";
                     return i.Name + " erworben";

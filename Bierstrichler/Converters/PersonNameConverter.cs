@@ -20,9 +20,9 @@ namespace Bierstrichler.Converters
         /// <returns>A converted value. If the method returns null, the valid null value is used.</returns>
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            Guid guid = (Guid)value;
+            int id = (int)value;
 
-            Person p = App.Persons.Find(x => x.ID == guid);
+            Person p = App.Persons.Find(x => x.Id == id);
             if (p == null)
                 return "Unbekannt";
 
